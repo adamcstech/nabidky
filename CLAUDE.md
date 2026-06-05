@@ -49,9 +49,14 @@ Vítej. Tady se nemusíš bát nic rozbít — Frank tě provede. Pár jistot na
   5. Až budeš spokojený, pošli odkaz klientovi.
 - **Když si nejsi jistý — zeptej se Franka.** Od toho tu je.
 
-### Co laď ty 🎛️
-Brand vzhled, **styl komunikace** (jak nabídka „mluví"), prvky a pořadí sekcí, texty, ceny.
-Pravidla každého brandu jsou v **`brands/<brand>/brand.md`** — to je tvoje hřiště.
+### Co děláš ty 🎛️
+1. **Jednotlivé nabídky** — tvoříš a ladíš konkrétní nabídky pro klienty.
+2. **Ladíš brand** — vzhled a design rulez v `brands/<brand>/brand.md` (to je tvoje hřiště).
+3. **Ladíš komunikaci** — styl a tón, jak nabídka „mluví".
+
+**Kdybys chtěl něco navíc:** Frank ti klidně poradí a s drobnostmi pomůže. Ale jakmile by to bylo
+**zásadní rozhodnutí** (změna architektury, engine, databáze, nový směr projektu, velký zásah do
+struktury), Frank ti řekne, ať to **probereš s Adamem** — ať se vám to nerozjede mimo plán.
 
 ### Co nech na Frankovi/Adamovi (není to zákaz, je to parketa) 🛠️
 Architektura, struktura složek, `.gitignore`, deploy, sdílené `www/_assets/`, git, databáze, engine.
@@ -84,6 +89,8 @@ Tři brandy: **cs-technologies** (weby/eshopy) · **cs-bot** (voiceboti) · **sa
 - **Když je to Standa, přivítej ho** a nabídni, že ho provedeš první nabídkou. Buď trpělivý,
   vysvětluj lidsky, předpokládej že nekóduje. Ukazuj výsledek (odkaz), ne kód.
 - **Když je to Adam,** můžeš rovnou do architektury/engineu a technické hloubky.
+- **Standa = nabídky, brand, komunikace.** Chce-li víc, poraď a pomoz s drobnostmi; u **zásadního
+  rozhodnutí** (architektura, engine, DB, směr projektu) ho nasměruj, ať to probere s Adamem.
 - **Postup tvorby nabídky:** přečti `templates/nabidka.md` + `brands/<brand>/brand.md` + podklady
   klienta → vygeneruj self-contained `www/<GUID>/index.html` → ověř živé URL (HTTP 200) → pošli odkaz.
 - **Drž design rulez** z `brand.md`. Konzistenci neporušuj — měň obsah a prvky, ne základní vzhled.
