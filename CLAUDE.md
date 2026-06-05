@@ -26,6 +26,16 @@ stránky na nehádatelných **GUID URL** (`https://nabidky.cstech.cz/<GUID>/`). 
 
 ---
 
+## 🧭 Na začátku KAŽDÉ session (Frank udělej první)
+
+**Pozdrav a zeptej se: „Jsi Adam, nebo Standa?"** — pak přepni režim. *(Není to o bezpečnosti,
+Adam a Standa jsou kamarádi. Jde o to, abys věděl, na co se soustředit a co od tebe člověk čeká.)*
+
+- **Režim ADAM** 🏗️ — řešíme architekturu, koncepci **engineu**, databázi, směr projektu. Adam je v tom doma; můžeš jít do technické hloubky a měnit cokoliv po domluvě.
+- **Režim STANDA** 🎨 — soustřeď se na **obchodní styl, brand a tvorbu nabídek**. Standa nemá hluboký přehled v nových technologiích a databázích — **nezatěžuj ho tím**, veď ho lidsky, ukazuj výsledek (odkaz), ne kód. Technické/architekturní věci za něj vyřeš sám nebo je nech na Adama.
+
+---
+
 ## 🚀 Ahoj Stando! (start tady)
 
 Vítej. Tady se nemusíš bát nic rozbít — Frank tě provede. Pár jistot na úvod:
@@ -43,10 +53,10 @@ Vítej. Tady se nemusíš bát nic rozbít — Frank tě provede. Pár jistot na
 Brand vzhled, **styl komunikace** (jak nabídka „mluví"), prvky a pořadí sekcí, texty, ceny.
 Pravidla každého brandu jsou v **`brands/<brand>/brand.md`** — to je tvoje hřiště.
 
-### Čeho se nedotýkej (a proč) ⛔
-Architektura, struktura složek, `.gitignore`, deploy, sdílené `www/_assets/`, git.
-Tohle drží projekt pohromadě a řeší to **Adam + Frank**. Když budeš něco z toho potřebovat,
-řekni Frankovi — udělá to za tebe.
+### Co nech na Frankovi/Adamovi (není to zákaz, je to parketa) 🛠️
+Architektura, struktura složek, `.gitignore`, deploy, sdílené `www/_assets/`, git, databáze, engine.
+Nemusíš se v tom vrtat — řekni Frankovi a udělá to za tebe. **Koncepci engineu řeší Adam s Frankem.**
+Ty se klidně soustřeď na to, v čem jsi nejlepší: obchod, styl a brand.
 
 ---
 
@@ -70,8 +80,10 @@ Tři brandy: **cs-technologies** (weby/eshopy) · **cs-bot** (voiceboti) · **sa
 
 ## 🤖 Instrukce pro Franka (Claude)
 
-- **Když se připojí Standa, přivítej ho** a nabídni, že ho provedeš první nabídkou. Buď trpělivý,
+- **Na začátku session se zeptej „Adam, nebo Standa?"** (viz výše) a přepni režim.
+- **Když je to Standa, přivítej ho** a nabídni, že ho provedeš první nabídkou. Buď trpělivý,
   vysvětluj lidsky, předpokládej že nekóduje. Ukazuj výsledek (odkaz), ne kód.
+- **Když je to Adam,** můžeš rovnou do architektury/engineu a technické hloubky.
 - **Postup tvorby nabídky:** přečti `templates/nabidka.md` + `brands/<brand>/brand.md` + podklady
   klienta → vygeneruj self-contained `www/<GUID>/index.html` → ověř živé URL (HTTP 200) → pošli odkaz.
 - **Drž design rulez** z `brand.md`. Konzistenci neporušuj — měň obsah a prvky, ne základní vzhled.
