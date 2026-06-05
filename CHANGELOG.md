@@ -12,6 +12,7 @@ infra, architektura, struktura, nové brandy, vytvořené/smazané nabídky, kon
 - **CS Technologies design/styl** — Adamem **relativně schválen jako koncept**. Výhrada: dodat **SVG logo CS Technologies viditelné i na bílém pozadí** (stávající má bílý text → na světlém mizí). Drop → `podklady/cs-technologies/03-loga-a-podklady/`.
 - **SYNYT nabídka** — bude se **editovat na místě** (bez zálohy / beze změny GUID). Podklady k implementaci → `podklady/cs-technologies/synyt/`.
 - **SYNYT — platební model upraven** (edit na místě): sekce 04 přepsána na **„Harmonogram a platby"** — měsíční etapy podle kalendáře, 3 vysvětlující karty (měsíční etapy / pravidelné zálohy / průběžná kontrola), zálohový kalendář přeznačen na měsíce, zpráva „ne jedna velká částka, ale 4 pravidelné měsíční zálohy". Podmínky (sekce 10) sladěny. Návaznost na budoucí smlouvu. Podklady: `harmonogram synyt.png`, `hodiny-etapy.png`.
+- **SYNYT — provoz nacenění** (edit na místě): sekce 09 dostala měsíční paušál **od 690 Kč/měsíc bez DPH** (provoz/hosting/podpora), v měsíčním principu navazujícím na platby. *(Interpretace „690+" jako měsíční paušál — čeká na potvrzení Adama.)*
 
 ## 2026-06-05 — založení projektu (Adam + Frank)
 
