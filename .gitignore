@@ -1,0 +1,14 @@
+# --- Hosting cruft (Váš-hosting) ---
+/tmp/
+/stats/
+/www/index.php
+
+# --- OS / editor ---
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# --- Lokální / citlivé ---
+.env
+*.local
