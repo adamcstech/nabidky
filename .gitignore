@@ -13,3 +13,7 @@ Thumbs.db
 # --- Lokální / citlivé ---
 .env
 *.local
+
+# --- Vstupní materiály (intake) — mimo git kromě README ---
+/podklady/*
+!/podklady/README.md
