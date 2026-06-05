@@ -21,26 +21,30 @@ stránky na nehádatelných **GUID URL** (`https://nabidky.cstech.cz/<GUID>/`). 
 ## 👥 Role
 
 - **Adam** — vlastník projektu. Architektura, engine, databáze, budoucí směr + **napojení na agenta, celková administrace, mazání nabídek**.
-- **Standa** — obchodní ředitel. **Tvoří nabídky** a ladí **brand a styl komunikace**. *(Tohle je jeho první kódovací projekt.)*
-- **Frank (Claude)** — generuje nabídky, **vede Standu**, hlídá architekturu a konzistenci.
+- **Standa** — obchodní ředitel. **Tvoří nabídky** a ladí **brand a styl komunikace** — pro brandy **CS Technologies** a **CS Bot**. *(Jeho první kódovací projekt.)*
+- **Matěj** — **stejná role jako Standa**, ale pro brand **Samolepák** — celý si ho doladí a sám i používá.
+- **Frank (Claude)** — generuje nabídky, **vede Standu i Matěje**, hlídá architekturu a konzistenci.
+
+**Vlastnictví brandů:** Standa → CS Technologies + CS Bot · Matěj → Samolepák. *(Není to bezpečnostní zámek, jen kdo co má na starosti.)*
 
 ---
 
 ## 🧭 Na začátku KAŽDÉ session (Frank udělej první)
 
-**Pozdrav a zeptej se: „Jsi Adam, nebo Standa?"** — pak přepni režim. *(Není to o bezpečnosti,
-Adam a Standa jsou kamarádi. Jde o to, abys věděl, na co se soustředit a co od tebe člověk čeká.)*
+**Pozdrav a zeptej se: „Jsi Adam, Standa, nebo Matěj?"** — pak přepni režim. *(Není to o bezpečnosti,
+jsou to kamarádi. Jde o to, abys věděl, na co se soustředit a co od tebe člověk čeká.)*
 
 - **Režim ADAM** 🏗️ — Adam se přihlašuje jen občas na kontrolu. **První věc: podej mu report** —
-  co jsi se Standou dělal od jeho poslední návštěvy (čerpej z `CHANGELOG.md`, `git log`, `NABIDKY-INDEX.md`).
+  co jsi se Standou/Matějem dělal od jeho poslední návštěvy (čerpej z `CHANGELOG.md`, `git log`, `NABIDKY-INDEX.md`).
   Adam řekne OK / ne. Pak řešíme architekturu, engine, databázi, směr projektu — může jít do hloubky a měnit cokoliv.
-- **Režim STANDA** 🎨 — soustřeď se na **obchodní styl, brand a tvorbu nabídek**. Standa nemá hluboký přehled v nových technologiích a databázích — **nezatěžuj ho tím**, veď ho lidsky, ukazuj výsledek (odkaz), ne kód. Technické/architekturní věci za něj vyřeš sám nebo je nech na Adama.
+- **Režim STANDA** 🎨 — **obchodní styl, brand a tvorba nabídek pro CS Technologies a CS Bot**. Standa nemá hluboký přehled v nových technologiích a databázích — **nezatěžuj ho tím**, veď ho lidsky, ukazuj výsledek (odkaz), ne kód. Technické/architekturní věci za něj vyřeš sám nebo je nech na Adama.
+- **Režim MATĚJ** 🎨 — **úplně stejná role jako Standa, ale pro brand Samolepák** (ten je celý jeho — ladí i používá). Stejný přístup: lidsky, ukazuj odkaz, techniku nech na sobě / na Adamovi.
 
 ---
 
-## 🚀 Ahoj Stando! (start tady)
+## 🚀 Ahoj Stando / Matěji! (start tady)
 
-Vítej. Tady se nemusíš bát nic rozbít — Frank tě provede. Pár jistot na úvod:
+Vítej — *(Standa řeší CS Technologies + CS Bot, Matěj řeší Samolepák)*. Tady se nemusíš bát nic rozbít — Frank tě provede. Pár jistot na úvod:
 
 - **Nemusíš umět kódovat.** Řekneš, co chceš, a Frank to napíše a nasadí.
 - **Jak vyrobíš novou nabídku:**
@@ -87,13 +91,14 @@ Tři brandy: **cs-technologies** (weby/eshopy) · **cs-bot** (voiceboti) · **sa
 
 ## 🤖 Instrukce pro Franka (Claude)
 
-- **Na začátku session se zeptej „Adam, nebo Standa?"** (viz výše) a přepni režim.
-- **Když je to Standa, přivítej ho** a nabídni, že ho provedeš první nabídkou. Buď trpělivý,
+- **Na začátku session se zeptej „Adam, Standa, nebo Matěj?"** (viz výše) a přepni režim.
+- **Když je to Standa/Matěj, přivítej ho** a nabídni, že ho provedeš první nabídkou. Buď trpělivý,
   vysvětluj lidsky, předpokládej že nekóduje. Ukazuj výsledek (odkaz), ne kód.
+  Respektuj vlastnictví brandů: **Standa = CS Technologies + CS Bot · Matěj = Samolepák.**
 - **Když je to Adam,** můžeš rovnou do architektury/engineu a technické hloubky.
-- **Standa = nabídky, brand, komunikace.** Chce-li víc, poraď a pomoz s drobnostmi; u **zásadního
-  rozhodnutí** (architektura, engine, DB, směr projektu) ho nasměruj, ať to probere s Adamem.
-- **Pracuj se Standou samostatně.** Když mu to jde, laď to s ním. Vše podstatné zapisuj do `CHANGELOG.md`,
+- **Standa i Matěj = nabídky, brand, komunikace.** Chtějí-li víc, poraď a pomoz s drobnostmi; u **zásadního
+  rozhodnutí** (architektura, engine, DB, směr projektu) je nasměruj, ať to proberou s Adamem.
+- **Pracuj se Standou i Matějem samostatně.** Když jim to jde, laď to s nimi. Vše podstatné zapisuj do `CHANGELOG.md`,
   ať máš Adamovi co reportovat, až se příště přihlásí (a on schválí / opraví směr).
 - **Postup tvorby nabídky:** přečti `templates/nabidka.md` + `brands/<brand>/brand.md` + podklady
   klienta → vygeneruj self-contained `www/<GUID>/index.html` → ověř živé URL (HTTP 200) → pošli odkaz.

@@ -6,6 +6,12 @@ infra, architektura, struktura, nové brandy, vytvořené/smazané nabídky, kon
 
 ---
 
+## 2026-06-05 — Matěj přidán + CS Technologies koncept schválen (Adam + Frank)
+
+- **Nová role: Matěj** — stejná role jako Standa, ale vlastní brand **Samolepák** (ladí i používá). Vlastnictví brandů: Standa → CS Technologies + CS Bot · Matěj → Samolepák. Session start nově: „Adam, Standa, nebo Matěj?".
+- **CS Technologies design/styl** — Adamem **relativně schválen jako koncept**. Výhrada: dodat **SVG logo CS Technologies viditelné i na bílém pozadí** (stávající má bílý text → na světlém mizí). Drop → `podklady/cs-technologies/03-loga-a-podklady/`.
+- **SYNYT nabídka** — bude se **editovat na místě** (bez zálohy / beze změny GUID). Podklady k implementaci → `podklady/cs-technologies/synyt/`.
+
 ## 2026-06-05 — založení projektu (Adam + Frank)
 
 - **Infra:** git repo `adamcstech/nabidky` (RW deploy key, SSH alias `github-nabidky`). Hosting Váš-hosting, docroot `www/`, PHP 8.4, živé na `nabidky.cstech.cz`.
