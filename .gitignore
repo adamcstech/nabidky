@@ -21,3 +21,6 @@ Thumbs.db
 # --- Vstupní materiály (intake) — mimo git kromě README ---
 /podklady/*
 !/podklady/README.md
+
+# --- Index nabídek (klientská data) — mimo git ---
+/NABIDKY-INDEX.md
