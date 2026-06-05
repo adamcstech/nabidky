@@ -2,6 +2,7 @@
 /tmp/
 /stats/
 /www/index.php
+/_
 
 # --- OS / editor ---
 .DS_Store
