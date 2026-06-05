@@ -1,8 +1,12 @@
 # --- Hosting cruft (Váš-hosting) ---
 /tmp/
 /stats/
-/www/index.php
 /_
+
+# --- Generované nabídky (mimo git; privacy = nehádatelný GUID) ---
+# Ignoruj vše ve www/ kromě sdílených brand assetů (_assets)
+/www/*
+!/www/_assets/
 
 # --- OS / editor ---
 .DS_Store
