@@ -12,7 +12,9 @@ infra, architektura, struktura, nové brandy, vytvořené/smazané nabídky, kon
 - **CS Technologies design/styl** — Adamem **relativně schválen jako koncept**. Výhrada: dodat **SVG logo CS Technologies viditelné i na bílém pozadí** (stávající má bílý text → na světlém mizí). Drop → `podklady/cs-technologies/03-loga-a-podklady/`.
 - **SYNYT nabídka** — bude se **editovat na místě** (bez zálohy / beze změny GUID). Podklady k implementaci → `podklady/cs-technologies/synyt/`.
 - **SYNYT — platební model upraven** (edit na místě): sekce 04 přepsána na **„Harmonogram a platby"** — měsíční etapy podle kalendáře, 3 vysvětlující karty (měsíční etapy / pravidelné zálohy / průběžná kontrola), zálohový kalendář přeznačen na měsíce, zpráva „ne jedna velká částka, ale 4 pravidelné měsíční zálohy". Podmínky (sekce 10) sladěny. Návaznost na budoucí smlouvu. Podklady: `harmonogram synyt.png`, `hodiny-etapy.png`.
-- **SYNYT — provoz nacenění** (edit na místě): sekce 09 dostala měsíční paušál **od 690 Kč/měsíc bez DPH** (provoz/hosting/podpora), v měsíčním principu navazujícím na platby. *(Interpretace „690+" jako měsíční paušál — čeká na potvrzení Adama.)*
+- **SYNYT — cena navýšena o výrobní cenu díla** (edit na místě): k hodinovému rozpočtu (216 920 Kč) přidána **výrobní cena díla 690 000 Kč** → celková cena **906 920 Kč bez DPH** (1 097 373 s DPH). Zálohový kalendář přepočítán na 4 měsíční zálohy (výrobní cena rozložena rovnoměrně). *(Hodinová cena byla dle Adama silně podstřelená.)*
+- **SYNYT — SLA smlouva jako volitelné rozšíření** (sekce 05): roční poplatek **8 % z výrobní ceny = 55 200 Kč/rok**; garantované reakční doby, prioritní odbavení, **kontinuita týmu & know-how** (řeší „programátor co to dělal už u nás nepracuje"); platba ročně / půlročně +10 % / kvartálně +20 %.
+- **SYNYT — provoz vrácen do původního stavu** (sekce 09 bez ceny; dřívější „od 690 Kč/měs" byl omyl — 690k byla výrobní cena, ne měsíční paušál).
 
 ## 2026-06-05 — založení projektu (Adam + Frank)
 
