@@ -6,6 +6,11 @@ infra, architektura, struktura, nové brandy, vytvořené/smazané nabídky, kon
 
 ---
 
+## 2026-06-05 — CS Technologies: technologický směr EasyWeb → Medusa (Adam + Frank)
+
+- **Strategický posun:** CS Tech **odchází od vlastního CMS EasyWeb**. Eshopy (jako SYNYT) se nově staví na **MedusaJS** (headless commerce), Next.js/React, PostgreSQL, API-first. Promítnuto do `brands/cs-technologies/brand.md`.
+- **SYNYT — nová sekce „Technologie" (07)**: proklientské technologické shrnutí (Medusa, Next.js, Node/TS, PostgreSQL, API-first, cloud/CDN, + Redis/Docker/CI-CD/GraphQL), pozičování PROTI uzavřenému/krabicovému řešení. Účel: působit nejmoderněji a obstát, když klient nabídku ukáže svému ajťákovi. Zmínky o EasyWebu z nabídky odstraněny. Sekce přečíslovány 01–11.
+
 ## 2026-06-05 — Matěj přidán + CS Technologies koncept schválen (Adam + Frank)
 
 - **Nová role: Matěj** — stejná role jako Standa, ale vlastní brand **Samolepák** (ladí i používá). Vlastnictví brandů: Standa → CS Technologies + CS Bot · Matěj → Samolepák. Session start nově: „Adam, Standa, nebo Matěj?".
