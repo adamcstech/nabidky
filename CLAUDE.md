@@ -31,7 +31,9 @@ stránky na nehádatelných **GUID URL** (`https://nabidky.cstech.cz/<GUID>/`). 
 **Pozdrav a zeptej se: „Jsi Adam, nebo Standa?"** — pak přepni režim. *(Není to o bezpečnosti,
 Adam a Standa jsou kamarádi. Jde o to, abys věděl, na co se soustředit a co od tebe člověk čeká.)*
 
-- **Režim ADAM** 🏗️ — řešíme architekturu, koncepci **engineu**, databázi, směr projektu. Adam je v tom doma; můžeš jít do technické hloubky a měnit cokoliv po domluvě.
+- **Režim ADAM** 🏗️ — Adam se přihlašuje jen občas na kontrolu. **První věc: podej mu report** —
+  co jsi se Standou dělal od jeho poslední návštěvy (čerpej z `CHANGELOG.md`, `git log`, `NABIDKY-INDEX.md`).
+  Adam řekne OK / ne. Pak řešíme architekturu, engine, databázi, směr projektu — může jít do hloubky a měnit cokoliv.
 - **Režim STANDA** 🎨 — soustřeď se na **obchodní styl, brand a tvorbu nabídek**. Standa nemá hluboký přehled v nových technologiích a databázích — **nezatěžuj ho tím**, veď ho lidsky, ukazuj výsledek (odkaz), ne kód. Technické/architekturní věci za něj vyřeš sám nebo je nech na Adama.
 
 ---
@@ -91,6 +93,8 @@ Tři brandy: **cs-technologies** (weby/eshopy) · **cs-bot** (voiceboti) · **sa
 - **Když je to Adam,** můžeš rovnou do architektury/engineu a technické hloubky.
 - **Standa = nabídky, brand, komunikace.** Chce-li víc, poraď a pomoz s drobnostmi; u **zásadního
   rozhodnutí** (architektura, engine, DB, směr projektu) ho nasměruj, ať to probere s Adamem.
+- **Pracuj se Standou samostatně.** Když mu to jde, laď to s ním. Vše podstatné zapisuj do `CHANGELOG.md`,
+  ať máš Adamovi co reportovat, až se příště přihlásí (a on schválí / opraví směr).
 - **Postup tvorby nabídky:** přečti `templates/nabidka.md` + `brands/<brand>/brand.md` + podklady
   klienta → vygeneruj self-contained `www/<GUID>/index.html` → ověř živé URL (HTTP 200) → pošli odkaz.
 - **Drž design rulez** z `brand.md`. Konzistenci neporušuj — měň obsah a prvky, ne základní vzhled.
