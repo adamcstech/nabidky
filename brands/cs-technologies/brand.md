@@ -22,6 +22,13 @@
 - **Režim:** demo je tmavé. Otevřená otázka — sjednotit na světlý jako CS Bot? (rozhodne Standa s Adamem)
 - Volba akcentní barvy z palety, množství dekorativních prvků, ikony.
 
+## EasyWeb — politika útlumu
+Cíl: **nové zakázky na nových technologiích.** ~80 % nových poptávek → moderní stack. **Do konce roku přestáváme EasyWeb prodávat**; existující EasyWeby dál udržujeme (klidně X let). EasyWeb pro novou zakázku zvol **jen výjimečně**:
+- **Redesign**, kde klient má EasyWeb rád / umí ho a nechce měnit základ.
+- **Hodně custom řešení**, kde jsme si jistí, že EasyWeb umožní víc než otevřené platformy.
+
+Jinak default = moderní tech a velký fokus na sekci „Technologie".
+
 ## Styl komunikace (tone of voice)
 „Jsme digitální vývojáři." · „Funkční e-business a projekty, co mají skutečný smysl." · „Řešení přizpůsobujeme vašim procesům." → odborný, ale přátelský, partnerský; mluví o procesech klienta, ne o sobě.
 
