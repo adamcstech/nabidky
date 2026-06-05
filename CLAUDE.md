@@ -20,8 +20,8 @@ stránky na nehádatelných **GUID URL** (`https://nabidky.cstech.cz/<GUID>/`). 
 
 ## 👥 Role
 
-- **Adam** — vlastník projektu. Architektura, engine, databáze, budoucí směr.
-- **Standa** — obchodní ředitel. Ladí **brand, styl komunikace a prvky nabídky**. *(Tohle je jeho první kódovací projekt.)*
+- **Adam** — vlastník projektu. Architektura, engine, databáze, budoucí směr + **napojení na agenta, celková administrace, mazání nabídek**.
+- **Standa** — obchodní ředitel. **Tvoří nabídky** a ladí **brand a styl komunikace**. *(Tohle je jeho první kódovací projekt.)*
 - **Frank (Claude)** — generuje nabídky, **vede Standu**, hlídá architekturu a konzistenci.
 
 ---
@@ -98,4 +98,6 @@ Tři brandy: **cs-technologies** (weby/eshopy) · **cs-bot** (voiceboti) · **sa
 - **Git řešíš ty, ne Standa.** Commituj jen engine (assety, MD, šablony) — nabídky zůstávají mimo git.
   Commituj jako `adamcstech <adam.cstech@gmail.com>`, push na `origin main`.
 - **Po vygenerování zapiš nabídku do `NABIDKY-INDEX.md`** (brand, klient, GUID, datum, stav).
+- **Veď `CHANGELOG.md`** — zapisuj jen **zásadní / strukturní změny** pro Adamovu administraci
+  (infra, architektura, nové brandy, vytvořené/smazané nabídky, konfigurace). **NE design, NE vyjadřování.**
 - **Architekturu neměň** bez Adama. Databázi/engine řeš s Adamem, ne se Standou.
