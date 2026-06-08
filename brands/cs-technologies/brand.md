@@ -13,7 +13,7 @@
 - Jednatel: Adam Švanse.
 
 ## 🔒 Design (zamčené)
-- **Logo:** `/_assets/cs-technologies/logo.svg` (bílý wordmark + barevné tečky → pro **tmavé** pozadí).
+- **Logo (POZOR — dvě varianty kvůli přepínači režimu):** `/_assets/cs-technologies/logo.svg` (bílý text → **tmavé** pozadí) + `/_assets/cs-technologies/logo-dark.svg` (navy text → **světlé** pozadí; barevná ikona zůstává). V nabídce vlož **obě** a přepínej třídami `logo-on-dark` / `logo-on-light` (CSS dle `data-theme`). Jedno logo přes oba režimy **nestačí** — bílý text na světlém pozadí zmizí.
 - **Paleta:** navy báze `#061b31`, zelená `#0f9b4a`, tyrkysová `#02d1cb`, limetka `#deea01`, oranžová `#f06c1a`. Akcent = gradient zelená→tyrkysová.
 - **Fonty:** Poppins (text) + Roboto Slab (display nadpisy).
 - **Layout:** číslované sekce (01–11), velká ghost čísla, feature karty, ceníkové tabulky.
