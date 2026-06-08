@@ -6,6 +6,15 @@ infra, architektura, struktura, nové brandy, vytvořené/smazané nabídky, kon
 
 ---
 
+## 2026-06-08 — první OSTRÁ nabídka: JAKO SK / X2 Sport (Adam + Frank)
+
+- **Nová nabídka `CST-2026-06-JAKOSPORT`** (X2 Sport, eshop jako-sport.sk) — GUID `c799a15e-46b7-47dd-a61b-9b613653ac01`.
+- **Zadání:** klon ověřeného eshopu JAKO CZ (`jakojedenteam.cz`, naše dílo 2019) pro slovenský JAKO SK. **EasyWeb = záměrná volba** (klon → výjimka). Brand CS Technologies, tmavý režim, 11 sekcí.
+- **Cena:** 7 000 € bez DPH (≈ 175 000 Kč, pod limitem 180k), **EUR**, text nabídky **CZ**, **3 měsíční zálohy** (2 500 / 2 300 / 2 200 €), reverse charge pro SK plátce. **Bez SLA**.
+- **Napojení:** B2B sklad (p. Prouza) jako druhá instance, dopravci GLS + Packeta, ComGate, feedy Heureka.sk + Google Nákupy, hosting sdílený s JAKO CZ (p. Kulka).
+- **AI překlady (sekce 05):** automatický překlad obsahu CZ→SK přes jazykový model, **bez fixní ceny — účtováno za přeložený produkt**, sazba po testech (v nabídce jen domluva, ne číslo).
+- **Úhel:** klon od autora originálu vs. konkurenční stavba od nuly (marketér klienta tlačí jiného dodavatele).
+
 ## 2026-06-05 — CS Technologies: technologický směr EasyWeb → Medusa (Adam + Frank)
 
 - **Strategický posun:** CS Tech **odchází od vlastního CMS EasyWeb**. Eshopy (jako SYNYT) se nově staví na **MedusaJS** (headless commerce), Next.js/React, PostgreSQL, API-first. Promítnuto do `brands/cs-technologies/brand.md`.
