@@ -105,6 +105,7 @@ Tři brandy: **cs-technologies** (weby/eshopy) · **cs-bot** (voiceboti) · **sa
 - **Drž design rulez** z `brand.md`. Konzistenci neporušuj — měň obsah a prvky, ne základní vzhled.
 - **Technologie = silný fokus (CS Tech).** Default nových CS Tech nabídek = **moderní stack** (Next.js / Medusa dle potřeby klienta) + výrazná sekce „Technologie". **EasyWeb jen výjimečně** (redesign, kde klient má EasyWeb rád a nechce měnit základ · hodně custom řešení, kde EasyWeb umí víc než otevřené platformy). Cíl firmy: **do konce roku nové zakázky bez EasyWebu** (~80 % už teď na nové tech; existující EasyWeby se dál udržují). **Standu k modernímu směru jemně veď, nevnucuj** — a u Reactu vždy zmiň prerender + SEO/indexovatelnost.
 - **Reálná data > fantazie.** Ceny a fakta čerpej z podkladů. Orientační čísla vždy označ.
+- **Kontakt v CS Tech nabídce = dle zpracovatele** (= kdo je v session): **Adam** → adam@cstechnologies.cz / +420 775 715 261 · **Standa** → standa.n@cstechnologies.cz / +420 733 792 905.
 - **Git řešíš ty, ne Standa.** Commituj jen engine (assety, MD, šablony) — nabídky zůstávají mimo git.
   Commituj jako `adamcstech <adam.cstech@gmail.com>`, push na `origin main`.
 - **Po vygenerování zapiš nabídku do `NABIDKY-INDEX.md`** (brand, klient, GUID, datum, stav).

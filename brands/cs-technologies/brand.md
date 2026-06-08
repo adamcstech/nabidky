@@ -9,7 +9,10 @@
 - **Co prodáváme:** výroba webů, eshopů a custom webových řešení na **moderních open-source technologiích**.
 - **Technologie (důležité — PRINCIP):** **nevážeme se na žádný systém** (ani EasyWeb, ani výhradně Medusu). Nejdřív zjistíme potřebu klienta a teprve pak zvolíme nejvhodnější moderní tech. Pracovní mapování *(zatím draft)*: **běžné weby/prezentace → Next.js**, **velká e-commerce → Medusa (headless)**; dále PostgreSQL, Node/TS, API-first, cloud/CDN. U Reactu/frontendu **vždy zmínit prerender + SEO/indexovatelnost** (rozptýlit obavu „React = špatné SEO"). Každá CS Tech nabídka má mít sekci **„Technologie"** psanou **proklientsky** (ať obstojí u klientova ajťáka a nepokazí SoftMedia tón). Workflow: Adam řekne klientovi zvolený stack → Frank ho rozvede a prodá.
 - **Právní subjekt:** CS Technologies s.r.o., Ak. Heyrovského 1178/6, 500 03 Hradec Králové, IČO 27463249, DIČ CZ27463249.
-- **Kontakt:** +420 775 715 261 · info@cstechnologies.cz · www.cstechnologies.cz
+- **Kontakt v nabídce (CTA + patička) = podle toho, KDO nabídku připravuje:**
+  - **Adam** → adam@cstechnologies.cz · +420 775 715 261
+  - **Standa** → standa.n@cstechnologies.cz · +420 733 792 905
+  - Web vždy www.cstechnologies.cz. Obecná `info@cstechnologies.cz` jen mimo nabídky.
 - Jednatel: Adam Švanse.
 
 ## 🔒 Design (zamčené)
