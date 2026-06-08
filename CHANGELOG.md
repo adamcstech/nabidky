@@ -6,6 +6,11 @@ infra, architektura, struktura, nové brandy, vytvořené/smazané nabídky, kon
 
 ---
 
+## 2026-06-08 — push ostrých dat na GitHub (pro agenta) (Adam + Frank)
+
+- Na **vědomé rozhodnutí Adama** (private repo) pushnuta **reálná data**: všechny 4 nabídky, **celé `podklady/`** (reálné dokumenty ~6 klientů — Teamline/JAKO CZ smlouva, X2 Sport komunikace, BEST SERIES objednávka, SYNYT analýza, inerez/marine/sodokolín kalkulace) a `NABIDKY-INDEX.md`. Účel: jiná agentní session si to prozkoumá a navrhne strukturu.
+- Provedeno přes `git add -f` (cruft `index.php`/`tmp/`/`stats/` vynechán). **`.gitignore` nezměněn** → nové nabídky/podklady zůstávají defaultně mimo git (jednorázové zpřístupnění). Pozn.: data jsou nyní v git historii.
+
 ## 2026-06-08 — první OSTRÁ nabídka: JAKO SK / X2 Sport (Adam + Frank)
 
 - **Nová nabídka `CST-2026-06-JAKOSPORT`** (X2 Sport, eshop jako-sport.sk) — GUID `c799a15e-46b7-47dd-a61b-9b613653ac01`.
