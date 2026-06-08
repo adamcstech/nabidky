@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="cs" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Nabídka pro SYNYT — moderní eshop sportovního oblečení | CS Technologies</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Roboto+Slab:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#061b31; --navy-2:#0a2440; --navy-3:#0e2c4d;
+  --ink:#eaf1f8; --muted:#9fb3c8; --line:rgba(255,255,255,.09);
+  --green:#0f9b4a; --teal:#02d1cb; --lime:#cfe000; --orange:#f06c1a; --red:#e53935; --gold:#f4bd38;
+  --bg:var(--navy); --surface:rgba(255,255,255,.035); --surface-2:rgba(255,255,255,.05);
+  --card:#0c243f; --shadow:0 18px 50px rgba(0,0,0,.35);
+  --grad:linear-gradient(100deg,var(--green),var(--teal));
+  --radius:18px;
+}
+html[data-theme="light"]{
+  --navy:#f4f7fb; --navy-2:#ffffff; --navy-3:#eef3f9;
+  --ink:#0c243f; --muted:#5a6b7e; --line:rgba(6,27,49,.10);
+  --bg:#f4f7fb; --surface:rgba(6,27,49,.03); --surface-2:rgba(6,27,49,.05);
+  --card:#ffffff; --shadow:0 18px 50px rgba(6,27,49,.10);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"Poppins",system-ui,sans-serif;background:var(--bg);color:var(--ink);
+  line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden;transition:background .4s,color .4s;
+}
+.wrap{max-width:1060px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:"Roboto Slab",serif;line-height:1.15;letter-spacing:-.02em}
+a{color:var(--teal);text-decoration:none}
+.accent{color:var(--orange)}
+
+/* progress + topbar */
+#progress{position:fixed;top:0;left:0;height:3px;width:0;background:var(--grad);z-index:100;transition:width .1s}
+.topbar{position:sticky;top:0;z-index:90;backdrop-filter:blur(12px);
+  background:color-mix(in srgb,var(--bg) 78%,transparent);border-bottom:1px solid var(--line)}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.topbar img{height:30px;display:block}
+.topbar img.logo-on-light,.foot img.logo-on-light{display:none}
+html[data-theme="light"] .topbar img.logo-on-dark,html[data-theme="light"] .foot img.logo-on-dark{display:none}
+html[data-theme="light"] .topbar img.logo-on-light,html[data-theme="light"] .foot img.logo-on-light{display:block}
+.tb-right{display:flex;align-items:center;gap:14px}
+.tag{font-size:12px;color:var(--muted);border:1px solid var(--line);padding:5px 11px;border-radius:99px}
+.toggle{cursor:pointer;background:var(--surface);border:1px solid var(--line);color:var(--ink);
+  width:40px;height:40px;border-radius:11px;font-size:17px;display:grid;place-items:center;transition:.2s}
+.toggle:hover{background:var(--surface-2)}
+
+/* hero */
+.hero{position:relative;padding:96px 0 76px;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;
+  background:radial-gradient(800px 380px at 78% -8%,rgba(2,209,203,.22),transparent 60%),
+             radial-gradient(680px 360px at 8% 18%,rgba(15,155,74,.20),transparent 60%),
+             radial-gradient(560px 300px at 60% 110%,rgba(240,108,26,.14),transparent 60%)}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:13px;font-weight:600;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--teal);margin-bottom:22px}
+.eyebrow .dot{width:8px;height:8px;border-radius:99px;background:var(--orange);box-shadow:0 0 0 4px rgba(240,108,26,.18)}
+.hero h1{font-size:clamp(34px,6vw,62px);font-weight:800;margin-bottom:18px}
+.hero h1 .em{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p.lead{font-size:clamp(17px,2.4vw,21px);color:var(--muted);max-width:680px}
+.meta{display:flex;flex-wrap:wrap;gap:14px;margin-top:40px}
+.meta .m{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 18px;min-width:150px}
+.meta .m span{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.meta .m strong{font-size:16px;font-weight:600}
+
+/* sections */
+section.block{padding:70px 0;border-top:1px solid var(--line)}
+.sec-head{display:flex;align-items:flex-start;gap:22px;margin-bottom:34px}
+.sec-num{font-family:"Roboto Slab",serif;font-weight:800;font-size:clamp(40px,7vw,72px);line-height:.9;
+  background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;opacity:.95;min-width:1.6em}
+.sec-head h2{font-size:clamp(25px,3.6vw,36px);font-weight:700;margin-bottom:8px}
+.sec-head .sub{color:var(--muted);font-family:"Poppins",sans-serif;font-size:15px}
+
+/* generic cards */
+.grid{display:grid;gap:18px}
+.g2{grid-template-columns:repeat(2,1fr)} .g3{grid-template-columns:repeat(3,1fr)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow)}
+.card h3{font-size:18px;font-weight:600;margin-bottom:8px;font-family:"Poppins",sans-serif}
+.card p{color:var(--muted);font-size:15px}
+.icon{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;margin-bottom:14px;
+  background:var(--surface-2);font-size:20px}
+.feat{display:flex;gap:13px;align-items:flex-start;padding:13px 0;border-bottom:1px solid var(--line)}
+.feat:last-child{border-bottom:0}
+.feat .ck{flex:0 0 auto;width:22px;height:22px;border-radius:7px;background:var(--grad);display:grid;place-items:center;
+  color:#04121f;font-weight:800;font-size:13px;margin-top:3px}
+.feat b{font-weight:600} .feat span{color:var(--muted);font-size:14px}
+
+ul.clean{list-style:none;display:grid;gap:11px;margin-top:6px}
+ul.clean li{display:flex;gap:12px;color:var(--muted);font-size:15px}
+ul.clean li::before{content:"";flex:0 0 auto;width:7px;height:7px;border-radius:99px;background:var(--teal);margin-top:9px}
+
+/* price */
+.price-hero{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:30px;box-shadow:var(--shadow);
+  display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:18px;margin-bottom:26px;position:relative;overflow:hidden}
+.price-hero::after{content:"";position:absolute;right:-40px;top:-40px;width:220px;height:220px;border-radius:50%;
+  background:var(--grad);filter:blur(70px);opacity:.25}
+.price-hero .big{font-family:"Roboto Slab",serif;font-size:clamp(34px,6vw,52px);font-weight:800}
+.price-hero .big small{display:block;font-size:14px;font-family:"Poppins",sans-serif;color:var(--muted);font-weight:500;letter-spacing:.04em}
+.pill{display:inline-block;font-size:13px;font-weight:600;padding:6px 13px;border-radius:99px;background:rgba(15,155,74,.16);color:var(--green);border:1px solid rgba(15,155,74,.3)}
+table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+th,td{padding:13px 16px;text-align:left;font-size:14.5px;border-bottom:1px solid var(--line)}
+th{background:var(--surface-2);font-weight:600;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+tr:last-child td{border-bottom:0}
+tr.total td{background:var(--surface-2);font-weight:700;font-size:16px}
+tr.total td .accent{font-family:"Roboto Slab",serif}
+tr.sub td{color:var(--green)}
+.tbl-wrap{overflow-x:auto;border-radius:var(--radius)}
+
+/* timeline */
+.tl{display:grid;gap:0}
+.tl .et{display:grid;grid-template-columns:auto 1fr;gap:22px}
+.tl .marker{display:flex;flex-direction:column;align-items:center}
+.tl .dot{width:44px;height:44px;border-radius:13px;background:var(--grad);display:grid;place-items:center;
+  font-family:"Roboto Slab",serif;font-weight:800;color:#04121f;font-size:18px;flex:0 0 auto}
+.tl .bar{width:2px;flex:1;background:var(--line);margin:6px 0}
+.tl .et:last-child .bar{display:none}
+.tl .body{padding-bottom:30px}
+.tl .body h3{font-size:19px;font-family:"Poppins",sans-serif;font-weight:600;margin-bottom:4px}
+.tl .body .when{font-size:13px;color:var(--teal);font-weight:600;margin-bottom:10px}
+.tl .body p{color:var(--muted);font-size:14.5px}
+
+/* steps */
+.steps{counter-reset:s;display:grid;gap:16px}
+.step{display:flex;gap:18px;align-items:flex-start;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px 20px}
+.step::before{counter-increment:s;content:counter(s);flex:0 0 auto;width:34px;height:34px;border-radius:10px;
+  background:var(--surface-2);border:1px solid var(--line);display:grid;place-items:center;font-weight:700;color:var(--orange)}
+.step b{font-weight:600} .step p{color:var(--muted);font-size:14.5px;margin-top:2px}
+
+.note{font-size:13.5px;color:var(--muted);background:var(--surface);border:1px solid var(--line);
+  border-left:3px solid var(--orange);border-radius:10px;padding:14px 16px;margin-top:18px}
+
+/* cta + footer */
+.cta{margin:30px 0 0;background:var(--card);border:1px solid var(--line);border-radius:22px;padding:40px;text-align:center;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.cta::before{content:"";position:absolute;inset:0;z-index:0;opacity:.5;
+  background:radial-gradient(500px 200px at 50% -20%,rgba(2,209,203,.22),transparent 60%)}
+.cta>*{position:relative}
+.cta h2{font-size:clamp(24px,4vw,34px);margin-bottom:12px}
+.cta p{color:var(--muted);max-width:540px;margin:0 auto 24px}
+.btn{display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:16px;padding:15px 28px;border-radius:13px;
+  background:var(--grad);color:#04121f;transition:transform .15s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(2,209,203,.3)}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line);margin-left:10px}
+footer{border-top:1px solid var(--line);padding:50px 0 60px;margin-top:60px}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:26px}
+.foot img{height:34px;margin-bottom:14px}
+.foot .col p{color:var(--muted);font-size:13.5px;line-height:1.8}
+.foot a{color:var(--muted)}.foot a:hover{color:var(--teal)}
+.legal{margin-top:30px;padding-top:22px;border-top:1px solid var(--line);font-size:12.5px;color:var(--muted);display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-between}
+
+@media(max-width:760px){
+  .g2,.g3{grid-template-columns:1fr}
+  .sec-head{gap:14px}.sec-num{min-width:auto}
+  .topbar .tag{display:none}
+  .hero{padding:64px 0 54px}
+}
+</style>
+</head>
+<body>
+<div id="progress"></div>
+
+<header class="topbar">
+  <div class="wrap">
+    <img class="logo-on-dark" src="/_assets/cs-technologies/logo.svg" alt="CS Technologies">
+    <img class="logo-on-light" src="/_assets/cs-technologies/logo-dark.svg" alt="CS Technologies">
+    <div class="tb-right">
+      <span class="tag">Nabídka&nbsp;·&nbsp;SYNYT</span>
+      <button class="toggle" id="themeBtn" title="Přepnout světlý/tmavý režim" aria-label="Přepnout režim">◐</button>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow"><span class="dot"></span> Cenová nabídka · CST-2026-06-SYNYT</div>
+    <h1>Nový eshop pro <span class="em">SYNYT</span><br>na míru výrobě sportovního oblečení</h1>
+    <p class="lead">Moderní, rychlý a plně řiditelný eshop s nákupem pro celé týmy, customizací dresů a napojením přímo na vaši výrobu. Připraveno na 3D konfigurátor potisku do budoucna.</p>
+    <div class="meta">
+      <div class="m"><span>Pro</span><strong>SYNYT, s.r.o.</strong></div>
+      <div class="m"><span>Od</span><strong>CS Technologies s.r.o.</strong></div>
+      <div class="m"><span>Datum</span><strong>5. 6. 2026</strong></div>
+      <div class="m"><span>Platnost</span><strong>30 dní</strong></div>
+    </div>
+  </div>
+</section>
+
+<!-- 01 -->
+<section class="block" id="zadani">
+  <div class="wrap">
+    <div class="sec-head"><div class="sec-num">01</div>
+      <div><h2>Porozumění zadání</h2><div class="sub">Co řešíme a proč do toho jdeme</div></div></div>
+    <div class="grid g2" style="margin-bottom:26px">
+      <div class="card"><div class="icon">🎯</div><h3>Z Wixu na vlastní řešení</h3>
+        <p>Současný web na Wixu vás limituje. Postavíme eshop na moderní otevřené platformě, kterou plně vlastníte — bez měsíčních stropů uzavřených řešení a s prostorem neomezeně růst.</p></div>
+      <div class="card"><div class="icon">👕</div><h3>Prodej na míru výrobě</h3>
+        <p>Od obyčejné poptávky, přes výběr předpřipravených designů, až po nákup pro celý tým s jmény a čísly hráčů a logy sponzorů — přesně podle toho, jak reálně vyrábíte.</p></div>
+    </div>
+    <ul class="clean">
+      <li><b style="color:var(--ink)">Katalog na míru</b>&nbsp;— produktové třídy, libovolné parametry, filtrování dle barevnosti a množstevní slevy.</li>
+      <li><b style="color:var(--ink)">Nákup pro tým</b>&nbsp;— seznam hráčů, velikosti, jména, čísla, loga partnerů předané rovnou do výroby.</li>
+      <li><b style="color:var(--ink)">Napojení na výrobu</b>&nbsp;— automatický přenos objednávek a stavů do MJ Soft přes FTP/XML.</li>
+      <li><b style="color:var(--ink)">Připraveno na budoucnost</b>&nbsp;— architektura myslí na 3D konfigurátor potisku dresů.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 02 -->
+<section class="block" id="funkce">
+  <div class="wrap">
+    <div class="sec-head"><div class="sec-num">02</div>
+      <div><h2>Co eshop bude umět</h2><div class="sub">Funkční jádro postavené na moderní headless platformě Medusa</div></div></div>
+    <div class="grid g3">
+      <div class="card"><div class="icon">🗂️</div><h3>Katalog &amp; produkty</h3><p>Produktové třídy s libovolnými atributy, multijazyčnost, ceníky, víceúrovňová kategorizace.</p></div>
+      <div class="card"><div class="icon">🎨</div><h3>Filtrování dle barev</h3><p>Chytré filtry nastavitelné u libovolné kategorie — důraz na filtrování podle barevnosti.</p></div>
+      <div class="card"><div class="icon">📉</div><h3>Množstevní slevy</h3><p>N typů slevových propadů (2 ks −10 %, 5 ks −20 % …) navázaných na konkrétní produkty.</p></div>
+      <div class="card"><div class="icon">👥</div><h3>Nákup pro tým</h3><p>Velikosti, jména a čísla hráčů, název týmu, loga sponzorů — vše předané do výroby.</p></div>
+      <div class="card"><div class="icon">🛒</div><h3>Košík ve 3 krocích</h3><p>Rekapitulace → doprava a platba → údaje a odeslání. Doprava zdarma dle pravidel.</p></div>
+      <div class="card"><div class="icon">🚚</div><h3>Doprava &amp; platba</h3><p>DPD (CZ/SK), Zásilkovna, Balíkovna, osobní odběr Solnice. Platby přes bránu Comgate i dobírka.</p></div>
+      <div class="card"><div class="icon">📰</div><h3>Obsah &amp; reference</h3><p>Články a aktuality, profily „lidé", reference „oblékli jsme" — provázané s produkty.</p></div>
+      <div class="card"><div class="icon">👤</div><h3>Zákaznický účet</h3><p>Registrace, přihlášení, správa údajů, historie objednávek a obnova hesla.</p></div>
+      <div class="card"><div class="icon">🔍</div><h3>SEO &amp; srovnávače</h3><p>Redirect 1:1 ze starých adres, GA4 + Tag Manager, XML feedy pro Zboží, Heureku a Google.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 -->
+<section class="block" id="cena">
+  <div class="wrap">
+    <div class="sec-head"><div class="sec-num">03</div>
+      <div><h2>Rozsah a cena</h2><div class="sub">Kompletní dodávka eshopu na klíč</div></div></div>
+    <div class="price-hero">
+      <div class="big">906&nbsp;920&nbsp;Kč <small>bez DPH · kompletní dodávka eshopu na klíč</small></div>
+      <div style="text-align:right">
+        <span class="pill">práce + výrobní cena díla</span>
+        <div style="margin-top:10px;color:var(--muted);font-size:14px">1&nbsp;097&nbsp;373&nbsp;Kč s DPH (21 %)</div>
+      </div>
+    </div>
+    <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>Popis</th><th class="num">Hodin</th><th class="num">Cena (bez DPH)</th></tr></thead>
+      <tbody>
+        <tr><td>Grafika &amp; návrh designu</td><td class="num">20</td><td class="num">28 000 Kč</td></tr>
+        <tr><td>Kodérské práce (HTML/CSS, responzivní šablony)</td><td class="num">25</td><td class="num">35 000 Kč</td></tr>
+        <tr><td>Programátorské práce (moduly, košík, integrace)</td><td class="num">71</td><td class="num">127 800 Kč</td></tr>
+        <tr><td>Account management</td><td class="num">30,5</td><td class="num">42 700 Kč</td></tr>
+        <tr><td>Řízení projektu</td><td class="num">15,5</td><td class="num">21 700 Kč</td></tr>
+        <tr><td><b>Mezisoučet práce</b></td><td class="num">162</td><td class="num">255 200 Kč</td></tr>
+        <tr class="sub"><td>Sleva 15 %</td><td class="num">—</td><td class="num">− 38 280 Kč</td></tr>
+        <tr><td>Práce celkem (hodinový rozpočet)</td><td class="num">162</td><td class="num">216 920 Kč</td></tr>
+        <tr><td><b>Výrobní cena díla</b> <span style="color:var(--muted);font-weight:400">— hodnota vyvinutého řešení</span></td><td class="num">—</td><td class="num">690 000 Kč</td></tr>
+        <tr class="total"><td>Celková cena bez DPH</td><td class="num"></td><td class="num"><span class="accent">906 920 Kč</span></td></tr>
+        <tr class="total"><td>Celková cena s DPH (21 %)</td><td class="num"></td><td class="num">1 097 373 Kč</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="note"><b style="color:var(--ink)">Výrobní cena díla</b> pokrývá hodnotu vyvinutého řešení — vlastní systém, jeho funkce, integrace a nasazení — nad rámec odpracovaných hodin. Hodinový rozpočet pokrývá samotnou realizaci na klíč (grafika, kódování, programování, napojení na dopravce, platební bránu a MJ Soft, SEO a spuštění).</div>
+  </div>
+</section>
+
+<!-- 04 -->
+<section class="block" id="harmonogram">
+  <div class="wrap">
+    <div class="sec-head"><div class="sec-num">04</div>
+      <div><h2>Harmonogram a platby</h2><div class="sub">4 měsíční etapy podle kalendáře — platíte v pravidelných měsíčních zálohách, ne najednou</div></div></div>
+    <div class="tl" style="margin-bottom:30px">
+      <div class="et"><div class="marker"><div class="dot">1</div><div class="bar"></div></div>
+        <div class="body"><h3>Návrh designu &amp; jádro katalogu</h3><div class="when">1. měsíc · týdny 1–4</div>
+          <p>Vizuální návrh šablon dle drátěného modelu, kodérské práce, konfigurace platformy a databáze (produkty, články, lidé, reference, uživatelé, objednávky, množstevní slevy).</p></div></div>
+      <div class="et"><div class="marker"><div class="dot">2</div><div class="bar"></div></div>
+        <div class="body"><h3>Filtry, slevy &amp; nákup pro tým</h3><div class="when">2. měsíc · týdny 5–8</div>
+          <p>Filtrování dle barevnosti, modul množstevních slev a start realizace nákupu pro tým — předání seznamu hráčů, velikostí, jmen, čísel a log do výroby.</p></div></div>
+      <div class="et"><div class="marker"><div class="dot">3</div><div class="bar"></div></div>
+        <div class="body"><h3>Košík, doprava &amp; platby</h3><div class="when">3. měsíc · týdny 9–12</div>
+          <p>Košík ve třech krocích, dopravci (DPD, Zásilkovna, Balíkovna, osobní odběr), platební brána Comgate a dobírka.</p></div></div>
+      <div class="et"><div class="marker"><div class="dot">4</div><div class="bar"></div></div>
+        <div class="body"><h3>Napojení na výrobu, SEO &amp; spuštění</h3><div class="when">4. měsíc · týdny 13–16</div>
+          <p>Export objednávek do MJ Soft (FTP/XML), redirect 1:1, analytika a XML feedy, finální ladění, testování a ostré spuštění.</p></div></div>
+    </div>
+
+    <h3 style="font-family:'Poppins',sans-serif;font-size:18px;font-weight:600;margin:6px 0 16px">Jak fungují platby</h3>
+    <div class="grid g3" style="margin-bottom:22px">
+      <div class="card"><div class="icon">📅</div><h3>Měsíční etapy</h3><p>Práce běží v kalendářních měsících — např. od 15. 4. do 15. 5. Každá etapa = jeden měsíc.</p></div>
+      <div class="card"><div class="icon">💳</div><h3>Pravidelné zálohy</h3><p>Neplatíte celou částku najednou ani ve dvou splátkách — platíte zálohu vždy na nadcházející měsíc.</p></div>
+      <div class="card"><div class="icon">✅</div><h3>Průběžná kontrola</h3><p>Zaplacením další měsíční zálohy zároveň schvalujete předchozí dokončenou etapu.</p></div>
+    </div>
+    <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>Měsíční etapa</th><th class="num">Záloha bez DPH</th><th class="num">Záloha s DPH</th><th>Splatnost</th></tr></thead>
+      <tbody>
+        <tr><td>1. měsíc</td><td class="num">217 788 Kč</td><td class="num">263 523 Kč</td><td>při podpisu</td></tr>
+        <tr><td>2. měsíc</td><td class="num">223 392 Kč</td><td class="num">270 304 Kč</td><td>před 2. měsícem</td></tr>
+        <tr><td>3. měsíc</td><td class="num">238 602 Kč</td><td class="num">288 708 Kč</td><td>před 3. měsícem</td></tr>
+        <tr><td>4. měsíc</td><td class="num">227 138 Kč</td><td class="num">274 838 Kč</td><td>před 4. měsícem</td></tr>
+        <tr class="total"><td>Celkem</td><td class="num"><span class="accent">906 920 Kč</span></td><td class="num">1 097 373 Kč</td><td></td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="note">Celková cena (práce + výrobní cena díla) je rozložená do <b style="color:var(--ink)">4 pravidelných měsíčních záloh</b> (průměrně ≈ 227 000 Kč bez DPH měsíčně) — místo jedné velké částky. Konkrétní data navážeme na datum podpisu a <b style="color:var(--ink)">tyto platební podmínky přecházejí beze změny do smlouvy</b>. Dodržení harmonogramu je podmíněno součinností objednatele (dodání podkladů, obsahu a produktových dat).</div>
+  </div>
+</section>
+
+<!-- 05 -->
+<section class="block" id="rozsireni">
+  <div class="wrap">
+    <div class="sec-head"><div class="sec-num">05</div>
+      <div><h2>Volitelná rozšíření</h2><div class="sub">Můžeme přidat kdykoliv — teď nebo v další fázi</div></div></div>
+    <div class="grid g2">
+      <div class="card"><div class="icon">🧩</div><h3>3D konfigurátor potisku dresů</h3>
+        <p>Zákazník si dres navrhne ve 3D v reálném čase — barvy, vzory, jména, čísla, loga. Z návrhu vznikne automaticky tiskový soubor pro výrobu. Stavíme na ověřených platformách (Simplio3D, Zakeke, KitBuilder) napojených přes API.</p>
+        <p style="margin-top:12px"><span class="pill">samostatná kalkulace dle zvolené platformy</span></p></div>
+      <div class="card"><div class="icon">🌍</div><h3>Jazykové mutace</h3>
+        <p>Rozšíření katalogu i obsahu do dalších jazyků (SK, EN, DE…) s automatizovaným překladem produktů a obsahu pomocí AI a samostatnou měnou pro každý trh.</p>
+        <p style="margin-top:12px"><span class="pill">cena na vyžádání</span></p></div>
+    </div>
+
+    <div class="card" style="margin-top:18px;border-color:rgba(2,209,203,.45)">
+      <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px;margin-bottom:8px">
+        <h3 style="font-size:20px">🤝 SLA smlouva — garance a kontinuita</h3>
+        <span class="pill">8 % z výrobní ceny ročně · 55&nbsp;200 Kč / rok</span>
+      </div>
+      <p style="color:var(--muted);font-size:15px;margin-bottom:16px">Volitelné rozšíření, ze kterého teprve plyne závazek a garance. Hlavní přínos: <b style="color:var(--ink)">udržíme pro vás vývojový tým a know-how</b> — nehrozí situace „programátor, který to dělal, už u nás nepracuje".</p>
+      <div class="grid g2">
+        <div>
+          <div class="feat"><div class="ck">✓</div><div><b>Garantované reakční doby</b><br><span>Závazek rychlosti odezvy na nahlášené požadavky.</span></div></div>
+          <div class="feat"><div class="ck">✓</div><div><b>Prioritní odbavení</b><br><span>Vaše požadavky řešíme přednostně před ostatními.</span></div></div>
+        </div>
+        <div>
+          <div class="feat"><div class="ck">✓</div><div><b>Kontinuita týmu &amp; know-how</b><br><span>Přebíráme odpovědnost za udržení znalostí o vašem řešení.</span></div></div>
+          <div class="feat"><div class="ck">✓</div><div><b>Flexibilní platba</b><br><span>Ročně · půlročně&nbsp;+10&nbsp;% · kvartálně&nbsp;+20&nbsp;%.</span></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 06 -->
+<section class="block" id="integrace">
+  <div class="wrap">
+    <div class="sec-head"><div class="sec-num">06</div>
+      <div><h2>Integrace &amp; napojení</h2><div class="sub">Eshop, který zapadne do vašich procesů</div></div></div>
+    <div class="grid g2">
+      <div class="card">
+        <div class="feat"><div class="ck">✓</div><div><b>MJ Soft (výroba)</b><br><span>Export objednávek přes FTP/XML, zpětná změna stavu a stahování dokumentů přes endpoint na webu.</span></div></div>
+        <div class="feat"><div class="ck">✓</div><div><b>Dopravci</b><br><span>DPD (CZ/SK), DPD Pickup, Česká pošta + Balíkovna, Zásilkovna, One Courier, osobní odběr Solnice.</span></div></div>
+      </div>
+      <div class="card">
+        <div class="feat"><div class="ck">✓</div><div><b>Platby</b><br><span>Platební brána Comgate, dobírka, platba při osobním převzetí.</span></div></div>
+        <div class="feat"><div class="ck">✓</div><div><b>Marketing &amp; analytika</b><br><span>GA4, Google Tag Manager, cookie panel se souhlasy, XML feedy pro Zboží.cz, Heureku a Google Merchant.</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 07 -->
+<section class="block" id="technologie">
+  <div class="wrap">
+    <div class="sec-head"><div class="sec-num">07</div>
+      <div><h2>Technologie</h2><div class="sub">Nejdřív zjistíme, co potřebujete — pak zvolíme nejvhodnější technologie</div></div></div>
+    <p style="color:var(--muted);font-size:16px;max-width:820px;margin-bottom:26px">Nevážeme se na žádný jediný systém ani zastaralou krabicovou platformu. Vždy nejprve poznáme vaše potřeby a teprve podle nich zvolíme <b style="color:var(--ink)">nejvhodnější moderní technologie</b>. Běžné weby a prezentace stavíme na <b style="color:var(--ink)">Next.js</b>, velká e-commerce řešení — jako to vaše — na <b style="color:var(--ink)">headless platformě Medusa</b>. Výsledek je rychlý, bezpečný, skvěle dohledatelný ve vyhledávačích a celý ho <b style="color:var(--ink)">plně vlastníte</b>.</p>
+    <div class="grid g3">
+      <div class="card"><div class="icon">🛒</div><h3>Medusa</h3><p>Moderní open-source e-commerce engine pro vaše velké řešení — katalog, objednávky, ceny i sklady. Stejný směr volí špičkové e-shopy po světě.</p></div>
+      <div class="card"><div class="icon">⚡</div><h3>Next.js &amp; React</h3><p>Bleskově rychlý frontend s <b style="color:var(--ink)">prerenderem</b> — okamžité načítání a perfektní výkon na mobilu i velkých obrazovkách.</p></div>
+      <div class="card"><div class="icon">🔎</div><h3>SEO &amp; indexovatelnost</h3><p>Díky prerenderu (server-side rendering) si Google i Seznam web <b style="color:var(--ink)">bez problémů přečtou a zaindexují</b> — moderní frontend bez SEO kompromisů.</p></div>
+      <div class="card"><div class="icon">🗄️</div><h3>PostgreSQL</h3><p>Robustní, prověřená databáze pro vaše produkty, objednávky a zákazníky.</p></div>
+      <div class="card"><div class="icon">🔗</div><h3>API-first</h3><p>Vše propojitelné přes API — čisté integrace na MJ Soft, dopravce i platební bránu.</p></div>
+      <div class="card"><div class="icon">☁️</div><h3>Cloud hosting &amp; CDN</h3><p>Rychlé načítání odkudkoliv, vysoká dostupnost a automatické zálohy.</p></div>
+    </div>
+    <p style="color:var(--muted);font-size:13.5px;margin-top:16px">Součástí stacku dále: Node.js &amp; TypeScript, Redis (cache), Docker, CI/CD, REST &amp; GraphQL API, zabezpečené platební brány.</p>
+    <div class="note"><b style="color:var(--ink)">Technologie vybíráme na míru vašemu zadání — ne naopak.</b> Výsledkem je rychlost, bezpečnost, výborné SEO a svoboda růst. Žádné zastaralé krabicové řešení, ale architektura připravená na roky dopředu, včetně AI a dalších rozšíření (např. 3D konfigurátor).</div>
+  </div>
+</section>
+
+<!-- 08 -->
+<section class="block" id="predpoklady">
+  <div class="wrap">
+    <div class="sec-head"><div class="sec-num">08</div>
+      <div><h2>Předpoklady a součinnost</h2><div class="sub">Co od vás budeme potřebovat, aby vše klaplo</div></div></div>
+    <ul class="clean">
+      <li>Zpětná vazba a schválení vizuálních návrhů, korektury.</li>
+      <li>Dodání obsahu — texty, produktová data, fotky, demo data pro články a reference.</li>
+      <li>Smlouva a přístupy k platební bráně Comgate (testovací provoz).</li>
+      <li>Identifikátory dopravců (DPD apod.) pro implementaci.</li>
+      <li>Součinnost pana Jelena z MJ Soft při testování přenosu objednávek.</li>
+      <li>Přístupy k doméně, GA4 a Search Console pro nastavení a redirecty.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 09 -->
+<section class="block" id="kroky">
+  <div class="wrap">
+    <div class="sec-head"><div class="sec-num">09</div>
+      <div><h2>Jak budeme postupovat</h2><div class="sub">Od odsouhlasení k hotovému eshopu</div></div></div>
+    <div class="steps">
+      <div class="step"><div><b>Společný hovor</b><p>Projdeme nabídku, doladíme rozsah a odpovíme na otázky.</p></div></div>
+      <div class="step"><div><b>Upřesnění a smlouva</b><p>Finalizujeme specifikaci díla, harmonogram a zálohový kalendář.</p></div></div>
+      <div class="step"><div><b>Podklady a přístupy</b><p>Předáte nám obsah, produktová data a potřebné přístupy.</p></div></div>
+      <div class="step"><div><b>Realizace ve 4 etapách</b><p>Postupně stavíme, průběžně ukazujeme a ladíme s vámi.</p></div></div>
+      <div class="step"><div><b>Testování a spuštění</b><p>Výstupní kontrola, přenos dat do výroby a ostrý start.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 10 -->
+<section class="block" id="provoz">
+  <div class="wrap">
+    <div class="sec-head"><div class="sec-num">10</div>
+      <div><h2>Provoz, hosting a podpora</h2><div class="sub">O web se postaráme i po spuštění</div></div></div>
+    <div class="grid g3">
+      <div class="card"><div class="icon">🛡️</div><h3>Hosting &amp; bezpečnost</h3><p>Vlastní hosting s SSL, pravidelné aktualizace, zálohy a monitoring dostupnosti.</p></div>
+      <div class="card"><div class="icon">✉️</div><h3>E-mail &amp; doména</h3><p>Správa domény a e-mailových schránek, webmail, technické zázemí na jednom místě.</p></div>
+      <div class="card"><div class="icon">🤝</div><h3>Rozvoj &amp; konzultace</h3><p>Průběžný rozvoj eshopu, drobné úpravy a konzultace dle zvoleného tarifu podpory.</p></div>
+    </div>
+    <div class="note">Konkrétní tarif provozu a podpory nastavíme podle reálného provozu eshopu — ceny rádi upřesníme na společném hovoru.</div>
+  </div>
+</section>
+
+<!-- 11 -->
+<section class="block" id="podminky">
+  <div class="wrap">
+    <div class="sec-head"><div class="sec-num">11</div>
+      <div><h2>Podmínky nabídky</h2><div class="sub">Pár vět na závěr</div></div></div>
+    <ul class="clean">
+      <li>Všechny ceny jsou uvedeny <b style="color:var(--ink)">bez DPH</b>, pokud není uvedeno jinak. DPH 21 %.</li>
+      <li>Platba probíhá v <b style="color:var(--ink)">pravidelných měsíčních zálohách</b> dle zálohového kalendáře (viz sekce 04) — ne jednorázově.</li>
+      <li>Nabídka platí <b style="color:var(--ink)">30 dní</b> od data vystavení (5. 6. 2026).</li>
+      <li>Práce nad rámec odsouhlasené specifikace řešíme samostatně dohodou.</li>
+      <li>Volitelná rozšíření lze objednat kdykoliv v průběhu i po dokončení projektu.</li>
+    </ul>
+
+    <div class="cta">
+      <h2>Pojďme to rozjet 🚀</h2>
+      <p>Líbí se vám směr? Domluvme si krátký hovor, doladíme detaily a můžeme začít.</p>
+      <a class="btn" href="mailto:info@cstechnologies.cz?subject=Nabídka%20eshopu%20SYNYT%20—%20CST-2026-06-SYNYT">Mám zájem, ozvěte se</a>
+      <a class="btn ghost" href="tel:+420775715261">+420 775 715 261</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div class="col" style="max-width:340px">
+        <img class="logo-on-dark" src="/_assets/cs-technologies/logo.svg" alt="CS Technologies">
+        <img class="logo-on-light" src="/_assets/cs-technologies/logo-dark.svg" alt="CS Technologies">
+        <p>Jsme digitální vývojáři. Stavíme funkční e-business a projekty, co mají skutečný smysl — řešení přizpůsobujeme vašim procesům.</p>
+      </div>
+      <div class="col">
+        <p><b style="color:var(--ink)">CS Technologies s.r.o.</b><br>
+        Ak. Heyrovského 1178/6<br>500 03 Hradec Králové<br>
+        IČO: 27463249 · DIČ: CZ27463249</p>
+      </div>
+      <div class="col">
+        <p><b style="color:var(--ink)">Kontakt</b><br>
+        <a href="tel:+420775715261">+420 775 715 261</a><br>
+        <a href="mailto:info@cstechnologies.cz">info@cstechnologies.cz</a><br>
+        <a href="https://www.cstechnologies.cz">www.cstechnologies.cz</a></p>
+      </div>
+    </div>
+    <div class="legal">
+      <span>© 2026 CS Technologies s.r.o. — Nabídka CST-2026-06-SYNYT</span>
+      <span>Důvěrné · určeno výhradně pro SYNYT, s.r.o.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// theme toggle (respektuje uložené nastavení)
+const root=document.documentElement, btn=document.getElementById('themeBtn');
+const saved=localStorage.getItem('cst-theme'); if(saved) root.setAttribute('data-theme',saved);
+btn.addEventListener('click',()=>{const n=root.getAttribute('data-theme')==='dark'?'light':'dark';
+  root.setAttribute('data-theme',n);localStorage.setItem('cst-theme',n);});
+// scroll progress
+const bar=document.getElementById('progress');
+addEventListener('scroll',()=>{const h=document.documentElement;
+  bar.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';},{passive:true});
+</script>
+</body>
+</html>

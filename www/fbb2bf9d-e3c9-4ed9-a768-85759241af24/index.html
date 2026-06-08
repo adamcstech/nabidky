@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="cs" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Zakázkové samolepky pro náborovou kampaň Policie ČR | Samolepák.cz</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#111236; --ink:#111236; --muted:#5b5d72; --line:rgba(17,18,54,.12);
+  --red:#dd232e; --red-2:#f5003e; --yellow:#edc00f; --blue:#008ed6; --green:#00cf01;
+  --bg:#ffffff; --bg-2:#f6f7fb; --surface:rgba(17,18,54,.035); --surface-2:rgba(17,18,54,.06);
+  --card:#ffffff; --shadow:0 18px 50px rgba(17,18,54,.10);
+  --grad:linear-gradient(100deg,var(--red),var(--red-2));
+  --radius:18px;
+}
+html[data-theme="dark"]{
+  --ink:#eef0fb; --muted:#a6a8c4; --line:rgba(255,255,255,.10);
+  --bg:#0d0e24; --bg-2:#141633; --surface:rgba(255,255,255,.04); --surface-2:rgba(255,255,255,.07);
+  --card:#171935; --shadow:0 18px 50px rgba(0,0,0,.4);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Poppins",system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden;transition:background .4s,color .4s}
+.wrap{max-width:1060px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:"Poppins",sans-serif;line-height:1.1;letter-spacing:-.02em;font-weight:800}
+a{color:var(--red);text-decoration:none}.accent{color:var(--red)}
+#progress{position:fixed;top:0;left:0;height:4px;width:0;background:var(--grad);z-index:100;transition:width .1s}
+.topbar{position:sticky;top:0;z-index:90;backdrop-filter:blur(12px);background:color-mix(in srgb,var(--bg) 82%,transparent);border-bottom:1px solid var(--line)}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.topbar img{height:30px;display:block}
+html[data-theme="dark"] .topbar img{filter:brightness(0) invert(1)}
+.tb-right{display:flex;align-items:center;gap:14px}
+.tag{font-size:12px;color:var(--muted);border:1px solid var(--line);padding:5px 11px;border-radius:99px;font-weight:600}
+.toggle{cursor:pointer;background:var(--surface);border:1px solid var(--line);color:var(--ink);width:40px;height:40px;border-radius:11px;font-size:17px;display:grid;place-items:center;transition:.2s}
+.toggle:hover{background:var(--surface-2)}
+.hero{position:relative;padding:96px 0 76px;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;
+  background:radial-gradient(720px 360px at 82% -8%,rgba(221,35,46,.16),transparent 60%),
+             radial-gradient(620px 320px at 4% 12%,rgba(237,192,15,.20),transparent 60%),
+             radial-gradient(520px 280px at 60% 110%,rgba(0,142,214,.10),transparent 60%)}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--red);margin-bottom:22px}
+.eyebrow .dot{width:9px;height:9px;border-radius:99px;background:var(--yellow);box-shadow:0 0 0 4px rgba(237,192,15,.22)}
+.hero h1{font-size:clamp(34px,6.2vw,62px);font-weight:900;margin-bottom:18px}
+.hero h1 .em{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p.lead{font-size:clamp(17px,2.4vw,21px);color:var(--muted);max-width:690px}
+.meta{display:flex;flex-wrap:wrap;gap:14px;margin-top:40px}
+.meta .m{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 18px;min-width:150px}
+.meta .m span{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.meta .m strong{font-size:16px;font-weight:700}
+section.block{padding:70px 0;border-top:1px solid var(--line)}
+.sec-head{display:flex;align-items:flex-start;gap:22px;margin-bottom:34px}
+.sec-num{font-family:"Poppins",sans-serif;font-weight:900;font-size:clamp(40px,7vw,72px);line-height:.9;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;min-width:1.5em}
+.sec-head h2{font-size:clamp(25px,3.6vw,36px);font-weight:800;margin-bottom:8px}
+.sec-head .sub{color:var(--muted);font-size:15px;font-weight:500}
+.grid{display:grid;gap:18px}.g2{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(3,1fr)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow)}
+.card h3{font-size:18px;font-weight:700;margin-bottom:8px}
+.card p{color:var(--muted);font-size:15px;font-weight:400}
+.icon{width:44px;height:44px;border-radius:13px;display:grid;place-items:center;margin-bottom:14px;background:var(--surface-2);font-size:21px}
+ul.clean{list-style:none;display:grid;gap:11px;margin-top:6px}
+ul.clean li{display:flex;gap:12px;color:var(--muted);font-size:15px}
+ul.clean li::before{content:"";flex:0 0 auto;width:8px;height:8px;border-radius:99px;background:var(--red);margin-top:8px}
+/* price hero */
+.price-hero{background:var(--navy);color:#fff;border-radius:22px;padding:32px;box-shadow:var(--shadow);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:18px;margin-bottom:26px;position:relative;overflow:hidden}
+html[data-theme="dark"] .price-hero{background:#0a0b1d;border:1px solid var(--line)}
+.price-hero::after{content:"";position:absolute;right:-30px;top:-30px;width:200px;height:200px;border-radius:50%;background:var(--grad);filter:blur(60px);opacity:.5}
+.price-hero .big{font-size:clamp(32px,6vw,50px);font-weight:900;position:relative}
+.price-hero .big small{display:block;font-size:14px;font-weight:500;color:#c9cae0;letter-spacing:.03em;margin-top:4px}
+.price-hero .pill{position:relative;display:inline-block;font-size:13px;font-weight:700;padding:7px 14px;border-radius:99px;background:var(--yellow);color:#111236}
+table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+th,td{padding:14px 16px;text-align:left;font-size:14.5px;border-bottom:1px solid var(--line)}
+th{background:var(--surface-2);font-weight:700;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+tr:last-child td{border-bottom:0}
+tr.hl td{background:rgba(237,192,15,.14);font-weight:700}
+tr.hl td:first-child::after{content:" ★";color:var(--yellow)}
+.tbl-wrap{overflow-x:auto;border-radius:var(--radius)}
+.steps{counter-reset:s;display:grid;gap:16px}
+.step{display:flex;gap:18px;align-items:flex-start;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px 20px}
+.step::before{counter-increment:s;content:counter(s);flex:0 0 auto;width:36px;height:36px;border-radius:11px;background:var(--grad);color:#fff;display:grid;place-items:center;font-weight:800}
+.step b{font-weight:700}.step p{color:var(--muted);font-size:14.5px;margin-top:2px}
+.note{font-size:13.5px;color:var(--muted);background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--yellow);border-radius:10px;padding:14px 16px;margin-top:18px}
+.ref{display:flex;flex-wrap:wrap;gap:24px;align-items:center;background:var(--navy);color:#fff;border-radius:22px;padding:34px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+html[data-theme="dark"] .ref{background:#0a0b1d;border:1px solid var(--line)}
+.ref .num-big{font-size:clamp(48px,9vw,84px);font-weight:900;line-height:1;background:linear-gradient(120deg,var(--yellow),var(--red-2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.ref p{color:#c9cae0;max-width:460px}
+.cta{margin:30px 0 0;background:var(--grad);color:#fff;border-radius:22px;padding:42px;text-align:center;box-shadow:var(--shadow)}
+.cta h2{font-size:clamp(24px,4vw,34px);margin-bottom:12px;color:#fff}
+.cta p{color:rgba(255,255,255,.9);max-width:540px;margin:0 auto 24px}
+.btn{display:inline-flex;align-items:center;gap:9px;font-weight:700;font-size:16px;padding:15px 28px;border-radius:13px;background:#fff;color:var(--red);transition:transform .15s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(0,0,0,.2)}
+.btn.ghost{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.6);margin-left:10px}
+footer{border-top:1px solid var(--line);padding:50px 0 60px;margin-top:60px}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:26px}
+.foot img{height:32px;margin-bottom:14px}
+html[data-theme="dark"] .foot img{filter:brightness(0) invert(1)}
+.foot .col p{color:var(--muted);font-size:13.5px;line-height:1.8}.foot a{color:var(--muted)}.foot a:hover{color:var(--red)}
+.legal{margin-top:30px;padding-top:22px;border-top:1px solid var(--line);font-size:12.5px;color:var(--muted);display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-between}
+@media(max-width:760px){.g2,.g3{grid-template-columns:1fr}.sec-head{gap:14px}.sec-num{min-width:auto}.topbar .tag{display:none}.hero{padding:64px 0 54px}}
+</style>
+</head>
+<body>
+<div id="progress"></div>
+<header class="topbar"><div class="wrap">
+  <img src="/_assets/samolepak/logo.svg" alt="Samolepák.cz">
+  <div class="tb-right"><span class="tag">Nabídka&nbsp;·&nbsp;Policie&nbsp;ČR</span>
+    <button class="toggle" id="themeBtn" aria-label="Přepnout režim">◑</button></div>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <div class="eyebrow"><span class="dot"></span> Cenová nabídka · SAM-2026-06-POLICIE</div>
+  <h1>Zakázkové samolepky pro <span class="em">náborovou kampaň</span> Policie ČR</h1>
+  <p class="lead">Odolné laminované samolepky v provedení <strong>Strong</strong>, které vydrží na služebních vozech v každém počasí — výrazné, ostré a připravené přilákat nové kolegy do řad policie.</p>
+  <div class="meta">
+    <div class="m"><span>Pro</span><strong>Policejní prezidium ČR</strong></div>
+    <div class="m"><span>Od</span><strong>Samolepák.cz</strong></div>
+    <div class="m"><span>Datum</span><strong>5. 6. 2026</strong></div>
+    <div class="m"><span>Platnost</span><strong>30 dní</strong></div>
+  </div>
+</div></section>
+
+<!-- 01 -->
+<section class="block"><div class="wrap">
+  <div class="sec-head"><div class="sec-num">01</div><div><h2>Porozumění zadání</h2><div class="sub">Nábor, který je vidět na silnici</div></div></div>
+  <div class="grid g2">
+    <div class="card"><div class="icon">🚓</div><h3>Polep na služební vozy</h3><p>Náborová kampaň potřebuje nosič, který je vidět všude. Samolepka na služebním voze jezdí po celé republice a oslovuje přesně tam, kde se lidé pohybují.</p></div>
+    <div class="card"><div class="icon">🛡️</div><h3>Musí vydržet</h3><p>Auto zažije déšť, mráz, slunce i myčku. Provedení Strong s laminací je dělané přesně na tohle — bez blednutí a odlepování.</p></div>
+  </div>
+</div></section>
+
+<!-- 02 -->
+<section class="block"><div class="wrap">
+  <div class="sec-head"><div class="sec-num">02</div><div><h2>Co dodáme — provedení Strong</h2><div class="sub">Prémiové laminované samolepky pro venkovní použití</div></div></div>
+  <div class="grid g3">
+    <div class="card"><div class="icon">💪</div><h3>Laminace Strong</h3><p>Ochranná laminace proti oděru, UV i chemii. Odolnost prověřená provozem na autech.</p></div>
+    <div class="card"><div class="icon">☀️</div><h3>UV &amp; počasí</h3><p>Barvy drží i na přímém slunci, samolepka nebledne a nepraská.</p></div>
+    <div class="card"><div class="icon">🚿</div><h3>Mytí v pohodě</h3><p>Odolá tlakové vodě i průjezdu myčkou bez poškození.</p></div>
+    <div class="card"><div class="icon">✂️</div><h3>Libovolný tvar</h3><p>Ořez na míru motivu — logo, znak i atypické tvary.</p></div>
+    <div class="card"><div class="icon">🎯</div><h3>Ostrý tisk</h3><p>Vysoké rozlišení, věrné barvy, čisté hrany i u jemných detailů.</p></div>
+    <div class="card"><div class="icon">📐</div><h3>Rozměr dle potřeby</h3><p>Od malých znaků po velkoformátové polepy dveří a kapot.</p></div>
+  </div>
+</div></section>
+
+<!-- 03 -->
+<section class="block"><div class="wrap">
+  <div class="sec-head"><div class="sec-num">03</div><div><h2>Cena a množstevní ceník</h2><div class="sub">Čím větší náklad, tím nižší cena za kus</div></div></div>
+  <div class="price-hero">
+    <div class="big">81 000 Kč <small>bez DPH · 3 000 ks Strong, polep služebních vozů</small></div>
+    <span class="pill">27 Kč / ks při 3 000 ks</span>
+  </div>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Množství</th><th class="num">Cena / ks (bez DPH)</th><th class="num">Cena celkem (bez DPH)</th></tr></thead>
+    <tbody>
+      <tr><td>100 ks</td><td class="num">49 Kč</td><td class="num">4 900 Kč</td></tr>
+      <tr><td>500 ks</td><td class="num">39 Kč</td><td class="num">19 500 Kč</td></tr>
+      <tr><td>1 000 ks</td><td class="num">33 Kč</td><td class="num">33 000 Kč</td></tr>
+      <tr class="hl"><td>3 000 ks</td><td class="num">27 Kč</td><td class="num">81 000 Kč</td></tr>
+      <tr><td>5 000 ks a více</td><td class="num">od 24 Kč</td><td class="num">individuálně</td></tr>
+    </tbody>
+  </table></div>
+  <div class="note">Ceny jsou orientační pro standardní rozměr náborového motivu v provedení Strong (laminace, venkovní použití). Finální cenu upřesníme podle konkrétního rozměru, tvaru ořezu a grafiky.</div>
+</div></section>
+
+<!-- 04 -->
+<section class="block"><div class="wrap">
+  <div class="sec-head"><div class="sec-num">04</div><div><h2>Reference</h2><div class="sub">Tohle už jezdí naživo</div></div></div>
+  <div class="ref">
+    <div class="num-big">3&nbsp;000</div>
+    <p><strong style="color:#fff">kusů v provedení Strong</strong> jsme vyrobili pro náborovou akci Policie ČR. Samolepky jsou dnes nalepené na služebních vozech po celé republice a denně připomínají, že policie nabírá nové kolegy.</p>
+  </div>
+</div></section>
+
+<!-- 05 -->
+<section class="block"><div class="wrap">
+  <div class="sec-head"><div class="sec-num">05</div><div><h2>Jak to probíhá</h2><div class="sub">Od grafiky k hotovým samolepkám</div></div></div>
+  <div class="steps">
+    <div class="step"><div><b>Podklady &amp; grafika</b><p>Pošlete logo/motiv ve vektoru, nebo grafiku připravíme.</p></div></div>
+    <div class="step"><div><b>Náhled &amp; schválení</b><p>Pošleme korekturu s rozměry a tvarem ořezu ke schválení.</p></div></div>
+    <div class="step"><div><b>Výroba Strong</b><p>Tisk, laminace a přesný ořez na míru motivu.</p></div></div>
+    <div class="step"><div><b>Dodání</b><p>Zabalíme a doručíme — připravené k aplikaci na vozy.</p></div></div>
+  </div>
+</div></section>
+
+<!-- 06 -->
+<section class="block"><div class="wrap">
+  <div class="sec-head"><div class="sec-num">06</div><div><h2>Technické parametry</h2><div class="sub">Co dělá Strong odolným</div></div></div>
+  <div class="grid g2">
+    <div class="card"><ul class="clean">
+      <li><b style="color:var(--ink)">Provedení:</b>&nbsp;laminované samolepky Strong</li>
+      <li><b style="color:var(--ink)">Použití:</b>&nbsp;venkovní, vč. polepu vozidel</li>
+      <li><b style="color:var(--ink)">Odolnost:</b>&nbsp;UV, voda, mráz, myčka, oděr</li>
+    </ul></div>
+    <div class="card"><ul class="clean">
+      <li><b style="color:var(--ink)">Lepidlo:</b>&nbsp;pro dlouhodobé přilnutí na lak i sklo</li>
+      <li><b style="color:var(--ink)">Ořez:</b>&nbsp;na míru tvaru motivu</li>
+      <li><b style="color:var(--ink)">Tisk:</b>&nbsp;plnobarevný, vysoké rozlišení</li>
+    </ul></div>
+  </div>
+</div></section>
+
+<!-- 07 -->
+<section class="block"><div class="wrap">
+  <div class="sec-head"><div class="sec-num">07</div><div><h2>Předpoklady a součinnost</h2><div class="sub">Co od vás potřebujeme</div></div></div>
+  <ul class="clean">
+    <li>Grafický podklad motivu (ideálně vektor — AI, PDF, EPS, SVG).</li>
+    <li>Požadovaný rozměr a tvar ořezu.</li>
+    <li>Schválení finální korektury před výrobou.</li>
+    <li>Množství a termín dodání.</li>
+  </ul>
+</div></section>
+
+<!-- 08 -->
+<section class="block"><div class="wrap">
+  <div class="sec-head"><div class="sec-num">08</div><div><h2>Proč Samolepák.cz</h2><div class="sub">Samolepky jsou naše řemeslo</div></div></div>
+  <div class="grid g3">
+    <div class="card"><div class="icon">🏭</div><h3>Vlastní výroba</h3><p>Tiskneme a laminujeme u nás — kontrola kvality od začátku do konce.</p></div>
+    <div class="card"><div class="icon">✅</div><h3>Ověřeno na autech</h3><p>Tisíce kusů Strong už jezdí na služebních vozech Policie ČR.</p></div>
+    <div class="card"><div class="icon">⚡</div><h3>Rychle a spolehlivě</h3><p>Jasné termíny a férová cena i u velkých nákladů.</p></div>
+  </div>
+</div></section>
+
+<!-- 09 -->
+<section class="block"><div class="wrap">
+  <div class="sec-head"><div class="sec-num">09</div><div><h2>Podmínky nabídky</h2><div class="sub">Krátce na závěr</div></div></div>
+  <ul class="clean">
+    <li>Ceny jsou uvedeny <b style="color:var(--ink)">bez DPH</b> (21 %).</li>
+    <li>Cena se upřesní dle finálního rozměru, tvaru a grafiky.</li>
+    <li>Výroba se zahájí po schválení korektury.</li>
+    <li>Nabídka platí 30 dní od data vystavení (5. 6. 2026).</li>
+  </ul>
+  <div class="cta">
+    <h2>Rozjedeme náborové samolepky? 🚓</h2>
+    <p>Pošlete motiv a množství — připravíme korekturu a cenu na míru.</p>
+    <a class="btn" href="mailto:info@samolepak.cz?subject=Nabídka%20samolepky%20Strong%20—%20SAM-2026-06-POLICIE">Chci nabídku na míru</a>
+    <a class="btn ghost" href="https://www.samolepak.cz">www.samolepak.cz</a>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="foot">
+    <div class="col" style="max-width:340px"><img src="/_assets/samolepak/logo.svg" alt="Samolepák.cz">
+      <p>Výroba a prodej 3D samolepek a zakázkových potisků. Odolné provedení Strong pro venkovní použití i polep vozidel.</p></div>
+    <div class="col"><p><b style="color:var(--ink)">Provozovatel</b><br>CS Production Group s.r.o.<br>Samolepák.cz</p></div>
+    <div class="col"><p><b style="color:var(--ink)">Kontakt</b><br>
+      <a href="mailto:info@samolepak.cz">info@samolepak.cz</a><br>
+      <a href="https://www.samolepak.cz">www.samolepak.cz</a></p></div>
+  </div>
+  <div class="legal"><span>© 2026 Samolepák.cz — Nabídka SAM-2026-06-POLICIE</span><span>Důvěrné · určeno pro Policejní prezidium ČR</span></div>
+</div></footer>
+
+<script>
+const root=document.documentElement,btn=document.getElementById('themeBtn');
+const saved=localStorage.getItem('samo-theme');if(saved)root.setAttribute('data-theme',saved);
+btn.addEventListener('click',()=>{const n=root.getAttribute('data-theme')==='light'?'dark':'light';root.setAttribute('data-theme',n);localStorage.setItem('samo-theme',n);});
+const bar=document.getElementById('progress');
+addEventListener('scroll',()=>{const h=document.documentElement;bar.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';},{passive:true});
+</script>
+</body>
+</html>

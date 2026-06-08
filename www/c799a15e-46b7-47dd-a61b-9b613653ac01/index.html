@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="cs" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Nabídka pro X2 Sport — eshop www.jako-sport.sk | CS Technologies</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Roboto+Slab:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#061b31; --navy-2:#0a2440; --navy-3:#0e2c4d;
+  --ink:#eaf1f8; --muted:#9fb3c8; --line:rgba(255,255,255,.09);
+  --green:#0f9b4a; --teal:#02d1cb; --lime:#deea01; --orange:#f06c1a; --red:#e53935; --gold:#f4bd38;
+  --bg:var(--navy); --surface:rgba(255,255,255,.035); --surface-2:rgba(255,255,255,.05);
+  --card:#0c243f; --shadow:0 18px 50px rgba(0,0,0,.35);
+  --grad:linear-gradient(100deg,var(--green),var(--teal));
+  --radius:18px;
+}
+html[data-theme="light"]{
+  --navy:#f4f7fb; --navy-2:#ffffff; --navy-3:#eef3f9;
+  --ink:#0c243f; --muted:#5a6b7e; --line:rgba(6,27,49,.10);
+  --bg:#f4f7fb; --surface:rgba(6,27,49,.03); --surface-2:rgba(6,27,49,.05);
+  --card:#ffffff; --shadow:0 18px 50px rgba(6,27,49,.10);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Poppins",system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden;transition:background .4s,color .4s}
+.wrap{max-width:1060px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:"Roboto Slab",serif;line-height:1.15;letter-spacing:-.02em}
+a{color:var(--teal);text-decoration:none}
+.accent{color:var(--orange)}
+#progress{position:fixed;top:0;left:0;height:3px;width:0;background:var(--grad);z-index:100;transition:width .1s}
+.topbar{position:sticky;top:0;z-index:90;backdrop-filter:blur(12px);background:color-mix(in srgb,var(--bg) 78%,transparent);border-bottom:1px solid var(--line)}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.topbar img{height:30px;display:block}
+.topbar img.logo-on-light,.foot img.logo-on-light{display:none}
+html[data-theme="light"] .topbar img.logo-on-dark,html[data-theme="light"] .foot img.logo-on-dark{display:none}
+html[data-theme="light"] .topbar img.logo-on-light,html[data-theme="light"] .foot img.logo-on-light{display:block}
+.tb-right{display:flex;align-items:center;gap:14px}
+.tag{font-size:12px;color:var(--muted);border:1px solid var(--line);padding:5px 11px;border-radius:99px}
+.toggle{cursor:pointer;background:var(--surface);border:1px solid var(--line);color:var(--ink);width:40px;height:40px;border-radius:11px;font-size:17px;display:grid;place-items:center;transition:.2s}
+.toggle:hover{background:var(--surface-2)}
+.hero{position:relative;padding:96px 0 76px;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;
+  background:radial-gradient(800px 380px at 78% -8%,rgba(2,209,203,.22),transparent 60%),
+             radial-gradient(680px 360px at 8% 18%,rgba(15,155,74,.20),transparent 60%),
+             radial-gradient(560px 300px at 60% 110%,rgba(240,108,26,.14),transparent 60%)}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin-bottom:22px}
+.eyebrow .dot{width:8px;height:8px;border-radius:99px;background:var(--orange);box-shadow:0 0 0 4px rgba(240,108,26,.18)}
+.hero h1{font-size:clamp(34px,6vw,62px);font-weight:800;margin-bottom:18px}
+.hero h1 .em{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p.lead{font-size:clamp(17px,2.4vw,21px);color:var(--muted);max-width:700px}
+.meta{display:flex;flex-wrap:wrap;gap:14px;margin-top:40px}
+.meta .m{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 18px;min-width:150px}
+.meta .m span{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.meta .m strong{font-size:16px;font-weight:600}
+section.block{padding:70px 0;border-top:1px solid var(--line)}
+.sec-head{display:flex;align-items:flex-start;gap:22px;margin-bottom:34px}
+.sec-num{font-family:"Roboto Slab",serif;font-weight:800;font-size:clamp(40px,7vw,72px);line-height:.9;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;opacity:.95;min-width:1.6em}
+.sec-head h2{font-size:clamp(25px,3.6vw,36px);font-weight:700;margin-bottom:8px}
+.sec-head .sub{color:var(--muted);font-family:"Poppins",sans-serif;font-size:15px}
+.lead-2{color:var(--muted);font-size:16px;max-width:820px;margin-bottom:26px}
+.grid{display:grid;gap:18px}
+.g2{grid-template-columns:repeat(2,1fr)} .g3{grid-template-columns:repeat(3,1fr)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow)}
+.card h3{font-size:18px;font-weight:600;margin-bottom:8px;font-family:"Poppins",sans-serif}
+.card p{color:var(--muted);font-size:15px}
+.icon{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;margin-bottom:14px;background:var(--surface-2);font-size:20px}
+.feat{display:flex;gap:13px;align-items:flex-start;padding:13px 0;border-bottom:1px solid var(--line)}
+.feat:last-child{border-bottom:0}
+.feat .ck{flex:0 0 auto;width:22px;height:22px;border-radius:7px;background:var(--grad);display:grid;place-items:center;color:#04121f;font-weight:800;font-size:13px;margin-top:3px}
+.feat b{font-weight:600} .feat span{color:var(--muted);font-size:14px}
+ul.clean{list-style:none;display:grid;gap:11px;margin-top:6px}
+ul.clean li{display:flex;gap:12px;color:var(--muted);font-size:15px}
+ul.clean li::before{content:"";flex:0 0 auto;width:7px;height:7px;border-radius:99px;background:var(--teal);margin-top:9px}
+.price-hero{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:30px;box-shadow:var(--shadow);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:18px;margin-bottom:26px;position:relative;overflow:hidden}
+.price-hero::after{content:"";position:absolute;right:-40px;top:-40px;width:220px;height:220px;border-radius:50%;background:var(--grad);filter:blur(70px);opacity:.25}
+.price-hero .big{font-family:"Roboto Slab",serif;font-size:clamp(34px,6vw,52px);font-weight:800}
+.price-hero .big small{display:block;font-size:14px;font-family:"Poppins",sans-serif;color:var(--muted);font-weight:500;letter-spacing:.04em}
+.pill{display:inline-block;font-size:13px;font-weight:600;padding:6px 13px;border-radius:99px;background:rgba(15,155,74,.16);color:var(--green);border:1px solid rgba(15,155,74,.3)}
+table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+th,td{padding:13px 16px;text-align:left;font-size:14.5px;border-bottom:1px solid var(--line)}
+th{background:var(--surface-2);font-weight:600;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+tr:last-child td{border-bottom:0}
+tr.total td{background:var(--surface-2);font-weight:700;font-size:16px}
+tr.total td .accent{font-family:"Roboto Slab",serif}
+.tbl-wrap{overflow-x:auto;border-radius:var(--radius)}
+.tl{display:grid;gap:0}
+.tl .et{display:grid;grid-template-columns:auto 1fr;gap:22px}
+.tl .marker{display:flex;flex-direction:column;align-items:center}
+.tl .dot{width:44px;height:44px;border-radius:13px;background:var(--grad);display:grid;place-items:center;font-family:"Roboto Slab",serif;font-weight:800;color:#04121f;font-size:18px;flex:0 0 auto}
+.tl .bar{width:2px;flex:1;background:var(--line);margin:6px 0}
+.tl .et:last-child .bar{display:none}
+.tl .body{padding-bottom:30px}
+.tl .body h3{font-size:19px;font-family:"Poppins",sans-serif;font-weight:600;margin-bottom:4px}
+.tl .body .when{font-size:13px;color:var(--teal);font-weight:600;margin-bottom:10px}
+.tl .body p{color:var(--muted);font-size:14.5px}
+.steps{counter-reset:s;display:grid;gap:16px}
+.step{display:flex;gap:18px;align-items:flex-start;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px 20px}
+.step::before{counter-increment:s;content:counter(s);flex:0 0 auto;width:34px;height:34px;border-radius:10px;background:var(--surface-2);border:1px solid var(--line);display:grid;place-items:center;font-weight:700;color:var(--orange)}
+.step b{font-weight:600} .step p{color:var(--muted);font-size:14.5px;margin-top:2px}
+.note{font-size:13.5px;color:var(--muted);background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--orange);border-radius:10px;padding:14px 16px;margin-top:18px}
+.cta{margin:30px 0 0;background:var(--card);border:1px solid var(--line);border-radius:22px;padding:40px;text-align:center;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.cta::before{content:"";position:absolute;inset:0;z-index:0;opacity:.5;background:radial-gradient(500px 200px at 50% -20%,rgba(2,209,203,.22),transparent 60%)}
+.cta>*{position:relative}
+.cta h2{font-size:clamp(24px,4vw,34px);margin-bottom:12px}
+.cta p{color:var(--muted);max-width:560px;margin:0 auto 24px}
+.btn{display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:16px;padding:15px 28px;border-radius:13px;background:var(--grad);color:#04121f;transition:transform .15s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(2,209,203,.3)}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line);margin-left:10px}
+footer{border-top:1px solid var(--line);padding:50px 0 60px;margin-top:60px}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:26px}
+.foot img{height:34px;margin-bottom:14px}
+.foot .col p{color:var(--muted);font-size:13.5px;line-height:1.8}
+.foot a{color:var(--muted)}.foot a:hover{color:var(--teal)}
+.legal{margin-top:30px;padding-top:22px;border-top:1px solid var(--line);font-size:12.5px;color:var(--muted);display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-between}
+@media(max-width:760px){.g2,.g3{grid-template-columns:1fr}.sec-head{gap:14px}.sec-num{min-width:auto}.topbar .tag{display:none}.hero{padding:64px 0 54px}}
+</style>
+</head>
+<body>
+<div id="progress"></div>
+
+<header class="topbar"><div class="wrap">
+  <img class="logo-on-dark" src="/_assets/cs-technologies/logo.svg" alt="CS Technologies">
+  <img class="logo-on-light" src="/_assets/cs-technologies/logo-dark.svg" alt="CS Technologies">
+  <div class="tb-right"><span class="tag">Nabídka&nbsp;·&nbsp;JAKO&nbsp;SK</span>
+    <button class="toggle" id="themeBtn" title="Přepnout světlý/tmavý režim" aria-label="Přepnout režim">◐</button></div>
+</div></header>
+
+<!-- HERO -->
+<section class="hero"><div class="wrap">
+  <div class="eyebrow"><span class="dot"></span> Cenová nabídka · CST-2026-06-JAKOSPORT</div>
+  <h1>Nový eshop <span class="em">www.jako-sport.sk</span><br>pro X2 Sport — klon ověřeného JAKO CZ</h1>
+  <p class="lead">Nestavíme od nuly. Replikujeme funkční eshop <strong>jakojedenteam.cz</strong>, který roky úspěšně prodává, do slovenské verze <strong>jako-sport.sk</strong> — s napojením na váš stávající B2B sklad. Rychle, ověřeně a s minimem rizika.</p>
+  <div class="meta">
+    <div class="m"><span>Pro</span><strong>X2 Sport, s.r.o.</strong></div>
+    <div class="m"><span>Od</span><strong>CS Technologies s.r.o.</strong></div>
+    <div class="m"><span>Datum</span><strong>8. 6. 2026</strong></div>
+    <div class="m"><span>Platnost</span><strong>30 dní</strong></div>
+  </div>
+</div></section>
+
+<!-- 01 -->
+<section class="block"><div class="wrap">
+  <div class="sec-head"><div class="sec-num">01</div>
+    <div><h2>Porozumění zadání</h2><div class="sub">Co řešíme a proč klon</div></div></div>
+  <div class="grid g2" style="margin-bottom:26px">
+    <div class="card"><div class="icon">🧬</div><h3>Klon, ne experiment</h3>
+      <p>JAKO CZ (jakojedenteam.cz) jsme postavili a roky běží. Pro jako-sport.sk ho replikujeme — přebíráme hotovou architekturu, funkce i konfigurátor potisku. Žádné objevování kola.</p></div>
+    <div class="card"><div class="icon">🔗</div><h3>Napojení na váš ekosystém</h3>
+      <p>Eshop se napojí na stejný B2B sklad (p. Prouza), který už používá JAKO CZ i SK — jako druhá instance. Sklad, ceny i objednávky drží pohromadě.</p></div>
+  </div>
+  <ul class="clean">
+    <li><b style="color:var(--ink)">Rychleji a levněji</b>&nbsp;— odpadá většina vývoje, platíte zlomek původní ceny plné stavby.</li>
+    <li><b style="color:var(--ink)">Nižší riziko</b>&nbsp;— ověřené řešení, které reálně prodává, ne nevyzkoušený nový eshop.</li>
+    <li><b style="color:var(--ink)">Společný výchozí základ</b>&nbsp;— klon startuje shodně s JAKO CZ; dál se jako-sport.sk vyvíjí samostatně podle vašich potřeb.</li>
+  </ul>
+</div></section>
+
+<!-- 02 -->
+<section class="block"><div class="wrap">
+  <div class="sec-head"><div class="sec-num">02</div>
+    <div><h2>Co eshop bude umět</h2><div class="sub">Plná funkční výbava JAKO eshopu — převzatá z CZ verze</div></div></div>
+  <div class="grid g3">
+    <div class="card"><div class="icon">🗂️</div><h3>Katalog dle sportů</h3><p>Členění podle sportů a kategorie Fans, filtrování dle barev, velikostí, určení (pánské/dámské/dětské) i týmových řad.</p></div>
+    <div class="card"><div class="icon">🎽</div><h3>Konfigurátor potisku</h3><p>Potisk dresů — logo týmu i sponzora, jméno a číslo hráče, přední i zadní strana s živou vizualizací.</p></div>
+    <div class="card"><div class="icon">👥</div><h3>Hromadný nákup pro tým</h3><p>Objednávka pro celý tým — řádky pro jednotlivé hráče (velikost, číslo, jméno), nákup setů s minimálním odběrem.</p></div>
+    <div class="card"><div class="icon">🏬</div><h3>Sklad &amp; dostupnost</h3><p>Import sortimentu z B2B, varianty dle barvy a velikosti, dostupnost a dopočet termínu dodání.</p></div>
+    <div class="card"><div class="icon">👤</div><h3>Účty a podúčty</h3><p>Firemní účty s podúčty, přehled objednávek a faktur, oblíbené položky včetně uložených potisků se sdílením.</p></div>
+    <div class="card"><div class="icon">🛒</div><h3>Košík, doprava, platba</h3><p>Standardní i hromadný nákup, dopravci a platby, dobírka i platba převodem pro firemní zákazníky.</p></div>
+    <div class="card"><div class="icon">⭐</div><h3>Recenze &amp; reference</h3><p>Hodnocení produktů s mikrodaty pro Google, reference oblečených klubů na úvodní stránce.</p></div>
+    <div class="card"><div class="icon">📰</div><h3>Obsah &amp; blog</h3><p>Články a aktuality provázané s produkty a autory, social feed na úvodní stránce.</p></div>
+    <div class="card"><div class="icon">🔍</div><h3>Vyhledávání &amp; SEO</h3><p>Fulltext s našeptávačem a fotkami, redirecty 301, XML feedy a analytika.</p></div>
+  </div>
+</div></section>
+
+<!-- 03 -->
+<section class="block"><div class="wrap">
+  <div class="sec-head"><div class="sec-num">03</div>
+    <div><h2>Rozsah a cena</h2><div class="sub">Kompletní klon jako-sport.sk na klíč</div></div></div>
+  <div class="price-hero">
+    <div class="big">7 679 € <small>bez DPH · kompletní klon eshopu (≈ 180 000 Kč)</small></div>
+    <span class="pill">klon ověřeného JAKO CZ</span>
+  </div>
+  <p class="lead-2">Cena pokrývá kompletní převzetí a zprovoznění slovenské verze:</p>
+  <div class="grid g2">
+    <div class="card"><div class="feat"><div class="ck">✓</div><div><b>Klon aplikace &amp; nasazení</b><br><span>Replikace JAKO CZ pro jako-sport.sk, promazání dat, rekonfigurace EasyWebu (jazyk SK, měna EUR).</span></div></div>
+      <div class="feat"><div class="ck">✓</div><div><b>Import dat &amp; skripty</b><br><span>Úprava import/export skriptů, prvotní import kategorií, produktů, ceníků a číselníků z B2B.</span></div></div>
+      <div class="feat"><div class="ck">✓</div><div><b>SK lokalizace</b><br><span>Překlad frontendu, formulářů, komponent a konfigurátoru potisku do slovenštiny.</span></div></div></div>
+    <div class="card"><div class="feat"><div class="ck">✓</div><div><b>Napojení na B2B</b><br><span>Připojení na sklad p. Prouzy jako druhá instance — produkty, zákazníci, objednávky, doklady.</span></div></div>
+      <div class="feat"><div class="ck">✓</div><div><b>Dopravci, platba, feedy</b><br><span>GLS + Packeta, platební brána ComGate, XML feedy pro Heureka.sk a Google Nákupy.</span></div></div>
+      <div class="feat"><div class="ck">✓</div><div><b>Spuštění</b><br><span>Redirecty 301, analytika, testování přenosů a importů, výstupní kontrola a ostrý start.</span></div></div></div>
+  </div>
+  <div class="note">Ceny jsou uvedeny <b style="color:var(--ink)">bez DPH</b>. U přeshraniční služby pro slovenského plátce se uplatní <b style="color:var(--ink)">přenesená daňová povinnost (reverse charge)</b>. Hosting řešíme na stejném serveru jako JAKO CZ se sdílením nákladů.</div>
+</div></section>
+
+<!-- 04 -->
+<section class="block"><div class="wrap">
+  <div class="sec-head"><div class="sec-num">04</div>
+    <div><h2>Harmonogram a platby</h2><div class="sub">3 měsíční etapy — platíte v pravidelných měsíčních zálohách</div></div></div>
+  <div class="tl" style="margin-bottom:30px">
+    <div class="et"><div class="marker"><div class="dot">1</div><div class="bar"></div></div>
+      <div class="body"><h3>Klon, rekonfigurace &amp; import</h3><div class="when">1. měsíc</div>
+        <p>Replikace aplikace, rekonfigurace EasyWebu (SK / EUR), úprava import/export skriptů a prvotní import dat z B2B.</p></div></div>
+    <div class="et"><div class="marker"><div class="dot">2</div><div class="bar"></div></div>
+      <div class="body"><h3>Lokalizace, B2B &amp; konfigurátor</h3><div class="when">2. měsíc</div>
+        <p>SK překlady frontendu a konfigurátoru potisku, napojení na B2B sklad, dopravci GLS + Packeta a platební brána ComGate.</p></div></div>
+    <div class="et"><div class="marker"><div class="dot">3</div><div class="bar"></div></div>
+      <div class="body"><h3>Feedy, testování &amp; spuštění</h3><div class="when">3. měsíc</div>
+        <p>XML feedy (Heureka.sk, Google Nákupy), redirecty, analytika, testování přenosů a importů, výstupní kontrola a ostré spuštění.</p></div></div>
+  </div>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Měsíční etapa</th><th class="num">Záloha bez DPH</th><th>Splatnost</th></tr></thead>
+    <tbody>
+      <tr><td>1. měsíc</td><td class="num">2 679 €</td><td>při podpisu</td></tr>
+      <tr><td>2. měsíc</td><td class="num">2 500 €</td><td>před 2. měsícem</td></tr>
+      <tr><td>3. měsíc</td><td class="num">2 500 €</td><td>před 3. měsícem</td></tr>
+      <tr class="total"><td>Celkem</td><td class="num"><span class="accent">7 679 €</span></td><td>bez DPH</td></tr>
+    </tbody>
+  </table></div>
+  <div class="note">Rozloženo do <b style="color:var(--ink)">3 pravidelných měsíčních záloh</b> — místo jedné velké částky. Konkrétní data navážeme na datum podpisu a tyto platební podmínky přecházejí beze změny do smlouvy. Dodržení harmonogramu je podmíněno součinností objednatele.</div>
+</div></section>
+
+<!-- 05 -->
+<section class="block"><div class="wrap">
+  <div class="sec-head"><div class="sec-num">05</div>
+    <div><h2>Automatické překlady přes AI</h2><div class="sub">Texty, které už máme — chytře přeložené do slovenštiny</div></div></div>
+  <div class="grid g2">
+    <div class="card"><div class="icon">🤖</div><h3>Jak to funguje</h3>
+      <p>Obsah produktů z databáze JAKO CZ (čeština) automaticky přeložíme pomocí jazykového modelu (AI) do slovenštiny. Nemusíte ručně vymýšlet texty, které už existují — využijeme je naplno.</p></div>
+    <div class="card"><div class="icon">🧾</div><h3>Cena za překlad</h3>
+      <p>Za tuto funkci neúčtujeme žádnou fixní částku. Účtujeme pouze <b style="color:var(--ink)">cenu za přeložení jednoho produktu</b>. Konkrétní sazbu stanovíme po testech, až uvidíme kompletní rozsah dat.</p></div>
+  </div>
+  <div class="note">Tímto způsobem jsme se na automatických překladech domluveni. Sazba za produkt bude potvrzena na základě testovacího překladu před nasazením.</div>
+</div></section>
+
+<!-- 06 -->
+<section class="block"><div class="wrap">
+  <div class="sec-head"><div class="sec-num">06</div>
+    <div><h2>Integrace &amp; napojení</h2><div class="sub">Eshop, který zapadne do JAKO ekosystému</div></div></div>
+  <div class="grid g2">
+    <div class="card">
+      <div class="feat"><div class="ck">✓</div><div><b>B2B sklad (p. Prouza)</b><br><span>Druhá instance připravena — produkty, číselníky, zákazníci, objednávky a doklady přes webové služby (jSON).</span></div></div>
+      <div class="feat"><div class="ck">✓</div><div><b>Dopravci</b><br><span>GLS (zachováváme) a Packeta. Další dopravce umíme doplnit dle potřeby.</span></div></div></div>
+    <div class="card">
+      <div class="feat"><div class="ck">✓</div><div><b>Platba</b><br><span>Platební brána ComGate, dobírka i platba převodem pro firemní zákazníky.</span></div></div>
+      <div class="feat"><div class="ck">✓</div><div><b>Srovnávače &amp; analytika</b><br><span>XML feedy pro Heureka.sk a Google Nákupy, GTM a analytika, redirecty 301.</span></div></div></div>
+  </div>
+</div></section>
+
+<!-- 07 -->
+<section class="block"><div class="wrap">
+  <div class="sec-head"><div class="sec-num">07</div>
+    <div><h2>Technologie</h2><div class="sub">Osvědčená platforma, na které JAKO úspěšně prodává</div></div></div>
+  <p class="lead-2">jako-sport.sk poběží na <b style="color:var(--ink)">platformě EasyWeb</b> — stejném prověřeném řešení jako JAKO CZ, které roky stabilně zvládá katalog, konfigurátor potisku, hromadné týmové objednávky i napojení na sklad. Volíme ho zde zcela záměrně: u klonu je jistota a kompatibilita důležitější než experiment.</p>
+  <div class="grid g3">
+    <div class="card"><div class="icon">🏆</div><h3>Ověřené v provozu</h3><p>EasyWeb — stejný základ, na kterém JAKO CZ reálně prodává. Žádné dětské nemoci nového systému.</p></div>
+    <div class="card"><div class="icon">🔌</div><h3>Přímé napojení na B2B</h3><p>Hotová integrace na sklad p. Prouzy — sdílená logika s JAKO CZ, druhá instance.</p></div>
+    <div class="card"><div class="icon">🤖</div><h3>Moderní AI překlady</h3><p>Automatické překlady obsahu přes jazykový model — moderní prvek navíc.</p></div>
+  </div>
+  <div class="note">U klonu je nejchytřejší cesta jistota: postavit jako-sport.sk na téže osvědčené platformě EasyWeb jako JAKO CZ znamená rychlejší nasazení a plnou kompatibilitu se skladem.</div>
+</div></section>
+
+<!-- 08 -->
+<section class="block"><div class="wrap">
+  <div class="sec-head"><div class="sec-num">08</div>
+    <div><h2>Předpoklady a součinnost</h2><div class="sub">Co od vás budeme potřebovat</div></div></div>
+  <ul class="clean">
+    <li>Součinnost p. Prouzy (B2B) při napojení a testování přenosů.</li>
+    <li>Potvrzení a zřízení platební brány ComGate, případně přístupy dopravců (GLS, Packeta).</li>
+    <li>Seznam srovnávačů a dopravců, se kterými máme počítat (zatím Heureka.sk, Google Nákupy; GLS, Packeta).</li>
+    <li>Schválení vzorku automatického překladu před hromadným nasazením.</li>
+    <li>Přístupy k doméně jako-sport.sk a součinnost při spuštění a redirectech.</li>
+  </ul>
+</div></section>
+
+<!-- 09 -->
+<section class="block"><div class="wrap">
+  <div class="sec-head"><div class="sec-num">09</div>
+    <div><h2>Jak budeme postupovat</h2><div class="sub">Od odsouhlasení k hotovému eshopu</div></div></div>
+  <div class="steps">
+    <div class="step"><div><b>Potvrzení a smlouva</b><p>Doladíme rozsah, finalizujeme harmonogram a zálohový kalendář.</p></div></div>
+    <div class="step"><div><b>Klon a rekonfigurace</b><p>Replikace aplikace, nastavení SK/EUR, úprava skriptů a prvotní import.</p></div></div>
+    <div class="step"><div><b>Lokalizace a napojení</b><p>SK překlady, konfigurátor, B2B, dopravci a platba.</p></div></div>
+    <div class="step"><div><b>Testování a spuštění</b><p>Feedy, redirecty, kontrola přenosů a ostrý start.</p></div></div>
+  </div>
+</div></section>
+
+<!-- 10 -->
+<section class="block"><div class="wrap">
+  <div class="sec-head"><div class="sec-num">10</div>
+    <div><h2>Proč to udělat s námi</h2><div class="sub">Klon od autora originálu vs. stavba od nuly</div></div></div>
+  <div class="grid g3">
+    <div class="card"><div class="icon">⚡</div><h3>Rychlost</h3><p>Přebíráme hotové řešení — nasazení v řádu týdnů, ne měsíců stavby od základu.</p></div>
+    <div class="card"><div class="icon">🛡️</div><h3>Jistota</h3><p>Eshop, který reálně prodává v CZ. Stejné funkce, stejný konfigurátor, stejné napojení.</p></div>
+    <div class="card"><div class="icon">🤝</div><h3>Autor originálu</h3><p>JAKO CZ jsme postavili my. Známe každý detail — nikdo to neudělá rychleji a věrněji.</p></div>
+  </div>
+  <div class="note">Nová stavba od jiného dodavatele znamená vyšší cenu, delší čas a riziko nesouladu s vaším B2B. Klon od autora originálu je nejjistější a nejrychlejší cesta na slovenský trh.</div>
+</div></section>
+
+<!-- 11 -->
+<section class="block"><div class="wrap">
+  <div class="sec-head"><div class="sec-num">11</div>
+    <div><h2>Podmínky nabídky</h2><div class="sub">Pár vět na závěr</div></div></div>
+  <ul class="clean">
+    <li>Ceny jsou uvedeny <b style="color:var(--ink)">bez DPH</b> v <b style="color:var(--ink)">EUR</b>. U služby pro SK plátce se uplatní přenesená daňová povinnost (reverse charge).</li>
+    <li>Platba probíhá v <b style="color:var(--ink)">pravidelných měsíčních zálohách</b> dle zálohového kalendáře (sekce 04).</li>
+    <li>Automatické překlady se účtují za přeložený produkt; sazba bude potvrzena po testech.</li>
+    <li>Nabídka platí <b style="color:var(--ink)">30 dní</b> od data vystavení (8. 6. 2026).</li>
+  </ul>
+  <div class="cta">
+    <h2>Pojďme jako-sport.sk rozjet 🚀</h2>
+    <p>B2B je připravené, otázky zodpovězené — stačí potvrdit a můžeme začít.</p>
+    <a class="btn" href="mailto:adam@cstechnologies.cz?subject=Nabídka%20JAKO%20SK%20—%20CST-2026-06-JAKOSPORT">Mám zájem, ozvěte se</a>
+    <a class="btn ghost" href="tel:+420775715261">+420 775 715 261</a>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="foot">
+    <div class="col" style="max-width:340px">
+      <img class="logo-on-dark" src="/_assets/cs-technologies/logo.svg" alt="CS Technologies">
+      <img class="logo-on-light" src="/_assets/cs-technologies/logo-dark.svg" alt="CS Technologies">
+      <p>Jsme digitální vývojáři. Stavíme funkční e-business a projekty, co mají skutečný smysl — řešení přizpůsobujeme vašim procesům.</p></div>
+    <div class="col"><p><b style="color:var(--ink)">CS Technologies s.r.o.</b><br>
+      Ak. Heyrovského 1178/6<br>500 03 Hradec Králové<br>
+      IČO: 27463249 · DIČ: CZ27463249</p></div>
+    <div class="col"><p><b style="color:var(--ink)">Kontakt</b><br>
+      <a href="tel:+420775715261">+420 775 715 261</a><br>
+      <a href="mailto:adam@cstechnologies.cz">adam@cstechnologies.cz</a><br>
+      <a href="https://www.cstechnologies.cz">www.cstechnologies.cz</a></p></div>
+  </div>
+  <div class="legal"><span>© 2026 CS Technologies s.r.o. — Nabídka CST-2026-06-JAKOSPORT</span><span>Důvěrné · určeno výhradně pro X2 Sport, s.r.o.</span></div>
+</div></footer>
+
+<script>
+const root=document.documentElement, btn=document.getElementById('themeBtn');
+const saved=localStorage.getItem('cst-theme'); if(saved) root.setAttribute('data-theme',saved);
+btn.addEventListener('click',()=>{const n=root.getAttribute('data-theme')==='dark'?'light':'dark';root.setAttribute('data-theme',n);localStorage.setItem('cst-theme',n);});
+const bar=document.getElementById('progress');
+addEventListener('scroll',()=>{const h=document.documentElement;bar.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';},{passive:true});
+</script>
+</body>
+</html>

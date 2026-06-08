@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="cs" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Nabídka voicebota pro BEST SERIES | CS Bot</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --magenta:#c82973; --magenta-d:#a81f5f; --teal:#0e4b67; --teal-2:#15708f; --navy:#0a2233;
+  --ink:#13283a; --muted:#5d7080; --line:#e7ebef;
+  --bg:#ffffff; --bg-alt:#f6f8fa; --card:#ffffff; --surface:#f3f5f8;
+  --shadow:0 16px 40px rgba(14,75,103,.08); --shadow-lg:0 24px 60px rgba(200,41,115,.12);
+  --grad:linear-gradient(100deg,var(--magenta),var(--teal-2));
+  --radius:16px;
+}
+html[data-theme="dark"]{
+  --ink:#eaf1f6; --muted:#9fb3c0; --line:rgba(255,255,255,.10);
+  --bg:#07151f; --bg-alt:#0b1f2c; --card:#0e2433; --surface:rgba(255,255,255,.04);
+  --shadow:0 16px 40px rgba(0,0,0,.35); --shadow-lg:0 24px 60px rgba(0,0,0,.45);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Poppins",system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden;transition:background .35s,color .35s}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+h1,h2,h3{line-height:1.18;letter-spacing:-.02em;font-weight:700}
+a{color:var(--magenta);text-decoration:none}.accent{color:var(--magenta)}
+#progress{position:fixed;top:0;left:0;height:3px;width:0;background:var(--grad);z-index:100;transition:width .1s}
+.topbar{position:sticky;top:0;z-index:90;backdrop-filter:blur(12px);background:color-mix(in srgb,var(--bg) 85%,transparent);border-bottom:1px solid var(--line)}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:66px}
+.topbar img{height:30px;display:block}
+html[data-theme="dark"] .topbar img,html[data-theme="dark"] .foot img{filter:brightness(0) invert(1)}
+.tb-right{display:flex;align-items:center;gap:14px}
+.tag{font-size:12px;color:var(--muted);border:1px solid var(--line);padding:5px 12px;border-radius:99px;font-weight:500}
+.toggle{cursor:pointer;background:var(--surface);border:1px solid var(--line);color:var(--ink);width:40px;height:40px;border-radius:11px;font-size:17px;display:grid;place-items:center;transition:.2s}
+.toggle:hover{border-color:var(--magenta)}
+
+/* hero */
+.hero{position:relative;padding:92px 0 72px;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;
+  background:radial-gradient(680px 320px at 84% -10%,rgba(200,41,115,.10),transparent 62%),
+             radial-gradient(560px 300px at 2% 6%,rgba(21,112,143,.10),transparent 60%)}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:12.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--magenta);margin-bottom:22px}
+.eyebrow .dot{width:8px;height:8px;border-radius:99px;background:var(--teal-2)}
+.hero h1{font-size:clamp(33px,5.6vw,58px);font-weight:800;margin-bottom:18px;letter-spacing:-.03em}
+.hero h1 .em{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p.lead{font-size:clamp(17px,2.3vw,20px);color:var(--muted);max-width:660px}
+.meta{display:flex;flex-wrap:wrap;gap:12px;margin-top:38px}
+.meta .m{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:13px 18px;min-width:148px;box-shadow:var(--shadow)}
+.meta .m span{display:block;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:500}
+.meta .m strong{font-size:15.5px;font-weight:600}
+
+/* section scaffolding */
+section.block{padding:64px 0;border-top:1px solid var(--line)}
+section.block.alt{background:var(--bg-alt)}
+.sec-head{display:flex;align-items:baseline;gap:18px;margin-bottom:30px}
+.sec-num{font-weight:800;font-size:15px;color:var(--magenta);letter-spacing:.05em;padding-top:6px;font-variant-numeric:tabular-nums}
+.sec-head h2{font-size:clamp(24px,3.4vw,33px);font-weight:700;margin-bottom:6px}
+.sec-head .sub{color:var(--muted);font-size:15px;font-weight:400}
+.lead-2{color:var(--muted);font-size:16px;max-width:760px;margin-bottom:26px}
+
+.grid{display:grid;gap:16px}.g2{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(3,1fr)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}
+.card h3{font-size:17px;font-weight:600;margin-bottom:7px}
+.card p{color:var(--muted);font-size:14.5px}
+.icon{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;margin-bottom:13px;background:linear-gradient(135deg,rgba(200,41,115,.12),rgba(21,112,143,.12));font-size:20px}
+ul.clean{list-style:none;display:grid;gap:11px}
+ul.clean li{display:flex;gap:12px;color:var(--muted);font-size:15px}
+ul.clean li::before{content:"";flex:0 0 auto;width:7px;height:7px;border-radius:99px;background:var(--magenta);margin-top:9px}
+
+/* priority chips */
+.prios{display:flex;flex-wrap:wrap;gap:10px;margin-top:4px}
+.prio{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:500;background:var(--surface);border:1px solid var(--line);padding:9px 15px;border-radius:99px}
+.prio b{color:var(--magenta)}
+
+/* variants */
+.vargrid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.var{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:28px;box-shadow:var(--shadow);position:relative;display:flex;flex-direction:column}
+.var.featured{border-color:var(--magenta);box-shadow:var(--shadow-lg)}
+.var .badge{position:absolute;top:18px;right:20px;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#fff;background:var(--grad);padding:5px 11px;border-radius:99px}
+.var .vname{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:10px}
+.var .price{font-size:38px;font-weight:800;letter-spacing:-.02em}
+.var .price small{font-size:14px;color:var(--muted);font-weight:500}
+.var .vdesc{color:var(--muted);font-size:14px;margin:8px 0 18px;min-height:40px}
+.var table{box-shadow:none;border:0;border-radius:0;margin-bottom:0}
+.var table td{padding:9px 0;border-bottom:1px dashed var(--line);font-size:14px}
+.var table tr:last-child td{border-bottom:0}
+.var table td:last-child{text-align:right;white-space:nowrap;font-weight:600;font-variant-numeric:tabular-nums}
+.var .vtotal{margin-top:16px;padding-top:14px;border-top:2px solid var(--line);display:flex;justify-content:space-between;align-items:baseline}
+.var .vtotal b{font-size:13px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
+.var .vtotal .n{font-size:24px;font-weight:800;color:var(--magenta)}
+
+/* tables */
+table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+th,td{padding:13px 16px;text-align:left;font-size:14.5px;border-bottom:1px solid var(--line)}
+th{background:var(--surface);font-weight:600;font-size:12px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+td.c,th.c{text-align:center}
+tr:last-child td{border-bottom:0}
+.cmp td:first-child{font-weight:500}
+.yes{color:var(--magenta);font-weight:800}.no{color:var(--muted);opacity:.5}
+.tbl-wrap{overflow-x:auto;border-radius:var(--radius)}
+
+/* steps */
+.steps{counter-reset:s;display:grid;gap:14px}
+.step{display:flex;gap:16px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;box-shadow:var(--shadow)}
+.step::before{counter-increment:s;content:counter(s);flex:0 0 auto;width:34px;height:34px;border-radius:50%;background:var(--grad);color:#fff;display:grid;place-items:center;font-weight:700;font-size:15px}
+.step b{font-weight:600}.step p{color:var(--muted);font-size:14.5px;margin-top:2px}
+
+.note{font-size:13.5px;color:var(--muted);background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--magenta);border-radius:10px;padding:14px 16px;margin-top:18px}
+
+.cta{margin-top:30px;background:var(--navy);border-radius:20px;padding:44px;text-align:center;position:relative;overflow:hidden}
+html[data-theme="dark"] .cta{background:#0a1f2d;border:1px solid var(--line)}
+.cta::before{content:"";position:absolute;inset:0;background:radial-gradient(500px 220px at 50% -30%,rgba(200,41,115,.35),transparent 60%)}
+.cta>*{position:relative}
+.cta h2{font-size:clamp(23px,3.6vw,32px);margin-bottom:12px;color:#fff}
+.cta p{color:rgba(255,255,255,.78);max-width:520px;margin:0 auto 24px}
+.btn{display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:16px;padding:14px 28px;border-radius:12px;background:var(--grad);color:#fff;transition:transform .15s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(200,41,115,.4)}
+.btn.ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.35);margin-left:8px}
+
+footer{border-top:1px solid var(--line);padding:48px 0 60px}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:26px}
+.foot img{height:30px;margin-bottom:13px}
+.foot .col p{color:var(--muted);font-size:13.5px;line-height:1.8}.foot a{color:var(--muted)}.foot a:hover{color:var(--magenta)}
+.legal{margin-top:28px;padding-top:20px;border-top:1px solid var(--line);font-size:12.5px;color:var(--muted);display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-between}
+@media(max-width:760px){.g2,.g3,.vargrid{grid-template-columns:1fr}.topbar .tag{display:none}.hero{padding:60px 0 50px}.sec-head{flex-direction:column;gap:4px}}
+</style>
+</head>
+<body>
+<div id="progress"></div>
+<header class="topbar"><div class="wrap">
+  <img src="/_assets/cs-bot/logo-full.svg" alt="CS Bot">
+  <div class="tb-right"><span class="tag">Nabídka&nbsp;·&nbsp;BEST&nbsp;SERIES</span>
+    <button class="toggle" id="themeBtn" aria-label="Přepnout režim">◐</button></div>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <div class="eyebrow"><span class="dot"></span> Nabídka voicebota · CSB-2026-06-BEST</div>
+  <h1>Hlasový asistent, který <span class="em">zvedne každý hovor</span> vašich prádlomatů</h1>
+  <p class="lead">VoiceBot na telefonu, který zákazníkům poradí 24/7 — zjistí lokaci, rozpozná typ prádlomatu, vyřeší dotaz dle FAQ a problém předá dál. Žádné zmeškané hovory, žádné čekání na lince.</p>
+  <div class="meta">
+    <div class="m"><span>Pro</span><strong>BEST SERIES s.r.o.</strong></div>
+    <div class="m"><span>Od</span><strong>CS Bot</strong></div>
+    <div class="m"><span>Datum</span><strong>5. 6. 2026</strong></div>
+    <div class="m"><span>Platnost</span><strong>30 dní</strong></div>
+  </div>
+</div></section>
+
+<!-- 01 -->
+<section class="block"><div class="wrap">
+  <div class="sec-head"><div class="sec-num">01</div><div><h2>Porozumění zadání</h2><div class="sub">Co řešíme a proč</div></div></div>
+  <p class="lead-2">Zákazník u prádlomatu potřebuje pomoc okamžitě — ne až někdo zvedne telefon. Cílem je hlasový asistent, který odbaví hovor kdykoliv, poradí podle vašich postupů a co sám nevyřeší, čistě předá dál. Naše priority:</p>
+  <div class="prios">
+    <span class="prio"><b>01</b> Dostupnost 24/7</span>
+    <span class="prio"><b>02</b> Odborná pomoc dle FAQ</span>
+    <span class="prio"><b>03</b> Žádný zmeškaný hovor</span>
+    <span class="prio"><b>04</b> Přehled o každém kontaktu</span>
+    <span class="prio"><b>05</b> Nasazení během pár dní</span>
+  </div>
+</div></section>
+
+<!-- 02 -->
+<section class="block alt"><div class="wrap">
+  <div class="sec-head"><div class="sec-num">02</div><div><h2>Co voicebot umí</h2><div class="sub">Společné jádro obou variant</div></div></div>
+  <div class="grid g3">
+    <div class="card"><div class="icon">📍</div><h3>Zjistí lokaci</h3><p>Na začátku hovoru rozpozná, o kterou pobočku či prádelnu jde.</p></div>
+    <div class="card"><div class="icon">🧺</div><h3>Rozliší typ prádlomatu</h3><p>Podle odpovědí zákazníka určí konkrétní zařízení a postup.</p></div>
+    <div class="card"><div class="icon">💡</div><h3>Poradí dle FAQ</h3><p>Odbornou pomoc čerpá z vašich podkladů a častých dotazů.</p></div>
+    <div class="card"><div class="icon">✉️</div><h3>SMS s odkazem</h3><p>Při problému s platbou odešle SMS s URL formuláře k vyřešení.</p></div>
+    <div class="card"><div class="icon">📊</div><h3>Výstup do Google Sheetu</h3><p>Každý hovor i jeho výsledek se přehledně ukládá do tabulky.</p></div>
+    <div class="card"><div class="icon">📞</div><h3>Vlastní telefonní číslo</h3><p>Registrace lokální pevné linky, na kterou bot odpovídá.</p></div>
+  </div>
+</div></section>
+
+<!-- 03 -->
+<section class="block"><div class="wrap">
+  <div class="sec-head"><div class="sec-num">03</div><div><h2>Varianty &amp; cena</h2><div class="sub">Začněte malým pasivním botem, nebo rovnou naplno</div></div></div>
+  <div class="vargrid">
+    <div class="var">
+      <div class="vname">Pasivní · Start</div>
+      <div class="price">4 625 Kč <small>+ DPH</small></div>
+      <div class="vdesc">Bot, který přijímá hovory a poradí dle FAQ. Přesně dle úvodní specifikace.</div>
+      <table><tbody>
+        <tr><td>Příprava a natrénování bota</td><td>4 500 Kč</td></tr>
+        <tr><td>Registrace tel. čísla (pevná linka)</td><td>v ceně</td></tr>
+        <tr><td>Testovací provoz (50 min · 2,50 Kč/min)</td><td>125 Kč</td></tr>
+      </tbody></table>
+      <div class="vtotal"><b>Celkem dle specifikace</b><span class="n">4 625 Kč</span></div>
+    </div>
+    <div class="var featured">
+      <div class="badge">Doporučeno</div>
+      <div class="vname">Aktivní · Plný provoz</div>
+      <div class="price">od 24 000 Kč <small>+ DPH</small></div>
+      <div class="vdesc">Bot napojený na vaše systémy, s více scénáři, odchozími hovory a reportingem.</div>
+      <table><tbody>
+        <tr><td>Analýza a návrh scénářů</td><td>6 000 Kč</td></tr>
+        <tr><td>Příprava a natrénování (rozšířené)</td><td>9 000 Kč</td></tr>
+        <tr><td>Napojení na API / CRM / databázi</td><td>7 000 Kč</td></tr>
+        <tr><td>Reporting a ladění</td><td>2 000 Kč</td></tr>
+      </tbody></table>
+      <div class="vtotal"><b>Od</b><span class="n">24 000 Kč</span></div>
+    </div>
+  </div>
+  <div class="note">Provoz hovorů se účtuje dle skutečně provolaných minut (od 2,50 Kč/min). Ceny varianty Aktivní jsou orientační — finální kalkulace dle počtu scénářů a integrací.</div>
+</div></section>
+
+<!-- 04 -->
+<section class="block alt"><div class="wrap">
+  <div class="sec-head"><div class="sec-num">04</div><div><h2>Volitelná rozšíření</h2><div class="sub">Přidáme kdykoliv — teď nebo později</div></div></div>
+  <div class="grid g3">
+    <div class="card"><div class="icon">🌐</div><h3>Vícejazyčný bot</h3><p>Obsluha hovorů i v dalších jazycích (SK, EN, DE…).</p></div>
+    <div class="card"><div class="icon">📣</div><h3>Odchozí kampaně</h3><p>Aktivní hovory — ověření, připomenutí, oslovení zákazníků.</p></div>
+    <div class="card"><div class="icon">🔌</div><h3>Napojení na systémy</h3><p>Integrace na vaše CRM, objednávky či interní nástroje.</p></div>
+  </div>
+  <div class="note">Cena volitelných rozšíření na vyžádání — rádi připravíme samostatnou kalkulaci.</div>
+</div></section>
+
+<!-- 05 -->
+<section class="block"><div class="wrap">
+  <div class="sec-head"><div class="sec-num">05</div><div><h2>Srovnání variant</h2><div class="sub">Co která varianta obsahuje</div></div></div>
+  <div class="tbl-wrap"><table class="cmp">
+    <thead><tr><th>Funkce</th><th class="c">Pasivní</th><th class="c">Aktivní</th></tr></thead>
+    <tbody>
+      <tr><td>Příjem hovorů &amp; odpověď dle FAQ</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+      <tr><td>Lokace, typ prádlomatu, SMS s URL</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+      <tr><td>Výstup do Google Sheetu</td><td class="c yes">✓</td><td class="c yes">✓</td></tr>
+      <tr><td>Více scénářů a větvení konverzace</td><td class="c no">—</td><td class="c yes">✓</td></tr>
+      <tr><td>Napojení na API / CRM / databázi</td><td class="c no">—</td><td class="c yes">✓</td></tr>
+      <tr><td>Odchozí hovory (kampaně, ověření)</td><td class="c no">—</td><td class="c yes">✓</td></tr>
+      <tr><td>Reporting a průběžná optimalizace</td><td class="c no">—</td><td class="c yes">✓</td></tr>
+    </tbody>
+  </table></div>
+</div></section>
+
+<!-- 06 -->
+<section class="block alt"><div class="wrap">
+  <div class="sec-head"><div class="sec-num">06</div><div><h2>Jak nasazení probíhá</h2><div class="sub">Od objednávky k prvnímu hovoru za pár dní</div></div></div>
+  <div class="steps">
+    <div class="step"><div><b>Registrace čísla &amp; podklady</b><p>Zaregistrujeme linku a převezmeme vaše FAQ a scénáře.</p></div></div>
+    <div class="step"><div><b>Natrénování bota</b><p>Připravíme a vyladíme konverzaci na míru prádlomatům.</p></div></div>
+    <div class="step"><div><b>Testovací provoz</b><p>50 minut testovacích hovorů a doladění dle vašich připomínek.</p></div></div>
+    <div class="step"><div><b>Ostrý provoz</b><p>Bot jede naživo, výstupy padají do Google Sheetu.</p></div></div>
+  </div>
+  <div class="note">První testovací verze bude připravena do 10 dnů od připsání platby.</div>
+</div></section>
+
+<!-- 07 -->
+<section class="block"><div class="wrap">
+  <div class="sec-head"><div class="sec-num">07</div><div><h2>Předpoklady a součinnost</h2><div class="sub">Co od vás potřebujeme</div></div></div>
+  <div class="grid g2">
+    <div class="card"><ul class="clean">
+      <li>Podklady pro FAQ a popis typů prádlomatů.</li>
+      <li>Definice scénářů a chování v okrajových situacích.</li>
+    </ul></div>
+    <div class="card"><ul class="clean">
+      <li>Přístup k cílovému Google Sheetu (nebo vytvoříme nový).</li>
+      <li>Zpětná vazba k testovacím hovorům.</li>
+    </ul></div>
+  </div>
+</div></section>
+
+<!-- 08 -->
+<section class="block alt"><div class="wrap">
+  <div class="sec-head"><div class="sec-num">08</div><div><h2>Provoz a správa</h2><div class="sub">Náklady po spuštění</div></div></div>
+  <div class="grid g3">
+    <div class="card"><div class="icon">⏱️</div><h3>Provoz hovorů</h3><p>Účtováno dle skutečně provolaných minut — od 2,50 Kč/min.</p></div>
+    <div class="card"><div class="icon">🛠️</div><h3>Údržba scénářů</h3><p>Volitelná průběžná údržba a vylepšování konverzace.</p></div>
+    <div class="card"><div class="icon">📈</div><h3>Optimalizace</h3><p>U varianty Aktivní ladíme bota podle reálných hovorů.</p></div>
+  </div>
+</div></section>
+
+<!-- 09 -->
+<section class="block"><div class="wrap">
+  <div class="sec-head"><div class="sec-num">09</div><div><h2>Proč CS Bot</h2><div class="sub">Voiceboti, kteří mluví lidsky</div></div></div>
+  <div class="grid g3">
+    <div class="card"><div class="icon">🇨🇿</div><h3>Česky a na míru</h3><p>Implementace na míru vašim procesům, ne šablona z krabice.</p></div>
+    <div class="card"><div class="icon">⚡</div><h3>Rychlé nasazení</h3><p>První verze do 10 dnů, ladění podle reálných hovorů.</p></div>
+    <div class="card"><div class="icon">🧠</div><h3>Součást procesů</h3><p>Bot je plnohodnotná součást firemních procesů, ne hračka.</p></div>
+  </div>
+</div></section>
+
+<!-- 10 -->
+<section class="block alt"><div class="wrap">
+  <div class="sec-head"><div class="sec-num">10</div><div><h2>Podmínky nabídky</h2><div class="sub">Krátce a jasně</div></div></div>
+  <ul class="clean" style="max-width:780px">
+    <li>Ceny jsou uvedeny <b style="color:var(--ink)">bez DPH</b>. Platba předem na základě výzvy k úhradě.</li>
+    <li>Daňový doklad vystavíme po zaplacení.</li>
+    <li>První testovací verze do 10 dnů od připsání platby.</li>
+    <li>Nabídka platí 30 dní od data vystavení (5. 6. 2026).</li>
+  </ul>
+  <div class="cta">
+    <h2>Pustíme bota do provozu? 🤖</h2>
+    <p>Pošlete nám FAQ a my za pár dní rozjedeme první testovací hovory.</p>
+    <a class="btn" href="mailto:info@csbot.cz?subject=Nabídka%20voicebota%20—%20CSB-2026-06-BEST">Chci voicebota</a>
+    <a class="btn ghost" href="tel:+420733792905">+420 733 792 905</a>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="foot">
+    <div class="col" style="max-width:340px"><img src="/_assets/cs-bot/logo-full.svg" alt="CS Bot">
+      <p>Voiceboti, chatboti a AI automatizace na míru. Hlasový asistent, který pracuje na telefonu a stává se plnohodnotnou součástí vašich procesů.</p></div>
+    <div class="col"><p><b style="color:var(--ink)">Provozovatel</b><br>CS Technologies s.r.o.<br>Ak. Heyrovského 1178/6<br>500 03 Hradec Králové<br>IČO: 27463249 · DIČ: CZ27463249</p></div>
+    <div class="col"><p><b style="color:var(--ink)">Kontakt</b><br>
+      <a href="tel:+420733792905">+420 733 792 905</a><br>
+      <a href="mailto:info@csbot.cz">info@csbot.cz</a><br>
+      <a href="https://www.csbot.cz">www.csbot.cz</a></p></div>
+  </div>
+  <div class="legal"><span>© 2026 CS Bot — Nabídka CSB-2026-06-BEST</span><span>Důvěrné · určeno výhradně pro BEST SERIES s.r.o.</span></div>
+</div></footer>
+
+<script>
+const root=document.documentElement,btn=document.getElementById('themeBtn');
+const saved=localStorage.getItem('csbot-theme');if(saved)root.setAttribute('data-theme',saved);
+btn.addEventListener('click',()=>{const n=root.getAttribute('data-theme')==='light'?'dark':'light';root.setAttribute('data-theme',n);localStorage.setItem('csbot-theme',n);});
+const bar=document.getElementById('progress');
+addEventListener('scroll',()=>{const h=document.documentElement;bar.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';},{passive:true});
+</script>
+</body>
+</html>
