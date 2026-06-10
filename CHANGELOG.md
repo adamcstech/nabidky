@@ -6,6 +6,12 @@ infra, architektura, struktura, nové brandy, vytvořené/smazané nabídky, kon
 
 ---
 
+## 2026-06-10 — nová nabídka: předimplementační analýza Weldis (Adam + Frank)
+
+- **Nabídka `CST-2026-06-WELDIS`** (Weldis, www.weldis.cz) — GUID `e75e2d30-b73e-4dcc-9eaa-6a90e63a60b6`. Brand CS Technologies, kontakt **Standa** (standa.n@cstechnologies.cz / 733 792 905).
+- **Typ: předimplementační analýza** (ne vývoj eshopu) — 30 000 Kč bez DPH, 30–32 h, do 14 dní. Struktura 9 sekcí: proč analýza, výstupy, cena/rozsah, tým (Stanislav Novák — obchod/marketing + Adam Švanse — technika), Část I obchodní/marketingová (6 oblastí), Část II technická (7 oblastí vč. SQL Ekonom, B2B, servisní portál), postup, proč, podmínky.
+- Zdrojový text od Standy uložen v `podklady/cs-technologies/weldis/` (mimo git). Offer i podklad **gitignored** (privacy model drží — jednorázový push proběhl dřív).
+
 ## 2026-06-08 — push ostrých dat na GitHub (pro agenta) (Adam + Frank)
 
 - Na **vědomé rozhodnutí Adama** (private repo) pushnuta **reálná data**: všechny 4 nabídky, **celé `podklady/`** (reálné dokumenty ~6 klientů — Teamline/JAKO CZ smlouva, X2 Sport komunikace, BEST SERIES objednávka, SYNYT analýza, inerez/marine/sodokolín kalkulace) a `NABIDKY-INDEX.md`. Účel: jiná agentní session si to prozkoumá a navrhne strukturu.
