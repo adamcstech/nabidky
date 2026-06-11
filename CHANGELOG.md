@@ -6,6 +6,23 @@ infra, architektura, struktura, nové brandy, vytvořené/smazané nabídky, kon
 
 ---
 
+## 2026-06-11 — engine: CS Technologies design system v1 + tisk (Adam + Frank)
+
+- **Centralizace CSS/JS nabídek** — odladěný vzhled CS Tech (z ostrých JAKO SK + Weldis) vytažen do
+  **`www/_assets/cs-technologies/offer-v1.css`** (12 kB, vč. `@media print`) a **`offer-v1.js`** (chování:
+  přepínač režimu + progress). Nabídka už **negeneruje ~230 řádků inline `<style>`** — jen linkuje centrální vrstvu.
+- **Motivace (Adamovo rozhodnutí):** budoucí agent bude tvořit nabídky → fixní design system = **nižší
+  spend tokenů** (content-only nabídka ~3× menší: 146 vs 300 řádků, 8,9 vs 25 kB) a **nulová možnost rozbít styl**
+  (agent skládá z hotových dílků, píše jen obsah).
+- **Verzování = řešení „freeze":** nabídka si přišpendlí `offer-v1.css` → je **zmražená** (sent == printed).
+  Změna designu = `offer-v2.css`, staré nabídky zůstanou na v1.
+- **Tisk (`@media print`):** světlá inkoust-úsporná paleta bez ohledu na režim, skrytí chrome (lišta/přepínač/
+  progress/tlačítka), logo s tmavým textem, zrušení gradient pozadí/glow/stínů, gradient text → plná barva,
+  hlídání zalomení stránek. **Plní původní plán „tisková šablona + print CSS"** — jako součást design systemu, ne zvlášť.
+- **Katalog komponent** `brands/cs-technologies/components.md` — skeleton + snippet ke každému dílku (slovní zásoba pro agenta/Standu).
+- **Živá referenční ukázka** (kitchen sink všech komponent): GUID `502d1d85-f882-4db7-afb0-a4ebd3d6aaca` (mimo git, regenerovatelná).
+- **CS Bot / Samolepák:** zatím beze změny — zamknou se do vlastního `offer-v1.css` až po doladění formy (CS Bot se ladí teď).
+
 ## 2026-06-10 — nová nabídka: předimplementační analýza Weldis (Adam + Frank)
 
 - **Nabídka `CST-2026-06-WELDIS`** (Weldis, www.weldis.cz) — GUID `e75e2d30-b73e-4dcc-9eaa-6a90e63a60b6`. Brand CS Technologies, kontakt **Standa** (standa.n@cstechnologies.cz / 733 792 905).
