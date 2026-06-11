@@ -6,6 +6,13 @@ infra, architektura, struktura, nové brandy, vytvořené/smazané nabídky, kon
 
 ---
 
+## 2026-06-11 — CS Bot design system (draft) + rozjetá nabídka Úřad vlády (Adam + Frank)
+
+- **CS Bot design system — draft:** `www/_assets/cs-bot/offer-v1.css` (+ `@media print`) + `offer-v1.js`. Stejná komponentová kostra jako CS Tech, překlopená do CS Bot tokenů: **světlý default, magenta `#c82973`→tyrkys, jen Poppins**, `.block.tint` střídání bílá/šedá, `table.tbl` pro cenové tabulky. **Zatím draft** — ladí se s Adamem, zamkne se po doladění vzhledu.
+- **Nová nabídka (rozpracovaná): AI voicebot pro Úřad vlády ČR** — GUID `05dfa5fe-9890-41d6-bac5-244a1ccd9ecc`, brand CS Bot, content-only. Podklady (struktura + plán callu + shrnutí z callu) v `podklady/cs-bot/urad-vlady/` (mimo git). Stav: **vizuální kostra + orientační ceny** (implementace 80–120 tis., provoz 10 000 Kč/měs · 6 měs. PoC, demo 0 Kč — vše nezávazně, přesné částky a podpoložky zítra).
+- **Klíčový koncept (Adamova vize): voicebot pracuje ve DVOU VRSTVÁCH** — (1) přímé znalosti & rozcestník = obecná orientace + nasměrování na ministerstvo; (2) ověřená data pod kontrolou = fakta jen z vložené znalostní báze + guardraily proti halucinacím. Sekce přestavěna na tyto vrstvy + **schéma toku nahoře** (Volající → Voicebot → V1/V2 → Operátor). Pro vládního klienta je to hlavní argument důvěryhodnosti.
+- **Demo číslo:** +420 388 000 388 (živé, v sekci 03).
+
 ## 2026-06-11 — engine: CS Technologies design system v1 + tisk (Adam + Frank)
 
 - **Centralizace CSS/JS nabídek** — odladěný vzhled CS Tech (z ostrých JAKO SK + Weldis) vytažen do
