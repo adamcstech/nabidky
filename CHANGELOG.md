@@ -6,6 +6,14 @@ infra, architektura, struktura, nové brandy, vytvořené/smazané nabídky, kon
 
 ---
 
+## 2026-06-12 — CS Bot design system v1 FINALIZOVÁN + ostrá nabídka Úřad vlády hotová (Adam + Frank)
+
+- **CS Bot `offer-v1.css` → produkční (v1):** sundán „draft" status. Doplněny **custom komponenty voicebot nabídky** jako třídy (dříve inline): `.pill.alt`, `.stage-head`/`.free`, `.fromyou` (box součinnosti), `.card.reco`, `.bignum`, `.phone-box`, `.qlist`, schéma `.flow` (uzly/šipky/vrstvy/výstupy). Nabídka je teď **content-only s třídami**, žádné vlastní inline styly.
+- **Tisk:** `@media print` rozšířen o nové komponenty (break-inside). **Tlačítko tisku 🖨** přidáno do hlavičky vedle přepínače režimu (`offer-v1.js` → `window.print()`).
+- **Tmavé logo CS Bot:** vytvořeno `logo-dark.svg` (z `logo-full.svg`, modrá `#1E516B` → bílá, magenta zůstává). Nasazeno v hlavičce i patičce pro tmavý režim.
+- **Katalog komponent** `brands/cs-bot/components.md` — skeleton + snippety vč. custom dílků (princip pro budoucí CS Bot nabídky / agenta).
+- **Nabídka `CSB-2026-06-URADVLADY`** (Úřad vlády ČR) — GUID `05dfa5fe-9890-41d6-bac5-244a1ccd9ecc`, **hotová**. 9 sekcí: technické proporce (2 vrstvy + tok hovoru), spolupráce, demo zdarma (+420 490 000 207), specifikace ve 4 etapách (smlouva+DPA · registrace čísla · Vrstva 1 22 900 Kč · Vrstva 2 RAG 80 000 Kč), kalkulace, provoz (2 sloty 3 000 Kč/měs · hovor 2,50 · přesměr. 0,50 · RAG od 2 000 · support 1 500/hod), otevřené dotazy, doplňky, platnost. Kontakt Standa. Offer i podklady **mimo git**.
+
 ## 2026-06-11 — CS Bot design system (draft) + rozjetá nabídka Úřad vlády (Adam + Frank)
 
 - **CS Bot design system — draft:** `www/_assets/cs-bot/offer-v1.css` (+ `@media print`) + `offer-v1.js`. Stejná komponentová kostra jako CS Tech, překlopená do CS Bot tokenů: **světlý default, magenta `#c82973`→tyrkys, jen Poppins**, `.block.tint` střídání bílá/šedá, `table.tbl` pro cenové tabulky. **Zatím draft** — ladí se s Adamem, zamkne se po doladění vzhledu.
