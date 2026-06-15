@@ -12,6 +12,8 @@
     root.setAttribute('data-theme', n);
     localStorage.setItem(KEY, n);
   });
+  var pb = document.getElementById('printBtn');
+  if (pb) pb.addEventListener('click', function () { window.print(); });
   var bar = document.getElementById('progress');
   if (bar) addEventListener('scroll', function () {
     var h = document.documentElement;
