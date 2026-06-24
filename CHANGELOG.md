@@ -6,6 +6,15 @@ infra, architektura, struktura, nové brandy, vytvořené/smazané nabídky, kon
 
 ---
 
+## 2026-06-24 — Samolepák design system v1 (s Matějem) (Matěj + Frank)
+
+- **Nová role aktivní: Matěj** (vlastník brandu Samolepák) — poprvé ladí Samolepák.
+- **Šablona Samolepák přepracována** (GUID `fbb2bf9d-…`, vzor PČR): z 9 sekcí na **4 pilíře — Design · Materiál · Cena · Dodání** + CTA. Reálná data PČR (Lamino Strong, 4 000 ks, **296 000 Kč s DPH**, doprava zdarma). Ceny **s DPH** (B2C). Materiál: ukázán jen zvolený (Lamino Strong) + technické parametry.
+- **Design vyladěn:** větší logo, čisté hero (gradient pryč), akcent přebarven žlutá→…→ **šedá #d9d9d9** (text na ní černý), drží červená + navy + bílá. **Tmavé logo** `logo-dark.svg` (navy text → bílá přes obrys, červená zůstává).
+- **Design system v1 vytažen:** `www/_assets/samolepak/offer-v1.css` (+ `@media print`, tmavé bloky cena/CTA převedené na světlé) + `offer-v1.js` (přepínač režimu + **tlačítko tisku 🖨** + progress). Nabídka je teď **content-only** (žádné inline styly). Katalog `brands/samolepak/components.md`.
+- **Tisk srovnán napříč všemi 3 brandy** (CS Tech · CS Bot · Samolepák) — @media print + tlačítko 🖨.
+- **Domén. fakta uložena (od Matěje):** 3 materiály + slevová logika; **3D nesmí mít ostré hrany** (pryskyřice vyteče) → neslibovat nereálné; v nabídce vždy jen vybraný materiál.
+
 ## 2026-06-12 — CS Bot design system v1 FINALIZOVÁN + ostrá nabídka Úřad vlády hotová (Adam + Frank)
 
 - **CS Bot `offer-v1.css` → produkční (v1):** sundán „draft" status. Doplněny **custom komponenty voicebot nabídky** jako třídy (dříve inline): `.pill.alt`, `.stage-head`/`.free`, `.fromyou` (box součinnosti), `.card.reco`, `.bignum`, `.phone-box`, `.qlist`, schéma `.flow` (uzly/šipky/vrstvy/výstupy). Nabídka je teď **content-only s třídami**, žádné vlastní inline styly.
