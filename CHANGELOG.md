@@ -53,6 +53,12 @@ infra, architektura, struktura, nové brandy, vytvořené/smazané nabídky, kon
   v `components.md` u skeletonu poznámka, že `data-theme="dark"` je závazné. Technicky beze změny —
   skeleton i obě živé CS Tech nabídky tmavý default už měly. **Brandová diferenciace: CS Tech tmavý ·
   CS Bot a Samolepák světlé.**
+- **Oprava chyby v `ul.clean` (CS Tech `offer-v1.css`):** odrážka byla řešená `display:flex`, takže
+  **každý `<b>` uvnitř `<li>` se stal samostatnou flex položkou** a text se lámal do dvou sloupců vedle sebe.
+  Přepsáno na poziční odrážku (`position:absolute` + `padding-left`), text teče normálně inline; přidáno
+  `ul.clean li b{color:var(--ink)}` pro zvýraznění. Opraveny 3 odrážky v nabídce AD (Adam nahlásil 2).
+  **Pozor — stejná chyba je latentně i v CS Bot a Samolepák `offer-v1.css`** a **projevuje se v odeslané
+  nabídce Úřadu vlády** (4 výskyty `<li><b>`). Kvůli freeze jsem tam nesahal — rozhodne Adam.
 - **UZAVŘENO (rozhodl Adam 21. 9. 2026): tracking v gitu je záměr, ne omyl.** **PČR nabídka**
   (`fbb2bf9d-…`, brandový vzor Samolepáku) a **`NABIDKY-INDEX.md`** zůstávají **vědomě trackované**
   navzdory `.gitignore` — slouží jako vzor a seed pro budoucí engine. Editace těchto dvou souborů se
