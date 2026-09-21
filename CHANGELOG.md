@@ -6,6 +6,26 @@ infra, architektura, struktura, nové brandy, vytvořené/smazané nabídky, kon
 
 ---
 
+## 2026-09-21 — WordPress jako třetí tech větev + nabídka AD auditoři (Adam + Frank)
+
+- **`brands/cs-technologies/brand.md` rozšířen o WordPress** — schváleno Adamem. Mapování technologií nově:
+  **běžné weby → Next.js · velká e-commerce → Medusa · obsahový web s redakcí na šabloně → WordPress**.
+  Přidána sekce „WordPress — kdy ano" s kritérii (redakce, hotová šablona, menší rozpočet, klient si spravuje sám),
+  s negativním vymezením (ne pro větší e-shop / integrace / aplikační logiku) a s pokynem prodávat ho
+  proklientsky, ne jako ústupek. **EasyWeb politika útlumu beze změny.**
+- **Nová nabídka `CST-2026-09-AD`** (AD auditoři a.s.) — GUID `3bc4d248-52fa-4356-976c-47ea4d35671c`.
+  Nový web poradenské firmy (daně, audit, účetnictví, přeměny) na **WordPressu**, vzor designu **ekp.cz**.
+  Rozsah: 6 sekcí menu, 33 podoblastí služeb, profily lidí s carouselem, článková sekce se štítky,
+  formulář v modálu, mapa 3 poboček. **56 000 Kč bez DPH** (37,5 h, rozepsáno po položkách),
+  platba **50 % / 50 %**, termín do 8 týdnů. Kontakt Adam. Content-only, linkuje `offer-v1.css`.
+- **Podklady** `podklady/cs-technologies/ad-as/` — 2× docx od klienta (struktura menu + rozpis hlavní stránky).
+  Docx se čte přímo přes python-docx, převod na MD není potřeba.
+- **Dorovnán git viselec** z 24. 6. — nabídka PČR (content-only) + `NABIDKY-INDEX.md` zacommitovány (`73e740a`).
+- **Otevřené pro Adama:** (1) CS Tech `offer-v1.css` **nemá tabulkovou komponentu**, kterou CS Bot má
+  (`table.tbl`) — cenový rozpis proto poskládán z `.feat` řádků; zvážit doplnění pro paritu brandů.
+  (2) PČR nabídka a `NABIDKY-INDEX.md` zůstávají trackované v gitu navzdory `.gitignore` (dědictví
+  jednorázového pushe z 8. 6.) — rozhodnout, zda vyndat z trackingu, nebo vědomě ponechat.
+
 ## 2026-06-24 — Samolepák design system v1 (s Matějem) (Matěj + Frank)
 
 - **Nová role aktivní: Matěj** (vlastník brandu Samolepák) — poprvé ladí Samolepák.

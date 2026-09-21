@@ -7,7 +7,7 @@
 
 ## Identita & subjekt
 - **Co prodáváme:** výroba webů, eshopů a custom webových řešení na **moderních open-source technologiích**.
-- **Technologie (důležité — PRINCIP):** **nevážeme se na žádný systém** (ani EasyWeb, ani výhradně Medusu). Nejdřív zjistíme potřebu klienta a teprve pak zvolíme nejvhodnější moderní tech. Pracovní mapování *(zatím draft)*: **běžné weby/prezentace → Next.js**, **velká e-commerce → Medusa (headless)**; dále PostgreSQL, Node/TS, API-first, cloud/CDN. U Reactu/frontendu **vždy zmínit prerender + SEO/indexovatelnost** (rozptýlit obavu „React = špatné SEO"). Každá CS Tech nabídka má mít sekci **„Technologie"** psanou **proklientsky** (ať obstojí u klientova ajťáka a nepokazí SoftMedia tón). Workflow: Adam řekne klientovi zvolený stack → Frank ho rozvede a prodá.
+- **Technologie (důležité — PRINCIP):** **nevážeme se na žádný systém** (ani EasyWeb, ani výhradně Medusu). Nejdřív zjistíme potřebu klienta a teprve pak zvolíme nejvhodnější moderní tech. Pracovní mapování *(zatím draft)*: **běžné weby/prezentace → Next.js**, **velká e-commerce → Medusa (headless)**, **obsahový web s redakcí na šabloně → WordPress**; dále PostgreSQL, Node/TS, API-first, cloud/CDN. U Reactu/frontendu **vždy zmínit prerender + SEO/indexovatelnost** (rozptýlit obavu „React = špatné SEO"). Každá CS Tech nabídka má mít sekci **„Technologie"** psanou **proklientsky** (ať obstojí u klientova ajťáka a nepokazí SoftMedia tón). Workflow: Adam řekne klientovi zvolený stack → Frank ho rozvede a prodá.
 - **Právní subjekt:** CS Technologies s.r.o., Ak. Heyrovského 1178/6, 500 03 Hradec Králové, IČO 27463249, DIČ CZ27463249.
 - **Kontakt v nabídce (CTA + patička) = podle toho, KDO nabídku připravuje:**
   - **Adam** → adam@cstechnologies.cz · +420 775 715 261
@@ -24,6 +24,21 @@
 ## 🎛️ Standa ladí
 - **Režim:** demo je tmavé. Otevřená otázka — sjednotit na světlý jako CS Bot? (rozhodne Standa s Adamem)
 - Volba akcentní barvy z palety, množství dekorativních prvků, ikony.
+
+## WordPress — kdy ano (třetí větev, schváleno Adamem 2026-09-21)
+
+**Není to ústupek, je to správná volba pro určitý typ zakázky.** WordPress zvol, když platí většina z toho:
+
+- **Obsahový web s redakcí** — klient chce sám psát články, aktuality, judikaturu; potřebuje kategorie a štítky.
+- **Staví se na hotové šabloně** (klient přinese vzor „chceme to jako X"), ne na custom grafice od nuly.
+- **Menší rozpočet** (řádově desítky tisíc) — Next.js + headless CMS by zadání předražil.
+- **Klient si to bude spravovat sám** a chce běžné, dostupné prostředí, na které najde lidi.
+
+**WordPress naopak nevol,** když jde o e-shop většího rozsahu, silné integrace do firemních systémů, aplikační
+logiku nad rámec obsahu, nebo když klient výslovně chce moderní JS stack.
+
+**V nabídce ho prodávej proklientsky** — redakce bez programátora, rychlost (cache, WebP), SEO struktura
+a strukturovaná data u článků, bezpečnost a pravidelné aktualizace. **Neomlouvej se za něj.**
 
 ## EasyWeb — politika útlumu
 Cíl: **nové zakázky na nových technologiích.** ~80 % nových poptávek → moderní stack. **Do konce roku přestáváme EasyWeb prodávat**; existující EasyWeby dál udržujeme (klidně X let). EasyWeb pro novou zakázku zvol **jen výjimečně**:
