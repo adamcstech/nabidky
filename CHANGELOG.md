@@ -53,8 +53,11 @@ infra, architektura, struktura, nové brandy, vytvořené/smazané nabídky, kon
   v `components.md` u skeletonu poznámka, že `data-theme="dark"` je závazné. Technicky beze změny —
   skeleton i obě živé CS Tech nabídky tmavý default už měly. **Brandová diferenciace: CS Tech tmavý ·
   CS Bot a Samolepák světlé.**
-- **Otevřené pro Adama:** PČR nabídka a `NABIDKY-INDEX.md` zůstávají trackované v gitu navzdory `.gitignore` (dědictví
-  jednorázového pushe z 8. 6.) — rozhodnout, zda vyndat z trackingu, nebo vědomě ponechat.
+- **UZAVŘENO (rozhodl Adam 21. 9. 2026): tracking v gitu je záměr, ne omyl.** **PČR nabídka**
+  (`fbb2bf9d-…`, brandový vzor Samolepáku) a **`NABIDKY-INDEX.md`** zůstávají **vědomě trackované**
+  navzdory `.gitignore` — slouží jako vzor a seed pro budoucí engine. Editace těchto dvou souborů se
+  proto commitují přes `git add -f`. **Všechny ostatní nabídky jedou gitignore** (privacy = nehádatelný
+  GUID) — `.gitignore` se nemění a nové nabídky se do gitu nepřidávají.
 
 ## 2026-06-24 — Samolepák design system v1 (s Matějem) (Matěj + Frank)
 
