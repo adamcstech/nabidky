@@ -20,10 +20,14 @@
 - **Paleta:** navy báze `#061b31`, zelená `#0f9b4a`, tyrkysová `#02d1cb`, limetka `#deea01`, oranžová `#f06c1a`. Akcent = gradient zelená→tyrkysová.
 - **Fonty:** Poppins (text) + Roboto Slab (display nadpisy).
 - **Layout:** číslované sekce (01–11), velká ghost čísla, feature karty, ceníkové tabulky.
+- **Režim: VÝCHOZÍ JE TMAVÝ 🔒** *(rozhodl Adam 21. 9. 2026 — dřív otevřená otázka, teď zavřená.)*
+  Každá CS Tech nabídka se otevírá v tmavém režimu: `<html lang="cs" data-theme="dark">`. Světlý režim
+  zůstává dostupný přes přepínač ◐ pro toho, kdo si ho přepne, a tisk jede vždy světle bez ohledu na režim.
+  **Na rozdíl od CS Bot a Samolepáku, které jsou světlé** — tmavá je poznávací znamení CS Tech.
 
 ## 🎛️ Standa ladí
-- **Režim:** demo je tmavé. Otevřená otázka — sjednotit na světlý jako CS Bot? (rozhodne Standa s Adamem)
 - Volba akcentní barvy z palety, množství dekorativních prvků, ikony.
+- *(Výchozí režim už Standa neladí — je zamčený na tmavý, viz výše.)*
 
 ## WordPress — kdy ano (třetí větev, schváleno Adamem 2026-09-21)
 

@@ -48,6 +48,11 @@ infra, architektura, struktura, nové brandy, vytvořené/smazané nabídky, kon
 - **Praxe zapsána do `brand.md`:** u WordPress implementací se **nedělá školení, ale PDF návod psaný přímo
   pro daný web**. Do nabídek se píše *„Předání a PDF návod k editaci"*, nikoliv „zaškolení". Promítnuto
   do nabídky AD (ceník, harmonogram, sekce Co dodáme i Technologie). **Cena položky beze změny (2 h / 2 800 Kč).**
+- **Výchozí režim CS Tech ZAMČEN NA TMAVÝ** (rozhodl Adam) — dosud to v `brand.md` viselo jako otevřená
+  otázka („sjednotit na světlý jako CS Bot?"). Přesunuto z „Standa ladí" do zamčené části designu,
+  v `components.md` u skeletonu poznámka, že `data-theme="dark"` je závazné. Technicky beze změny —
+  skeleton i obě živé CS Tech nabídky tmavý default už měly. **Brandová diferenciace: CS Tech tmavý ·
+  CS Bot a Samolepák světlé.**
 - **Otevřené pro Adama:** PČR nabídka a `NABIDKY-INDEX.md` zůstávají trackované v gitu navzdory `.gitignore` (dědictví
   jednorázového pushe z 8. 6.) — rozhodnout, zda vyndat z trackingu, nebo vědomě ponechat.
 

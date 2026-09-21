@@ -27,6 +27,9 @@ malý inline `<style>` v hlavičce jako únikový poklop — ale jen výjimečn�
 
 ## Skeleton (fixní boilerplate — kopíruj 1:1)
 
+> **`data-theme="dark"` na `<html>` je závazné** — výchozí režim CS Tech je tmavý (zamčeno 21. 9. 2026).
+> Neměň ho na `light`; klient si může přepnout sám tlačítkem ◐ a tisk je světlý vždycky.
+
 ```html
 <!DOCTYPE html>
 <html lang="cs" data-theme="dark">
