@@ -189,6 +189,32 @@ Tlačítka `.btn` (plné) a `.btn.ghost` (obrysové). **V tisku se skryjí autom
 </div></section>
 ```
 
+### Tabulka — `table.tbl` (ceníky, rozpisy, srovnání)
+Vždy zabal do `.tbl-wrap` — na mobilu se pak posouvá vodorovně místo rozbití layoutu.
+`th.num` / `td.num` = číselný sloupec zarovnaný doprava. `<small>` uvnitř buňky = popisek pod položkou.
+`tr.sum` = zvýrazněný souhrnný řádek (celkem).
+
+```html
+<div class="tbl-wrap">
+<table class="tbl">
+  <thead><tr><th>Položka</th><th class="num">Rozsah</th><th class="num">Cena bez DPH</th></tr></thead>
+  <tbody>
+    <tr><td>{{Položka}}<small>{{upřesnění}}</small></td><td class="num">6 h</td><td class="num">8 400 Kč</td></tr>
+    <tr class="sum"><td>Celkem</td><td class="num">42,5 h</td><td class="num">63 000 Kč</td></tr>
+  </tbody>
+</table>
+</div>
+```
+
+---
+
+## Mezery mezi dílky — neřeš je
+
+Dílky poskládané pod sebou uvnitř sekce dostávají odstup **automaticky**
+(`section.block .wrap > * + *`). **Nepiš `style="margin-top:…"`** — dřív to bylo potřeba,
+protože `.grid`, `.card`, `.facts`, `.steps`, `.chips` ani tabulka vlastní horní margin nemají
+a slepily se s předchozím prvkem. Od 21. 9. 2026 to řeší `offer-v1.css`.
+
 ---
 
 ## Co řeší tisk (automaticky, `@media print` v offer-v1.css)

@@ -21,9 +21,22 @@ infra, architektura, struktura, nové brandy, vytvořené/smazané nabídky, kon
 - **Podklady** `podklady/cs-technologies/ad-as/` — 2× docx od klienta (struktura menu + rozpis hlavní stránky).
   Docx se čte přímo přes python-docx, převod na MD není potřeba.
 - **Dorovnán git viselec** z 24. 6. — nabídka PČR (content-only) + `NABIDKY-INDEX.md` zacommitovány (`73e740a`).
-- **Otevřené pro Adama:** (1) CS Tech `offer-v1.css` **nemá tabulkovou komponentu**, kterou CS Bot má
-  (`table.tbl`) — cenový rozpis proto poskládán z `.feat` řádků; zvážit doplnění pro paritu brandů.
-  (2) PČR nabídka a `NABIDKY-INDEX.md` zůstávají trackované v gitu navzdory `.gitignore` (dědictví
+- **CS Tech `offer-v1.css` rozšířen** (schváleno Adamem, **aditivní — žádné stávající pravidlo se nemění,
+  freeze drží**; CS Tech v1 linkují jen nová nabídka AD a interní kitchen sink, odeslané nabídky JAKO SK
+  a Weldis mají pořád vlastní inline CSS):
+  - **`table.tbl` + `.tbl-wrap`** — tabulková komponenta v paritě s CS Bot (`th.num`/`td.num`, `<small>`
+    popisek v buňce, `tr.sum` souhrnný řádek, vodorovný posuv na mobilu) + `@media print` (bez stínu,
+    nelámat řádky, opakovaná hlavička přes stránky).
+  - **Vertikální rytmus `section.block .wrap > * + *{margin-top:18px}`** — oprava **reálné chyby**: `.grid`,
+    `.card`, `.facts`, `.steps`, `.chips` ani tabulka neměly horní margin, takže se poskládané dílky
+    slepily s předchozím prvkem a mezera se musela lepit inline stylem. Margin se slučuje se `.sec-head`
+    a `.lead-2`, takže se rozestupy nesčítají. **Inline `style="margin-top"` se už nepíše.**
+  - `brands/cs-technologies/components.md` — snippet tabulky + sekce „Mezery mezi dílky — neřeš je".
+- **Nabídka AD upravena:** číslo **`CST-2026-09-AD-AS`** (dřív `CST-2026-09-AD`), cenový rozpis překlopen
+  z `.feat` řádků do `table.tbl`. **Vložení dodaného obsahu do webu přidáno do ceny** (5 h / 7 000 Kč) —
+  **copywriting v ceně není**, klient dodá hotové finální texty (promítnuto do předpokladů, „co v ceně není",
+  podmínek i harmonogramu). Celková cena **56 000 → 63 000 Kč bez DPH** (76 230 s DPH), zálohy 2× 31 500 Kč.
+- **Otevřené pro Adama:** PČR nabídka a `NABIDKY-INDEX.md` zůstávají trackované v gitu navzdory `.gitignore` (dědictví
   jednorázového pushe z 8. 6.) — rozhodnout, zda vyndat z trackingu, nebo vědomě ponechat.
 
 ## 2026-06-24 — Samolepák design system v1 (s Matějem) (Matěj + Frank)

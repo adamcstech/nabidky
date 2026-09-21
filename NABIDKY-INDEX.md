@@ -5,7 +5,7 @@ Frank sem zapisuje každou novou nabídku. Slouží jako seed pro budoucí engin
 
 | Datum | Brand | Klient | Číslo | GUID / URL | Stav |
 |---|---|---|---|---|---|
-| 2026-09-21 | CS Technologies | AD auditoři a.s. | CST-2026-09-AD | `3bc4d248-52fa-4356-976c-47ea4d35671c` | **ostrá** · nový web poradenské firmy na **WordPressu** (vzor designu ekp.cz), 9 sekcí, rozepsaná cena **56 000 Kč bez DPH** (37,5 h), platba 50/50, termín do 8 týdnů, kontakt Adam. Podklady = 2× docx (menu + hlavní stránka) |
+| 2026-09-21 | CS Technologies | AD auditoři a.s. | CST-2026-09-AD-AS | `3bc4d248-52fa-4356-976c-47ea4d35671c` | **ostrá** · nový web poradenské firmy na **WordPressu** (vzor designu ekp.cz), 9 sekcí, cena **63 000 Kč bez DPH** (42,5 h, rozpis v `table.tbl`), platba 50/50, termín do 8 týdnů, vložení obsahu v ceně / copywriting ne, kontakt Adam. Podklady = 2× docx (menu + hlavní stránka) |
 | 2026-06-12 | CS Bot | Úřad vlády ČR | CSB-2026-06-URADVLADY | `05dfa5fe-9890-41d6-bac5-244a1ccd9ecc` | **OSTRÁ · ODESLÁNO** · AI voicebot, 9 sekcí, etapy (Vrstva 1 22 900 Kč / Vrstva 2 RAG 80 000 Kč), provoz sloty+sazby, demo +420 490 000 207, kontakt Standa. Linkuje offer-v1.css → **nesahat / změny do offer-v2.css** (mimo git) |
 | 2026-06-11 | CS Technologies | — (interní) | — | `502d1d85-f882-4db7-afb0-a4ebd3d6aaca` | **referenční ukázka** design systemu v1 — kitchen sink všech komponent + tisk (regenerovatelná) |
 | 2026-06-10 | CS Technologies | Weldis | CST-2026-06-WELDIS | `e75e2d30-b73e-4dcc-9eaa-6a90e63a60b6` | **ostrá** · předimplementační analýza, 30 000 Kč, kontakt Standa (mimo git) |
