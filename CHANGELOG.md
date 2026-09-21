@@ -39,6 +39,12 @@ infra, architektura, struktura, nové brandy, vytvořené/smazané nabídky, kon
   z `.feat` řádků do `table.tbl`. **Vložení dodaného obsahu do webu přidáno do ceny** (5 h / 7 000 Kč) —
   **copywriting v ceně není**, klient dodá hotové finální texty (promítnuto do předpokladů, „co v ceně není",
   podmínek i harmonogramu). Celková cena **56 000 → 63 000 Kč bez DPH** (76 230 s DPH), zálohy 2× 31 500 Kč.
+- **Nabídka AD — úpravy dle Adama (stávající klient):** postup přestavěn na **statická vizuální verze dle
+  dodaného vzoru → schválení → implementace do WordPressu** (harmonogram, sekce 01 i položka v ceníku).
+  **Hosting a doména zůstávají u nás** — nová hostingová smlouva se neuzavírá, jen se upraví specifikace
+  podle nové technologie za stejných podmínek (vyjmuto z „co v ceně není"). **Místo smlouvy o dílo stačí
+  objednávka redesignu** (SoD je režim pro nové klienty). Z požadované součinnosti vypuštěno logo a kontaktní
+  osoba (máme), z rozšíření vypuštěna grafika na míru. **Cena a termín beze změny.**
 - **Otevřené pro Adama:** PČR nabídka a `NABIDKY-INDEX.md` zůstávají trackované v gitu navzdory `.gitignore` (dědictví
   jednorázového pushe z 8. 6.) — rozhodnout, zda vyndat z trackingu, nebo vědomě ponechat.
 
