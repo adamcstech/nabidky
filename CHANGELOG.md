@@ -57,8 +57,11 @@ infra, architektura, struktura, nové brandy, vytvořené/smazané nabídky, kon
   **každý `<b>` uvnitř `<li>` se stal samostatnou flex položkou** a text se lámal do dvou sloupců vedle sebe.
   Přepsáno na poziční odrážku (`position:absolute` + `padding-left`), text teče normálně inline; přidáno
   `ul.clean li b{color:var(--ink)}` pro zvýraznění. Opraveny 3 odrážky v nabídce AD (Adam nahlásil 2).
-  **Pozor — stejná chyba je latentně i v CS Bot a Samolepák `offer-v1.css`** a **projevuje se v odeslané
-  nabídce Úřadu vlády** (4 výskyty `<li><b>`). Kvůli freeze jsem tam nesahal — rozhodne Adam.
+  **Opraveno i v CS Bot a Samolepák `offer-v1.css`** (rozhodl Adam) — stejný přepis, jen s brandovou barvou
+  odrážky (magenta / červená). **Vědomá výjimka z freeze:** dotklo se to **odeslané nabídky Úřadu vlády**
+  (4 výskyty `<li><b>`), protože jde o opravu rozbitého zalomení, ne o změnu designu — a příští CS Bot
+  nabídka by na tu chybu jinak šlápla znovu. Samolepák žádný `<li><b>` zatím nepoužívá, tam je to prevence.
+  **Všechny tři brandy teď mají `ul.clean` stejně.**
 - **UZAVŘENO (rozhodl Adam 21. 9. 2026): tracking v gitu je záměr, ne omyl.** **PČR nabídka**
   (`fbb2bf9d-…`, brandový vzor Samolepáku) a **`NABIDKY-INDEX.md`** zůstávají **vědomě trackované**
   navzdory `.gitignore` — slouží jako vzor a seed pro budoucí engine. Editace těchto dvou souborů se

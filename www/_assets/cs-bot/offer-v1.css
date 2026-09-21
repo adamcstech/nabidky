@@ -72,8 +72,11 @@ section.block.tint{background:var(--surface);border-top:1px solid var(--line)}  
 .feat .ck{flex:0 0 auto;width:22px;height:22px;border-radius:7px;background:var(--grad);display:grid;place-items:center;color:#fff;font-weight:800;font-size:13px;margin-top:3px}
 .feat b{font-weight:600} .feat span{color:var(--muted);font-size:14px}
 ul.clean{list-style:none;display:grid;gap:11px;margin-top:6px}
-ul.clean li{display:flex;gap:12px;color:var(--muted);font-size:15px}
-ul.clean li::before{content:"";flex:0 0 auto;width:7px;height:7px;border-radius:99px;background:var(--magenta);margin-top:9px}
+/* Odrážka pozičně, NE flexem: uvnitř flexu se každý <b> stal samostatnou
+   flex položkou a text se lámal do dvou sloupců. Takhle text teče inline. */
+ul.clean li{position:relative;padding-left:19px;color:var(--muted);font-size:15px}
+ul.clean li::before{content:"";position:absolute;left:0;top:9px;width:7px;height:7px;border-radius:99px;background:var(--magenta)}
+ul.clean li b{color:var(--ink);font-weight:600}
 .chips{display:flex;flex-wrap:wrap;gap:10px}
 .chip{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:500;background:var(--surface);border:1px solid var(--line);padding:9px 15px;border-radius:99px;color:var(--muted)}
 .price-hero{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:30px;box-shadow:var(--shadow);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:18px;margin-bottom:18px;position:relative;overflow:hidden}
