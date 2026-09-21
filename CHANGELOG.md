@@ -32,6 +32,9 @@ infra, architektura, struktura, nové brandy, vytvořené/smazané nabídky, kon
     slepily s předchozím prvkem a mezera se musela lepit inline stylem. Margin se slučuje se `.sec-head`
     a `.lead-2`, takže se rozestupy nesčítají. **Inline `style="margin-top"` se už nepíše.**
   - `brands/cs-technologies/components.md` — snippet tabulky + sekce „Mezery mezi dílky — neřeš je".
+  - **Interní kitchen sink přegenerován** (GUID `502d1d85-…`) — nová sekce 05 „Tabulka" (ukázka `table.tbl`
+    vč. `tr.sum` a popisků v buňkách), Postup přečíslován na 06, inline `margin-top` hack odstraněn.
+    Katalog tak zase sedí s CSS.
 - **Nabídka AD upravena:** číslo **`CST-2026-09-AD-AS`** (dřív `CST-2026-09-AD`), cenový rozpis překlopen
   z `.feat` řádků do `table.tbl`. **Vložení dodaného obsahu do webu přidáno do ceny** (5 h / 7 000 Kč) —
   **copywriting v ceně není**, klient dodá hotové finální texty (promítnuto do předpokladů, „co v ceně není",
