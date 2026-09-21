@@ -45,6 +45,9 @@ infra, architektura, struktura, nové brandy, vytvořené/smazané nabídky, kon
   podle nové technologie za stejných podmínek (vyjmuto z „co v ceně není"). **Místo smlouvy o dílo stačí
   objednávka redesignu** (SoD je režim pro nové klienty). Z požadované součinnosti vypuštěno logo a kontaktní
   osoba (máme), z rozšíření vypuštěna grafika na míru. **Cena a termín beze změny.**
+- **Praxe zapsána do `brand.md`:** u WordPress implementací se **nedělá školení, ale PDF návod psaný přímo
+  pro daný web**. Do nabídek se píše *„Předání a PDF návod k editaci"*, nikoliv „zaškolení". Promítnuto
+  do nabídky AD (ceník, harmonogram, sekce Co dodáme i Technologie). **Cena položky beze změny (2 h / 2 800 Kč).**
 - **Otevřené pro Adama:** PČR nabídka a `NABIDKY-INDEX.md` zůstávají trackované v gitu navzdory `.gitignore` (dědictví
   jednorázového pushe z 8. 6.) — rozhodnout, zda vyndat z trackingu, nebo vědomě ponechat.
 

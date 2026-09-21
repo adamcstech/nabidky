@@ -40,6 +40,11 @@ logiku nad rámec obsahu, nebo když klient výslovně chce moderní JS stack.
 **V nabídce ho prodávej proklientsky** — redakce bez programátora, rychlost (cache, WebP), SEO struktura
 a strukturovaná data u článků, bezpečnost a pravidelné aktualizace. **Neomlouvej se za něj.**
 
+**Předání u WordPressu = PDF návod, NE školení.** Ke každé WP implementaci připravujeme **PDF návod psaný
+přímo pro daný web** (kde co editovat, krok za krokem). Do nabídek proto **nepiš „zaškolení" ani „školení
+redakce"** — píše se *„Předání a PDF návod k editaci"*. Je to pro klienta lepší (návod nezapomene, může ho
+předat novému člověku) a pro nás levnější než opakované osobní školení.
+
 ## EasyWeb — politika útlumu
 Cíl: **nové zakázky na nových technologiích.** ~80 % nových poptávek → moderní stack. **Do konce roku přestáváme EasyWeb prodávat**; existující EasyWeby dál udržujeme (klidně X let). EasyWeb pro novou zakázku zvol **jen výjimečně**:
 - **Redesign**, kde klient má EasyWeb rád / umí ho a nechce měnit základ.
