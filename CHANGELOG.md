@@ -37,6 +37,16 @@ infra, architektura, struktura, nové brandy, vytvořené/smazané nabídky, kon
   (+ řádky „Konzultace před zahájením" a „Začátek prací"), sekce 06 (přejmenována na „Konzultace s Inuvio —
   týká se pouze varianty B"), postup realizace, předpoklady, podmínky a CTA. **Z „nepotřebujeme nic navíc"
   se stal prodejní argument varianty A**, který v nabídce dřív chyběl.
+- **Doplněno dle Adama — v ceně obou variant:** (1) **kompletní přesměrování původních URL** se spuštěním
+  Medusy (zachování pozic ve vyhledávání, odkazů i uložených adres zákazníků), (2) **analytika v plném
+  rozsahu — převod běžícího Google Tag Manageru** včetně měření a konverzí (návaznost dat, ne měření od nuly).
+  Uvedeno jako karta „Samozřejmou součástí obou variant" v sekci 05, dva řádky ve srovnávací tabulce,
+  vlastní krok v postupu realizace a řádek v podmínkách.
+- **Vendor lock-in použit jako přímý argument (Adam):** klientovi vadí, že **EasyWeb je náš vlastní systém,
+  který nikam nepřenese**. V sekci 02 proto nová **první karta „Žádný vendor lock-in"**, která to říká
+  na rovinu včetně nevýhody pro nás („argument proti nám") a staví proti tomu open-source Medusu — kód je
+  klientův, může pokračovat i s jiným dodavatelem. Posílen i řádek „Licence a vlastnictví" v podmínkách.
+  *(Pozn. pro Adama: je to vědomě sebekritická formulace o EasyWebu — pokud je to na klienta moc, zmírním.)*
 - **Sekce 06 přerámována (Adam):** konzultace nesmí vyznít jako „jdeme do neznáma". Nově se opírá o fakt,
   že **dokumentaci REST API Inuvia máme** a je z ní zřejmé, že požadované scénáře jsou realizovatelné —
   předmětem konzultace jsou **odchylky klientovy instalace Heliosu od standardu** a **ověření, že nikde
