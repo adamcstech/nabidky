@@ -23,6 +23,13 @@ infra, architektura, struktura, nové brandy, vytvořené/smazané nabídky, kon
   (`podklady/cs-technologies/01-vzorove-nabidky/inerez-mutace-kalkulace.pdf`): **51 744 položek**,
   z toho **33 770 spojovacího materiálu** — použito v nabídce jako argument, Adam má ověřit aktuálnost.
 - **Hosting zůstává u nás za stávající cenu** (prodejní argument, explicitně v nabídce).
+- **Doplněno dle Adama:** **designový rebrand je součástí migrace** — nová sekce 04 „Designový rebrand"
+  (vzhled dle klientovy testovací realizace na Shoptetu `737740.myshoptet.com`, odkaz v nabídce,
+  **funkce nezměněné**, rebrand **v ceně obou variant**). Promítnuto i do hero, postupu realizace,
+  srovnávací tabulky a podmínek. Sekce přečíslovány na 01–09.
+- **Počet produktů opraven dle Adama:** **52 031 aktivních produktů** (dřív „přes 51 000" ze staré
+  kalkulace 7/2025). Počet spojovacího materiálu z té kalkulace (33 770) **z nabídky vyňat** a nahrazen
+  neurčitým „desetitisíce položek" — staré přesné číslo nemá v ostré nabídce co dělat.
 - **Frankovy domněnky k potvrzení:** ceny vedeny jako **bez DPH** (Adam uvedl jen „450 000"),
   platba = **pravidelné měsíční zálohy** dle `brand.md` (Adam nespecifikoval). **Hodinový rozpad
   záměrně nevytvořen** — Adam dal rámcové ceny, ne hodiny; nevymýšlel jsem je.
