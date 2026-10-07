@@ -12,7 +12,7 @@ infra, architektura, struktura, nové brandy, vytvořené/smazané nabídky, kon
   `53a55e30-223a-4489-9fea-d7229c6099b2`. Migrace e-shopu **EasyWeb → Medusa**. Stávající klient.
 - **Milník ve strategii:** první nabídka na **Meduse** — naplňuje směr „EasyWeb útlum → moderní stack"
   a zároveň **první realizace na Meduse vůbec** (interní fakt, v nabídce vědomě NEuveden).
-- **Dvě varianty podle napojení na Helios Inuvio:** **A** zachování konektoru **Coaleos**, migrace 1:1,
+- **Dvě varianty podle napojení na Helios Inuvio:** **A** zachování konektoru **Coalios**, migrace 1:1,
   **450 000 Kč bez DPH** · **B** vynechání mezičlánku, **přímé napojení na REST API Inuvia**,
   **650 000 Kč bez DPH** (+200 000). **V nabídce doporučena B** — konektor je klientova největší bolest.
 - **Konzultace s poskytovatelem Inuvio je podmínka před zahájením prací** — dostala vlastní sekci (05)
