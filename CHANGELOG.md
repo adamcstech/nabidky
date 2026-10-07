@@ -6,6 +6,27 @@ infra, architektura, struktura, nové brandy, vytvořené/smazané nabídky, kon
 
 ---
 
+## 2026-10-07 — první nabídka na Meduse: 3Q Metal / inerez.cz (Adam + Frank)
+
+- **Nová nabídka `CST-2026-10-3QMETAL`** (3Q Metal s.r.o., e-shop inerez.cz) — GUID
+  `53a55e30-223a-4489-9fea-d7229c6099b2`. Migrace e-shopu **EasyWeb → Medusa**. Stávající klient.
+- **Milník ve strategii:** první nabídka na **Meduse** — naplňuje směr „EasyWeb útlum → moderní stack"
+  a zároveň **první realizace na Meduse vůbec** (interní fakt, v nabídce vědomě NEuveden).
+- **Dvě varianty podle napojení na Helios Inuvio:** **A** zachování konektoru **Coaleos**, migrace 1:1,
+  **450 000 Kč bez DPH** · **B** vynechání mezičlánku, **přímé napojení na REST API Inuvia**,
+  **650 000 Kč bez DPH** (+200 000). **V nabídce doporučena B** — konektor je klientova největší bolest.
+- **Konzultace s poskytovatelem Inuvio je podmínka před zahájením prací** — dostala vlastní sekci (05)
+  a je z ní navázaný **harmonogram i termín** (v nabídce proto žádné datum dodání, vědomě).
+- **Doménová specifika zachycena** (důvod ceny): jednotky nerezových tyčí (metry i kusy + výrobní délka),
+  konfigurátor dělení materiálu (např. dělení 10m jeklu), spojovací materiál rozbalený po kusech vs.
+  originální balení řešené příznakem. **Velikost katalogu dohledána ve staré kalkulaci** z 7/2025
+  (`podklady/cs-technologies/01-vzorove-nabidky/inerez-mutace-kalkulace.pdf`): **51 744 položek**,
+  z toho **33 770 spojovacího materiálu** — použito v nabídce jako argument, Adam má ověřit aktuálnost.
+- **Hosting zůstává u nás za stávající cenu** (prodejní argument, explicitně v nabídce).
+- **Frankovy domněnky k potvrzení:** ceny vedeny jako **bez DPH** (Adam uvedl jen „450 000"),
+  platba = **pravidelné měsíční zálohy** dle `brand.md` (Adam nespecifikoval). **Hodinový rozpad
+  záměrně nevytvořen** — Adam dal rámcové ceny, ne hodiny; nevymýšlel jsem je.
+
 ## 2026-09-21 — WordPress jako třetí tech větev + nabídka AD auditoři (Adam + Frank)
 
 - **`brands/cs-technologies/brand.md` rozšířen o WordPress** — schváleno Adamem. Mapování technologií nově:
