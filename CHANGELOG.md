@@ -52,6 +52,11 @@ infra, architektura, struktura, nové brandy, vytvořené/smazané nabídky, kon
   předmětem konzultace jsou **odchylky klientovy instalace Heliosu od standardu** a **ověření, že nikde
   nenarazíme na blocker**. Odrážky přepsány z „potvrdíme rozsah API / vyjasníme jednotky" na strukturu
   **Co už víme · Co si ověříme · Na co se zaměříme · Výstup**.
+- **Doplněn rámcový odhad času (Adam):** **varianta A 4 měsíce · varianta B 6 měsíců**. Uvedeno v hero
+  („Realizace 4–6 měsíců dle varianty"), v kartách obou variant, jako řádek ve srovnávací tabulce,
+  v podtitulku postupu realizace, v sekci 06 a v podmínkách. **Označeno jako rámcový odhad, ne závazný
+  termín** (pravidlo `templates/nabidka.md` o orientačních číslech) — závazný harmonogram se potvrzuje
+  u A při odsouhlasení, u B po konzultaci.
 - **Termín dle varianty:** u **A** harmonogram potvrzen **při odsouhlasení nabídky**, u **B** až
   **po konzultaci** s poskytovatelem Inuvia.
 - **Adam potvrdil:** ceny jsou **bez DPH**, platba = **pravidelné měsíční zálohy**, **rebrand bez příplatku**.
