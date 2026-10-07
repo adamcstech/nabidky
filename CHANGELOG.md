@@ -67,6 +67,9 @@ infra, architektura, struktura, nové brandy, vytvořené/smazané nabídky, kon
 
 ## 2026-09-21 — WordPress jako třetí tech větev + nabídka AD auditoři (Adam + Frank)
 
+- **ODESLÁNO KLIENTOVI** (potvrzeno Adamem 7. 10. 2026; přesné datum odeslání nezaznamenáno).
+  **Schválení očekáváno 8. 10. 2026.** Nabídka je zmražená — linkuje `offer-v1.css`.
+
 - **`brands/cs-technologies/brand.md` rozšířen o WordPress** — schváleno Adamem. Mapování technologií nově:
   **běžné weby → Next.js · velká e-commerce → Medusa · obsahový web s redakcí na šabloně → WordPress**.
   Přidána sekce „WordPress — kdy ano" s kritérii (redakce, hotová šablona, menší rozpočet, klient si spravuje sám),
