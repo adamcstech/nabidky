@@ -30,9 +30,17 @@ infra, architektura, struktura, nové brandy, vytvořené/smazané nabídky, kon
 - **Počet produktů opraven dle Adama:** **52 031 aktivních produktů** (dřív „přes 51 000" ze staré
   kalkulace 7/2025). Počet spojovacího materiálu z té kalkulace (33 770) **z nabídky vyňat** a nahrazen
   neurčitým „desetitisíce položek" — staré přesné číslo nemá v ostré nabídce co dělat.
-- **Frankovy domněnky k potvrzení:** ceny vedeny jako **bez DPH** (Adam uvedl jen „450 000"),
-  platba = **pravidelné měsíční zálohy** dle `brand.md` (Adam nespecifikoval). **Hodinový rozpad
-  záměrně nevytvořen** — Adam dal rámcové ceny, ne hodiny; nevymýšlel jsem je.
+- **Konzultace s Inuvio přerámována na variantu B** (upřesnil Adam): **u varianty A není potřeba** —
+  napojujeme se přes **stejné endpointy** jako dnes a funkčnost zůstává zachovaná, takže u A se
+  **začíná hned po odsouhlasení**. Konzultace je podmínkou **jen u varianty B** (nová cesta přes REST API).
+  Přepsáno na 9 místech: sekce 03 (odstraněna zmínka), karty obou variant, srovnávací tabulka
+  (+ řádky „Konzultace před zahájením" a „Začátek prací"), sekce 06 (přejmenována na „Konzultace s Inuvio —
+  týká se pouze varianty B"), postup realizace, předpoklady, podmínky a CTA. **Z „nepotřebujeme nic navíc"
+  se stal prodejní argument varianty A**, který v nabídce dřív chyběl.
+- **Termín dle varianty:** u **A** harmonogram potvrzen **při odsouhlasení nabídky**, u **B** až
+  **po konzultaci** s poskytovatelem Inuvia.
+- **Adam potvrdil:** ceny jsou **bez DPH**, platba = **pravidelné měsíční zálohy**, **rebrand bez příplatku**.
+  **Hodinový rozpad záměrně nevytvořen** — Adam dal rámcové ceny, ne hodiny; nevymýšlel jsem je.
 
 ## 2026-09-21 — WordPress jako třetí tech větev + nabídka AD auditoři (Adam + Frank)
 
