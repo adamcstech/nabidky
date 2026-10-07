@@ -8,6 +8,9 @@ infra, architektura, struktura, nové brandy, vytvořené/smazané nabídky, kon
 
 ## 2026-10-07 — první nabídka na Meduse: 3Q Metal / inerez.cz (Adam + Frank)
 
+- **ODESLÁNO KLIENTOVI 7. 10. 2026.** Nabídka je tím **zmražená** — linkuje `offer-v1.css`, takže vypadá
+  přesně tak, jak ji klient dostal. Změny designu CS Tech → `offer-v2.css`, ne zásah do v1.
+
 - **Nová nabídka `CST-2026-10-3QMETAL`** (3Q Metal s.r.o., e-shop inerez.cz) — GUID
   `53a55e30-223a-4489-9fea-d7229c6099b2`. Migrace e-shopu **EasyWeb → Medusa**. Stávající klient.
 - **Milník ve strategii:** první nabídka na **Meduse** — naplňuje směr „EasyWeb útlum → moderní stack"
