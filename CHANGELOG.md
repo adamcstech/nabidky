@@ -37,6 +37,11 @@ infra, architektura, struktura, nové brandy, vytvořené/smazané nabídky, kon
   (+ řádky „Konzultace před zahájením" a „Začátek prací"), sekce 06 (přejmenována na „Konzultace s Inuvio —
   týká se pouze varianty B"), postup realizace, předpoklady, podmínky a CTA. **Z „nepotřebujeme nic navíc"
   se stal prodejní argument varianty A**, který v nabídce dřív chyběl.
+- **Sekce 06 přerámována (Adam):** konzultace nesmí vyznít jako „jdeme do neznáma". Nově se opírá o fakt,
+  že **dokumentaci REST API Inuvia máme** a je z ní zřejmé, že požadované scénáře jsou realizovatelné —
+  předmětem konzultace jsou **odchylky klientovy instalace Heliosu od standardu** a **ověření, že nikde
+  nenarazíme na blocker**. Odrážky přepsány z „potvrdíme rozsah API / vyjasníme jednotky" na strukturu
+  **Co už víme · Co si ověříme · Na co se zaměříme · Výstup**.
 - **Termín dle varianty:** u **A** harmonogram potvrzen **při odsouhlasení nabídky**, u **B** až
   **po konzultaci** s poskytovatelem Inuvia.
 - **Adam potvrdil:** ceny jsou **bez DPH**, platba = **pravidelné měsíční zálohy**, **rebrand bez příplatku**.
