@@ -6,6 +6,38 @@ infra, architektura, struktura, nové brandy, vytvořené/smazané nabídky, kon
 
 ---
 
+## 2026-10-26 — brandové skilly pro lidi ve firmě (Adam + Frank)
+
+- **Nový směr projektu (Adamovo zadání):** vedle generování nabídek vzniká **sada brandových Agent Skills**
+  pro lidi ve firmě — cíl je **sjednotit komunikaci** (nabídky, prezentace, návody, e-maily, články).
+  Tři samostatné skilly, jeden per brand; **začínáme CS Technologies**.
+- **Zjištěno k mechanice** (primární zdroje: platform.claude.com, agentskills.io, code.claude.com):
+  formát `SKILL.md` je **otevřený standard** (Anthropic → open spec), **adoptoval ho i ChatGPT** →
+  jeden soubor funguje v Claudovi i v GPT. Spec definuje 6 polí (`name`, `description`, `license`,
+  `compatibility`, `metadata`, `allowed-tools`); `name` ≤64 znaků a musí se rovnat názvu složky,
+  `description` ≤1024 znaků a je **jediný mechanismus spouštění**. Progresivní načítání: metadata vždy
+  (~100 tokenů), tělo při spuštění, `references/` až na vyžádání.
+- **Omezení distribuce (důvod pro zvolenou architekturu):** na **claude.ai je skill per uživatel**,
+  bez centrální správy adminem a bez org-wide rolloutu; v ChatGPT dle plánu (Business/Enterprise+,
+  **neověřeno z primárního zdroje** — OpenAI vrací 403). Skilly se **nesynchronizují mezi prostředími**.
+- **Řešení vzdálené aktualizace:** skill je **dvouvrstvý** — v `SKILL.md` je funkční baseline s číslem
+  verze, nad tím pokyn stáhnout kanonickou verzi z našeho hostingu. **Aktualizace brandu = přepsat
+  jeden soubor na serveru**, nikdo nic nenahrává znovu. Degraduje bezpečně (claude.ai má přístup k síti
+  podle nastavení uživatele — plný/částečný/žádný).
+- **Infra:** nový adresář **`skills/`** (zdroj, v gitu) + **`skills/publish.sh`** (publikace). Živé:
+  `/brand/<name>/brand-full.txt` (kanonická verze, vše v jednom fetchi) · `/brand/<name>/SKILL.txt`
+  + `references/*.txt` (mirror) · `/brand/<name>.zip` (balíček k nahrání). **Pozn.: nginx vrací na `.md`
+  403**, proto se kanonické kopie publikují jako `.txt`.
+- **`.gitignore` upraven** — výjimky `!/www/brand/` a `!/www/robots.txt` (jde o engine, ne klientská data).
+  Přidán **`www/robots.txt` s `Disallow: /`** pro celou domému — nabídky mají `noindex` v HTML, tohle
+  pokrývá i publikované skilly bez prozrazení cest.
+- **`cs-technologies-brand` v1.0 hotový:** `SKILL.md` (111 řádků — identita, 5 principů tónu, slovník,
+  princip volby technologie, právní údaje a kontakty) + 6 referenčních souborů
+  (`emaily` · `nabidky` · `prezentace` · `navody` · `clanky` · `vizual`).
+- **Bez interních dat (Adamovo rozhodnutí):** žádné hodinové sazby, marže, SLA procenta ani strategie
+  útlumu EasyWebu — skill končí v osobních účtech lidí a Agent Skills **nejsou krytá ZDR**.
+  `brands/cs-technologies/brand.md` zůstává interní zdroj; skill je jeho **derivát pro jiné publikum**.
+
 ## 2026-10-07 — první nabídka na Meduse: 3Q Metal / inerez.cz (Adam + Frank)
 
 - **ODESLÁNO KLIENTOVI 7. 10. 2026.** Nabídka je tím **zmražená** — linkuje `offer-v1.css`, takže vypadá

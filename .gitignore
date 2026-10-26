@@ -4,9 +4,11 @@
 /_
 
 # --- Generované nabídky (mimo git; privacy = nehádatelný GUID) ---
-# Ignoruj vše ve www/ kromě sdílených brand assetů (_assets)
+# Ignoruj vše ve www/ kromě sdílených brand assetů, publikovaných skillů a robots.txt
 /www/*
 !/www/_assets/
+!/www/brand/
+!/www/robots.txt
 
 # --- OS / editor ---
 .DS_Store
