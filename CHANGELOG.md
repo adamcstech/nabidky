@@ -6,6 +6,34 @@ infra, architektura, struktura, nové brandy, vytvořené/smazané nabídky, kon
 
 ---
 
+## 2026-11-11 — nabídka: další kroky digitalizace POLSTRIN (Adam + Frank)
+
+- **Nová nabídka `CST-2026-11-POLSTRIN`** (POLSTRIN DESIGN, s. r. o., IČO 49283120) — GUID
+  `1ce5d930-bbd1-409f-980a-a67f83ee79cc`. **Netypická nabídka:** není to jedna zakázka, ale
+  **prezentace dalších kroků** navazujících na provedenou analýzu Digitalizace a automatizace
+  (výstup analýzy: `polstrin.cstest.cz/vystup/`).
+- **Struktura: tři nezávislé směry** (Adamova čtyřka zredukována — **widget plánu výroby není
+  samostatná větev, ale modul uvnitř agentního systému**):
+  **A — Agentní systém** (`agents.csbot.cz`): provoz 300 Kč/uživatel/měs + kreditové balíčky
+  (Start 2 000 / Standard 5 000 / Pro 10 000), zprovoznění = SAP konektory pro testovací i ostrou DB
+  (2 h) + **widget evidence plánu výroby** (15 h) = **30 600 Kč bez DPH**.
+  **B — 3D konfigurátor:** rekapitulace stavu (58 aktivních produktů, 51 připravených, 7 problémových
+  jmenovitě), **záměrně BEZ konečné ceny** (Adamovo rozhodnutí — chybí detaily specifikace);
+  zkušební přepracování modelu **IKARUS** 5 h / 9 000 Kč, pak buď cena za model, nebo **zaškolení
+  klienta na Blender s AI**. Doladění specifikace se **čerpá z nevyčerpaných 100 000 Kč**, které má
+  klient u nás — bez nové faktury.
+  **C — Web:** UX a grafický návrh od externího partnera **Davida Kučery** — 26 000 + 29 900 =
+  **55 900 Kč vč. DPH**, termín 3–5 týdnů; nezahrnuje kódování, copywriting, fotografie ani UX/UI
+  konfigurátoru.
+- **Z podkladů do nabídky převzato:** 92 % atypů v nově zakládaných položkách (2025), uvažovaná
+  pozice za **700 000 Kč/rok** z klientova vlastního auditu, sekce **„Co už je hotové a neplatíte to"**
+  (rozklíčování SAPu, inventura 4 268 souborů, křížová kontrola 11 427 položek, prototyp).
+- **Interní věci z `kalkulace-podklad.md` do nabídky NEŠLY** — kalkulační faktory ani informace o tom,
+  jakými nástroji se vývoj provádí (hlídá si to i sám zdrojový dokument).
+- **Frankovy domněnky k potvrzení:** sazba **1 800 Kč/h** u drobných položek (SAP konektory, widget,
+  IKARUS) — Adam ji nespecifikoval; **cena od grafika přenesena bez přirážky** a jako jediná uvedená
+  **vč. DPH**; doporučený kreditový balíček **Start**.
+
 ## 2026-11-11 — nabídka: předimplementační analýza AFRISO (Adam + Frank)
 
 - **ODESLÁNO KLIENTOVI 11. 11. 2026.** Nabídka je tím zmražená — linkuje `offer-v1.css`.
