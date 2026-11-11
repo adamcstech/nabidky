@@ -24,6 +24,14 @@ infra, architektura, struktura, nové brandy, vytvořené/smazané nabídky, kon
   **II — SEO/UX/obchodní kontext, 20 h / 20 000 Kč:** cíle firmy a USP, konkurence, síla domény
   a odkazové portfolio, marketingová strategie, **SEO i GEO** (viditelnost v AI odpovědích), UX vhled
   do prototypu. Vyžaduje přístupy: **Google Analytics, Search Console, Collabim**.
+- **Doplněn okruh eWay-CRM** (Adam): klient používá **eWay-CRM** vedle Pohody. V technické části vznikl
+  **samostatný okruh č. 5** — co z webu putuje do CRM (poptávky, servisní požadavky, registrace partnerů,
+  kontakty), v jaké fázi se záznam zakládá vs. doplňuje (duplicity), **co je zdroj pravdy** pro zákaznická
+  data mezi CRM / Pohodou / e-shopem, a zda se do CRM promítají projekty a objednávky. Promítnuto i do
+  sekcí 01, 03, 06 a 08 (kontakt na správce eWay-CRM mezi požadovanou součinností).
+- **Platba změněna na PŘEDEM** (Adam): zálohová faktura po potvrzení nabídky, **na vstupní den se jede
+  až po její úhradě**. Důvod: výstup se předává hotový a nemá se o něm pak dohadovat — historicky
+  bez problémů.
 - **Cena stanovena Adamem: 15 000 + 15 000 = 30 000 Kč bez DPH** (36 300 s DPH). **Vědomě nízká** —
   neodpovídá rozsahu a nemá odpovídat naší hodinovce. Jde o **vstřícný krok do spolupráce**; Adamovi
   jde o projekt (nový stack, dobrý klient).
