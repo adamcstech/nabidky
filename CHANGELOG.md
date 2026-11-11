@@ -30,6 +30,28 @@ infra, architektura, struktura, nové brandy, vytvořené/smazané nabídky, kon
   (rozklíčování SAPu, inventura 4 268 souborů, křížová kontrola 11 427 položek, prototyp).
 - **Interní věci z `kalkulace-podklad.md` do nabídky NEŠLY** — kalkulační faktory ani informace o tom,
   jakými nástroji se vývoj provádí (hlídá si to i sám zdrojový dokument).
+- **Doladěno s Adamem (11. 11.):**
+  - **Agentní systém:** doplněno **napojení Google Analytics a Search Console zdarma** (jen konektor)
+    + karta **„S čím dál počítáme"** mimo součet — **Microsoft 365** (konektor hotový, čeká na specifikaci
+    práv a autorizaci MS miniaplikace), **widget pro dopravce** a **finanční reporting**, obojí čeká
+    na specifikaci. V součinnosti: místo popisu nástěnky **navrhujeme postavit beta verzi widgetu
+    a odladit ji společně** — provoz nástěnky známe z návštěvy.
+  - **Konfigurátor:** přidán **základ administrace, databáze a úložiště za 30 000 Kč** jako konkrétní
+    první krok. Důvod uveden otevřeně: **původní plán rozšířit přímo SAP poskytovatel SAPu nedoporučil.**
+    Administrace je podána jako **společný základ pro konfigurátor i web** (platí se jednou).
+    Ze součinnosti vypuštěna zakázková výroba pro třetí strany — **konfigurátor je na běžné modely**.
+  - **Komunikace zůstatku přepsána** (Adamův požadavek na věrohodnost): místo vágních „100 000 Kč"
+    je celý řetězec — objednávka analýzy **166 000 Kč bez DPH**, vyčerpáno **60 000 Kč**, **zůstatek
+    106 000 Kč bez DPH**. Mechanismus: **nic se nestrhává samo**, každý krok se předem vyčíslí
+    a odsouhlasí, po každém čerpání klient ví, kolik zbývá. O dotaci se v nabídce nemluví.
+  - **Web:** doplněn **vývoj ze schváleného návrhu — rámcově 100 000 Kč bez DPH** a rozhodnutí
+    **WordPress vs. Node.js nad společnou administrací** (klíč: jak často web editují; u Node.js
+    navíc možnost správy obsahu přes agenta). V součinnosti **společný online call s Davidem Kučerou**.
+  - Jména zpracovatelů uvedena celá — **David Pacák** (modely) a **David Kučera** (UX/grafika).
+- **Kontrola proti `Soupis produktů.xlsx`** (dodal Adam): soupis má **58 produktů** (Sedací soupravy 18,
+  Křesla 13, Postele 15, Jídelní židle a barovky 8, Design Collection 4). **Všech 8 produktů jmenovaných
+  v nabídce v soupisu je**; počty u kompletních kategorií (8 a 15) sedí. Weiva, Continella, FR 106
+  a FR 9500 zůstávají otevřené, ale v nabídce se nezmiňují.
 - **Frankovy domněnky k potvrzení:** sazba **1 800 Kč/h** u drobných položek (SAP konektory, widget,
   IKARUS) — Adam ji nespecifikoval; **cena od grafika přenesena bez přirážky** a jako jediná uvedená
   **vč. DPH**; doporučený kreditový balíček **Start**.
