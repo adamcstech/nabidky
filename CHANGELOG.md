@@ -40,10 +40,11 @@ infra, architektura, struktura, nové brandy, vytvořené/smazané nabídky, kon
   Místo rozpisu hodin je v sekci 06 karta **„Proč je ta cena takhle nízká"**, která vstřícný krok
   pojmenovává otevřeně. Cenová tabulka má jen dvě položky po 15 000 Kč.
 - **Zápočet ceny analýzy do implementace ZAMÍTNUT Adamem** — z nabídky odstraněn.
-- **Reálný průběh doplněn dle Adama:** **vstupní den přímo u klienta** (Komerční 520, 251 01 Nupaky)
+- **Reálný průběh doplněn dle Adama:** osobní setkání přímo u klienta (Komerční 520, 251 01 Nupaky)
   **ve dvou — Adam Švanse + Stanislav Novák**, pak **do 2–3 týdnů návrat s výstupem** a seznámení
-  klienta s postupem celé realizace. Postup realizace přepsán z 6 kroků na 5 kolem téhle osy;
-  „kick-off" nahrazen „celým dnem u vás v Nupakách".
+  klienta s postupem celé realizace. Postup realizace přepsán z 6 kroků na 5 kolem téhle osy.
+  **Terminologie: „vstupní sezení" a „výstupní sezení"** — původní formulace „celý den u vás" byla
+  na Adamův pokyn odstraněna (opakovala se a slibovala délku, kterou dopředu nikdo nezná).
 
 ## 2026-10-26 — brandové skilly pro lidi ve firmě (Adam + Frank)
 
