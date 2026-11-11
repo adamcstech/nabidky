@@ -24,14 +24,18 @@ infra, architektura, struktura, nové brandy, vytvořené/smazané nabídky, kon
   **II — SEO/UX/obchodní kontext, 20 h / 20 000 Kč:** cíle firmy a USP, konkurence, síla domény
   a odkazové portfolio, marketingová strategie, **SEO i GEO** (viditelnost v AI odpovědích), UX vhled
   do prototypu. Vyžaduje přístupy: **Google Analytics, Search Console, Collabim**.
-- **Celkem 65 000 Kč bez DPH** (78 650 s DPH), 65 h. **Cena je Frankův návrh — Adam ji ladí**
-  (efektivní sazba ~1 000 Kč/h, tedy stejná hladina jako u analýzy Weldis).
-- **Frankův obchodní návrh zapracovaný do nabídky:** **při pokračování do implementace se odečte 50 %
-  ceny analýzy (32 500 Kč) z první etapy.** Důvod: Adamovi jde o projekt (nový stack, dobrý klient),
-  tohle sníží bariéru vstupu bez slevy z hodnoty práce.
-- **Frankovy domněnky k potvrzení:** termín **rámcově do 3 týdnů** od kick-offu (Adam nespecifikoval),
-  platba **po předání výstupu** se splatností 14 dní, obsazení **Adam technika + Standa obchod/SEO**
-  (analogie s Weldisem).
+- **Cena stanovena Adamem: 15 000 + 15 000 = 30 000 Kč bez DPH** (36 300 s DPH). **Vědomě nízká** —
+  neodpovídá rozsahu a nemá odpovídat naší hodinovce. Jde o **vstřícný krok do spolupráce**; Adamovi
+  jde o projekt (nový stack, dobrý klient).
+- **Hodiny z nabídky ZÁMĚRNĚ ODSTRANĚNY** (Frankovo doporučení, Adam souhlasil): při 30 000 Kč za
+  původně kalkulovaných 65 h by si klient odvodil sazbu ~460 Kč/h a **zakotvil si ji pro implementaci**.
+  Místo rozpisu hodin je v sekci 06 karta **„Proč je ta cena takhle nízká"**, která vstřícný krok
+  pojmenovává otevřeně. Cenová tabulka má jen dvě položky po 15 000 Kč.
+- **Zápočet ceny analýzy do implementace ZAMÍTNUT Adamem** — z nabídky odstraněn.
+- **Reálný průběh doplněn dle Adama:** **vstupní den přímo u klienta** (Komerční 520, 251 01 Nupaky)
+  **ve dvou — Adam Švanse + Stanislav Novák**, pak **do 2–3 týdnů návrat s výstupem** a seznámení
+  klienta s postupem celé realizace. Postup realizace přepsán z 6 kroků na 5 kolem téhle osy;
+  „kick-off" nahrazen „celým dnem u vás v Nupakách".
 
 ## 2026-10-26 — brandové skilly pro lidi ve firmě (Adam + Frank)
 
