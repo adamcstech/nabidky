@@ -8,6 +8,10 @@ infra, architektura, struktura, nové brandy, vytvořené/smazané nabídky, kon
 
 ## 2026-11-11 — nabídka: další kroky digitalizace POLSTRIN (Adam + Frank)
 
+- **ODESLÁNO KLIENTOVI 11. 11. 2026.** Nabídka je zmražená — linkuje `offer-v1.css`.
+  **Očekávaný návrat:** až bude doladěná specifikace a známá **cena 3D konfigurátoru** — ta se
+  v tomto dokumentu záměrně neuvádí a doplní se samostatně.
+
 - **Nová nabídka `CST-2026-11-POLSTRIN`** (POLSTRIN DESIGN, s. r. o., IČO 49283120) — GUID
   `1ce5d930-bbd1-409f-980a-a67f83ee79cc`. **Netypická nabídka:** není to jedna zakázka, ale
   **prezentace dalších kroků** navazujících na provedenou analýzu Digitalizace a automatizace
