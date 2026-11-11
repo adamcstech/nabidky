@@ -8,6 +8,8 @@ infra, architektura, struktura, nové brandy, vytvořené/smazané nabídky, kon
 
 ## 2026-11-11 — nabídka: předimplementační analýza AFRISO (Adam + Frank)
 
+- **ODESLÁNO KLIENTOVI 11. 11. 2026.** Nabídka je tím zmražená — linkuje `offer-v1.css`.
+
 - **Nová nabídka `CST-2026-11-AFRISO`** (AFRISO spol. s r.o., afriso.cz, Komerční 520, 251 01 Nupaky) — GUID `547318b4-c4f7-4ec8-850c-3a2800e9d56b`.
   **Předimplementační analýza** před migrací velkého B2B/B2C e-shopu, směřováno na **Medusa**.
   Navazuje na vzor Weldis (`CST-2026-06-WELDIS`), ale v jiném měřítku.
