@@ -6,6 +6,33 @@ infra, architektura, struktura, nové brandy, vytvořené/smazané nabídky, kon
 
 ---
 
+## 2026-11-11 — nabídka: předimplementační analýza AFRISO (Adam + Frank)
+
+- **Nová nabídka `CST-2026-11-AFRISO`** (AFRISO, afriso.cz) — GUID `547318b4-c4f7-4ec8-850c-3a2800e9d56b`.
+  **Předimplementační analýza** před migrací velkého B2B/B2C e-shopu, směřováno na **Medusa**.
+  Navazuje na vzor Weldis (`CST-2026-06-WELDIS`), ale v jiném měřítku.
+- **Výchozí situace:** klient si **sám postavil interaktivní prototyp přes GPT**
+  (`afriso-navrh-2-261109.appealingwallaby.chatgpt.site`, SPA s hash routingem, vzorová data),
+  **nasdílel git**. Prototyp obsahuje partnerskou zónu, evidenci projektů („Můj projekt"), konfigurátor
+  ventilů a poptávkový režim. V nabídce zarámováno jako **cenný vstup, ale ne specifikace**.
+- **Analýza rozdělena na 2 samostatně prodejné části** (Adamovo zadání):
+  **I — technická, 45 h / 45 000 Kč:** záměr+prototyp+repozitář · produktová data od **německé mateřské
+  společnosti** vč. **atribuce pro filtry**, překlad a import · **cenotvorba: 4 rabatové skupiny +
+  individuální ceníky** · **napojení na Pohodu** (sklady, synchronizace cen, objednávky) · funkční okruhy
+  (poptávka servisu a evidence požadavků, nástroje pro výběr produktu, evidence projektů, B2B zóna) ·
+  objednávkové flow, platební brána, XML feedy · architektura na Medusa + kalkulace.
+  **II — SEO/UX/obchodní kontext, 20 h / 20 000 Kč:** cíle firmy a USP, konkurence, síla domény
+  a odkazové portfolio, marketingová strategie, **SEO i GEO** (viditelnost v AI odpovědích), UX vhled
+  do prototypu. Vyžaduje přístupy: **Google Analytics, Search Console, Collabim**.
+- **Celkem 65 000 Kč bez DPH** (78 650 s DPH), 65 h. **Cena je Frankův návrh — Adam ji ladí**
+  (efektivní sazba ~1 000 Kč/h, tedy stejná hladina jako u analýzy Weldis).
+- **Frankův obchodní návrh zapracovaný do nabídky:** **při pokračování do implementace se odečte 50 %
+  ceny analýzy (32 500 Kč) z první etapy.** Důvod: Adamovi jde o projekt (nový stack, dobrý klient),
+  tohle sníží bariéru vstupu bez slevy z hodnoty práce.
+- **Frankovy domněnky k potvrzení:** termín **rámcově do 3 týdnů** od kick-offu (Adam nespecifikoval),
+  platba **po předání výstupu** se splatností 14 dní, obsazení **Adam technika + Standa obchod/SEO**
+  (analogie s Weldisem).
+
 ## 2026-10-26 — brandové skilly pro lidi ve firmě (Adam + Frank)
 
 - **Nový směr projektu (Adamovo zadání):** vedle generování nabídek vzniká **sada brandových Agent Skills**
