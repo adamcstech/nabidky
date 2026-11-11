@@ -48,6 +48,14 @@ infra, architektura, struktura, nové brandy, vytvořené/smazané nabídky, kon
     **WordPress vs. Node.js nad společnou administrací** (klíč: jak často web editují; u Node.js
     navíc možnost správy obsahu přes agenta). V součinnosti **společný online call s Davidem Kučerou**.
   - Jména zpracovatelů uvedena celá — **David Pacák** (modely) a **David Kučera** (UX/grafika).
+  - **Vlastnictví rozděleno na dvě podmínky:** řešení na míru (administrace, konfigurátor, web)
+    přechází po zaplacení na klienta vč. zdrojových kódů · **agentní platforma zůstává naším produktem
+    a poskytuje se jako služba** (klient neplatí vývoj, ale užívání; data vložená do platformy jsou jeho).
+    *Vlastnictví modulů na míru postavených na platformě (např. widget výroby) nabídka vědomě neřeší —
+    rozhodnuto nechat otevřené.*
+  - **Sjednoceno DPH:** cena od Davida Kučery přepočtena z 55 900 Kč vč. DPH na **46 200 Kč bez DPH**
+    (21 500 + 24 700), aby byl celý dokument v jedné hladině. **Fakturovat bude CS Technologies.**
+    Z podmínek odstraněna výjimka o ceně vč. DPH.
 - **Kontrola proti `Soupis produktů.xlsx`** (dodal Adam): soupis má **58 produktů** (Sedací soupravy 18,
   Křesla 13, Postele 15, Jídelní židle a barovky 8, Design Collection 4). **Všech 8 produktů jmenovaných
   v nabídce v soupisu je**; počty u kompletních kategorií (8 a 15) sedí. Weiva, Continella, FR 106
